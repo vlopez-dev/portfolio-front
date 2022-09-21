@@ -1,7 +1,8 @@
 <script>
     export let about_title,about_description,src
-</script>
+    
 
+</script>
 <section class="hero is-fullheight">
     <div class="hero-body">
       
@@ -21,20 +22,14 @@
 
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
   </div>
 
   </section>
+
+
+
+
+
 
   <style>
    .hero{

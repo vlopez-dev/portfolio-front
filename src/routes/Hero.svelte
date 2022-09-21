@@ -1,7 +1,7 @@
 <script>
     export let hero_title,hero_subtitle,hero_image
-</script>
 
+</script>
 <section class="hero  is-fullheight">
     <div class="hero-body">
       <div class="">
