@@ -1,9 +1,8 @@
 <script>
     export let item1, item2, item3,item4
-    import {page} from "$App/stores";
 
 </script>
-
+<header>
 <nav
   class="navbar"
   role="navigation"
@@ -37,17 +36,17 @@
       class="navbar-start"
       style="flex-grow: 1; justify-content: center;"
     >
-      <a class="navbar-item" href="/">{item1}</a>
-      <a class="navbar-item" href="/About">{item2}</a>
+      <a class="navbar-item" href="#/">{item1}</a>
+      <a class="navbar-item" href="#/about">{item2}</a>
 
-      <a class="navbar-item" href="/Projects">{item3}</a>
-      <a class="navbar-item" href="/Contact">{item4}</a>
+      <a class="navbar-item" href="#/projects">{item3}</a>
+      <a class="navbar-item" href="#/contact">{item4}</a>
 
     </div>
   
   </div>
 </nav>
-
+</header>
 
 <slot/>
 <style>
