@@ -6,10 +6,10 @@
     <div class="hero-body">
       <div class="">
         <p class="title">
-            Titulo Principal
+            Hi! My name is Victor
         </p>
         <p class="subtitle">
-          Subtitulo
+          Back-end developer
         </p>
       </div>
     </div>
@@ -22,4 +22,11 @@
     .hero-body{
         justify-content: center;
     }
+    .title{
+      font-family: 'Karla', sans-serif;
+      font-size: 80px;
+    }
+    .subtitle{
+      font-family: 'Inconsolata', monospace;
+        }
   </style>

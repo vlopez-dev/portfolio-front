@@ -53,4 +53,7 @@
     header{
         width: 100%;
     }
+    a{
+      font-family: 'Karla', sans-serif;
+    }
 </style>
