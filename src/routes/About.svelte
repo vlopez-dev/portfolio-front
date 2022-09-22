@@ -3,28 +3,23 @@
     
 
 </script>
-<section class="hero is-fullheight">
-    <div class="hero-body">
-      
-      <div class="columns">
-        <div class="column is-half" style="outline: 2xp solid red ;">
-          <img src="https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80" alt="">
-        </div>
-
-        <div class="column" style="outline: 2px solid green ;">
-          <div class="container">
-          <h2 class="title">Titulo Principal</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore sapiente recusandae laborum? Quisquam consequatur dignissimos incidunt fugiat est. Eveniet, dignissimos. Esse cumque odio atque facere explicabo modi ab tempora aliquam.</p>
-        </div>
-        </div>
-
-        <div class="column"></div>
-
+<section class="section is-large" >
+  <div class="columns">
+    <div class="column" >
     </div>
-
+    <div class="column">
+      <img src="https://images.unsplash.com/photo-1499155286265-79a9dc9c6380?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=684&q=80" alt="">
+    </div>
+    <div class="column" >
+    </div>
+    <div class="column" >
+      <h2 class="title">Titulo</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam dolores ipsum, sapiente veritatis totam reiciendis eveniet. Aliquam aliquid eius magnam quas, accusamus nemo ratione, laborum quaerat, quasi adipisci neque earum.</p>
+    </div>
+    <div class="column">
+    </div>
   </div>
-
-  </section>
+</section>
 
 
 
@@ -34,6 +29,20 @@
   <style>
    .hero{
     background-color: #f9ec86;
+   }
+   section{
+    background-color: #fced73;
+   }
+
+   .title{
+    font-family: 'Karla', sans-serif;
+
+   }
+
+   p{
+    font-family: 'Inconsolata', monospace;
+    line-height: 1.25rem;
+    color: #363636;
    }
    
   </style>
