@@ -4,32 +4,37 @@
 
 
 
-<section class="section is-medium">
-    
-
-
-<div class="columns is-multiline">
-    <div class="column is-one-quarter-desktop is-half-tablet">
+<section class="hero is-fullheight">
+<div class="hero-body">
+<div class="container is-fluid">
+  <div class="columns">
+    <div class="column">
       <div class="card">
-          <div class="card-image">
-              <figure class="image is-3by2">
-                <img src="https://unsplash.it/300/200/?random&pic=1" alt="">
-              </figure>
-              <div class="card-content is-overlay is-clipped">
-                <span class="tag is-info">
-                  Photo Title That is really long to show the clipping
-                </span>       
-              </div>
-          </div>
-          <footer class="card-footer">
-              <a class="card-footer-item">
-                BUY
-              </a>
-          </footer>
+        <figure class="image is-4by3">
+          <img src="https://images.unsplash.com/photo-1660308985375-bf5984ff786e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1121&q=80" alt="Placeholder image">
+        </figure>
+      </div>
+      
+    </div>
+    <div class="column">
+      <div class="card">
+        <figure class="image is-4by3">
+          <img src="https://images.unsplash.com/photo-1660068183020-616529579fce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80">
+        </figure>
       </div>
     </div>
-  
+    <div class="column">
+
+      <div class="card">
+        <figure class="image is-4by3">
+          <img src="https://images.unsplash.com/photo-1531581147762-5961e6e2e6b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80">
+        </figure>
+      </div>
+    </div>
+
   </div>
+</div>
+</div>
   </section>
 
 
@@ -39,7 +44,7 @@
 
 
 <style>
-.section{
+.hero{
     background-color: #fced73;
    }
 </style>

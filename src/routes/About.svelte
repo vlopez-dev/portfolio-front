@@ -3,7 +3,8 @@
     
 
 </script>
-<section class="section is-medium " >
+<section class="hero is-fullheight " >
+  <div class="hero-body">
   <div class="columns">
     <div class="column" >
     </div>
@@ -19,6 +20,7 @@
     <div class="column">
     </div>
   </div>
+</div>
 </section>
 
 

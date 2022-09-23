@@ -2,7 +2,8 @@
     // export let hero_title,hero_subtitle,hero_image
 
 </script>
-<section class="section is-large">
+<section class="hero is-fullheight">
+    <div class="hero-body">
     <div class="columns">
       <div class="column">
         <p class="title">
@@ -13,10 +14,11 @@
         </p>
       </div>
     </div>
+  </div>
   </section>
 
   <style>
-   .section{
+   .hero{
     background-color: #fced73;
    }
     .hero-body{
