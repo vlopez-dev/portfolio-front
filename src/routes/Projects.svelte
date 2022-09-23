@@ -4,7 +4,7 @@
 
 
 
-<section class="hero is-fullheight">
+<section class="section is-medium">
     
 
 
@@ -39,7 +39,7 @@
 
 
 <style>
-.hero{
-    background-color: #fbf4b6;
+.section{
+    background-color: #fced73;
    }
 </style>

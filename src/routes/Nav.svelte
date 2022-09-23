@@ -56,4 +56,7 @@
     a{
       font-family: 'Karla', sans-serif;
     }
+    .navbar{
+      background-color: #fced73;
+    }
 </style>

@@ -2,9 +2,9 @@
     // export let hero_title,hero_subtitle,hero_image
 
 </script>
-<section class="hero  is-fullheight">
-    <div class="hero-body">
-      <div class="">
+<section class="section is-large">
+    <div class="columns">
+      <div class="column">
         <p class="title">
             Hi! My name is Victor
         </p>
@@ -16,7 +16,7 @@
   </section>
 
   <style>
-   .hero{
+   .section{
     background-color: #fced73;
    }
     .hero-body{
@@ -29,4 +29,11 @@
     .subtitle{
       font-family: 'Inconsolata', monospace;
         }
+
+    .title{
+      text-align: center;
+    }
+    .subtitle{
+      text-align: center;
+    }
   </style>

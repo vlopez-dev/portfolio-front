@@ -3,7 +3,7 @@
     
 
 </script>
-<section class="section is-large" >
+<section class="section is-medium " >
   <div class="columns">
     <div class="column" >
     </div>
@@ -27,9 +27,7 @@
 
 
   <style>
-   .hero{
-    background-color: #f9ec86;
-   }
+   
    section{
     background-color: #fced73;
    }

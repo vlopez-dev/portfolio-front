@@ -6,6 +6,7 @@
   import Projects from "./routes/Projects.svelte";
   import Contact from "./routes/Contact.svelte";
   import Router from "svelte-spa-router"
+  import Footer from "./routes/Footer.svelte";
   let routes={
     "/":Hero,
     "/about":About,
@@ -36,7 +37,7 @@ item4="Contact"
   <Router {routes}></Router>
   
 
-
+<Footer></Footer>
 
 
 <style>
