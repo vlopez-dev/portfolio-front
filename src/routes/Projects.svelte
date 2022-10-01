@@ -22,23 +22,45 @@
 <section class="hero is-fullheight">
 <div class="hero-body">
 <div class="container is-fluid">
+
   <div class="columns">
+    {#each projects as project}
+
     <div class="column">
-      {#each projects as project}
 
       <div class="card">
+
         <figure class="image is-4by3">
           <img src="{project.pro_img}" alt="Placeholder image">
         </figure>
-          <p style="color:black">{project.name}</p>
-          <p>{project.description}</p>
+        <div class="card-content">
+          <div class="content">
+            <p style="color:black">{project.name}</p>
+
+            <p>{project.description}</p>
+          </div>
+        </div>
+        <footer class="card-footer">
+          <p class="card-footer-item">
+            <span>
+              View on <a href="https://twitter.com/codinghorror/status/506010907021828096">Twitter</a>
+            </span>
+          </p>
+          <p class="card-footer-item">
+            <span>
+              Share on <a href="#">Facebook</a>
+            </span>
+          </p>
+        </footer>
+
       </div>
-      {/each}
 
     </div>
-  
+
+    {/each}
 
   </div>
+
 </div>
 </div>
   </section>
@@ -53,4 +75,6 @@
 .hero{
     background-color: #fced73;
    }
+
+  
 </style>
