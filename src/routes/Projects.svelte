@@ -23,12 +23,12 @@
 <div class="hero-body">
 <div class="container is-fluid">
 
-  <div class="columns">
+  <div class="columns is-multiline">
     {#each projects as project}
 
-    <div class="column">
+    <div class="column is-one-quarter-desktop is-half-tablet">
 
-      <div class="card">
+      <div class="card-image">
 
         <figure class="image is-4by3">
           <img src="{project.pro_img}" alt="Placeholder image">
