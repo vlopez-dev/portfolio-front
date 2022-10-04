@@ -31,27 +31,21 @@
       <div class="card-image">
 
         <figure class="image is-4by3">
-          <img src="{project.pro_img}" alt="Placeholder image">
+          <figcaption class="card__caption">
+
+          <img class="card__image" src="{project.pro_img}" alt="Placeholder image">
+            <h2>{project.title}</h2>
+            <p>{project.description}</p>
+          </figcaption>
         </figure>
-        <div class="card-content">
+        <!-- <div class="card-content">
           <div class="content">
             <p style="color:black">{project.name}</p>
 
             <p>{project.description}</p>
           </div>
-        </div>
-        <footer class="card-footer">
-          <p class="card-footer-item">
-            <span>
-              View on <a href="https://twitter.com/codinghorror/status/506010907021828096">Twitter</a>
-            </span>
-          </p>
-          <p class="card-footer-item">
-            <span>
-              Share on <a href="#">Facebook</a>
-            </span>
-          </p>
-        </footer>
+        </div> -->
+    
 
       </div>
 
@@ -76,5 +70,19 @@
     background-color: #fced73;
    }
 
-  
+   .card__image {
+			transform: translateY(-10px);
+      
+		}
+
+
+
+
+		.card__caption :hover{
+			top: 50%;
+			transform: translateY(-50%);
+      background: linear-gradient(0deg, rgba(0, 0, 0, .5) 40%, rgba(255, 255 ,255 , 0) 100%);
+			transition: .3s;
+		}
+
 </style>
