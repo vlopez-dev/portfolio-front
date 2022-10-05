@@ -57,9 +57,5 @@ window.onload=function(){
   .navbar {
     background-color: #fced73;
   }
-
-.navbar-item:hover{
-  background-color: #fced73;
-}
-
+  
 </style>
