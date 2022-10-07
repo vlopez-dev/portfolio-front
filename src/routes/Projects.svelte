@@ -28,8 +28,7 @@
 
     <div class="column is-one-quarter-desktop is-half-tablet">
 
-
-          <div class="card">
+      <div class="card">
           <img class="" src="{project.pro_img}" alt="Placeholder image">
           <div class="info">
             <h2 class="">{project.name}</h2>
@@ -37,7 +36,8 @@
             <button>Info</button>
           </div>
         </div>
-     </div>
+        
+    </div>
 
 
     {/each}
@@ -90,7 +90,7 @@
 	transform: translateY(0px);
 }
 
-.info::before{
+.card::before{
     content: "";
 		position: absolute;
 		top: 0;
