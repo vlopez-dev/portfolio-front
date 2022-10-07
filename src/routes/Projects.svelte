@@ -23,26 +23,22 @@
 <div class="hero-body">
 <div class="container is-fluid">
 
-  <div class="columns is-multiline">
+  <div class="columns  is-multiline">
     {#each projects as project}
 
     <div class="column is-one-quarter-desktop is-half-tablet">
 
-      <div class=" card__fig card-image">
 
-        <figure class="image is-4by3">
-          <figcaption>
-            
-          <img class="card__image" src="{project.pro_img}" alt="Placeholder image">
+          <div class="card">
+          <img class="" src="{project.pro_img}" alt="Placeholder image">
           <div class="info">
-            <h2>{project.title}</h2>
-            <p>{project.description}</p>
+            <h2 class="">{project.name}</h2>
+            <p class="">{project.description}</p>
+            <button>Info</button>
           </div>
-          </figcaption>
-        </figure>
         </div>
+     </div>
 
-    </div>
 
     {/each}
 
@@ -61,25 +57,31 @@
 <style>
 .hero{
     background-color: #fced73;
-   }
+       }
+   
 
-.card__fig{
-  border-radius: 15px;
+.card{
+  width: 280px;
+	height: 360px;
+	border-radius: 15px;
 	padding: 1.5rem;
 	background: white;
 	position: relative;
+	display: flex;
+	align-items: flex-end;
 	transition: 0.4s ease-out;
-	box-shadow: 0px 7px 10px rgba(black, 0.5);
+  -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+  box-shadow: 5px 5px 15px 5px #000000;
 
 }
 
-.card__fig:hover{
+.card:hover{
   transform: translateY(20px);
 
 }
 
-.card__fig::before{
-  opacity: 1;
+.card::before{
+  opacity: 0.3;
 
 }
 
@@ -89,7 +91,7 @@
 }
 
 .info::before{
-  content: "";
+    content: "";
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -102,4 +104,55 @@
 		transition: 0.5s;
 		opacity: 0;
 }
+   
+img{
+    width: 100%;
+		height: 100%;
+		object-fit: cover;
+		position: absolute;
+		top: 0;
+		left: 0;
+		border-radius: 15px;
+}
+
+
+.info{
+    position: relative;
+		z-index: 3;
+		color: white;
+		opacity: 0;
+		transform: translateY(30px);
+		transition: 0.5s;
+}
+
+.info h2{
+  margin: 0px;
+
+}
+
+.info p{
+      letter-spacing: 1px;
+			font-size: 15px;
+			margin-top: 8px;
+}
+		
+.info button{
+      padding: 0.6rem;
+			outline: none;
+			border: none;
+			border-radius: 3px;
+			background: white;
+			color: black;
+			font-weight: bold;
+			cursor: pointer;
+			transition: 0.4s ease;
+}
+
+.info button:hover{
+  background: dodgerblue;
+	color: white;
+}
+
+
+
 </style>
