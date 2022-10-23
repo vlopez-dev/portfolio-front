@@ -1,120 +1,123 @@
 <script>
-    export let about_title,about_description,src
-    
-
+  export let about_title, about_description, src;
 </script>
-<section class="hero is-fullheight " >
-  <div class="hero-body">
-  <div class="columns">
-    <div class="column" >
+
+<section class="hero is-fullheight">
+    <div class="columns is-multiline m-6" >
+        <div class="column "></div>
+        <div class="column is-one-third">
+          <div class="container about-img">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80" alt="">
+          </div>
+        </div>
+        <div class="column">
+          <div class="container about-info">
+          <h3 class="title">Titulo</h3>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus temporibus nisi molestias repellendus iste nihil deserunt distinctio ab! Aliquam doloremque laudantium aut dignissimos reiciendis maxime sed ea, a repudiandae corrupti.</p>
+          <a href="">
+            <button class="button">
+  
+              <span class="icon">
+                <img src="https://img.icons8.com/ios-glyphs/30/000000/github.png"/>
+              </span>
+              <span>CV</span>
+  
+            </button>
+          </a>
+        </div>
+        </div>
+        <div class="column">
+        </div>
+
     </div>
-    <div class="column">
-      <img src="https://images.unsplash.com/photo-1499155286265-79a9dc9c6380?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=684&q=80" alt="">
+  
+  <div class="columns is-multiline">
+    <!-- <div class="column ">
+      
+    </div> -->
+    <div class="column is-full">
+      <div class="container">
+        <h4 class="title">Skills</h4>
+        <h5 class="subtitle">Alguna de las Skills que utilizo para desarrollar</h5>
+      </div>
+      <div class="container-tools">
+          <div class="box-tools">
+          <i class="devicon-django-plain"></i>
+        </div>
+        <div class="box-tools">
+          <i class="devicon-html5-plain"></i>
+        </div>
+        <div class="box-tools">
+          <i class="devicon-css3-plain"></i>
+        </div>
+        <div class="box-tools">
+          <i class="devicon-python-plain"></i>
+        </div>
+        <div class="box-tools">
+
+
+          <i class="devicon-linux-plain"></i>
+                    
+
+        </div>
+          
+      </div>
     </div>
-    <div class="column" >
-    </div>
-    <div class="column" >
-      <h2 class="title">Titulo</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam dolores ipsum, sapiente veritatis totam reiciendis eveniet. Aliquam aliquid eius magnam quas, accusamus nemo ratione, laborum quaerat, quasi adipisci neque earum.</p>
-      <button>CV</button>
-    </div>
-    
-  </div>
-</div>
+    <!-- <div class="column">Auto</div>
+  </div> -->
 </section>
 
-
-  <section class="hero is-fullheight  timeline-wrapper">
-    <div class="columns" style="outline: 2px solid red">
-      <div class="column"></div>
-      <div class="column">
-    <div class="middle-line"></div>
-
-    <div class="box box-top">
-        <div class="date">
-            <p>20</p>
-            <p>DEC</p>
-        </div>
-        <div class="box-content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
-        </div>
-    </div>
-
-    <div class="box box-bottom">
-        <div class="date">
-            <p>11</p>
-            <p>AUG</p>
-        </div>
-        <div class="box-content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
-        </div>
-    </div>
-  </div>
-  <div class="column"></div>
-  <div class="column"></div>
-
-  </div>
-</section>
-
-
-
-  <style>
-   
-   section{
+<style>
+  section {
     background-color: #fced73;
-   }
+  }
 
-   .title{
-    font-family: 'Karla', sans-serif;
+  .title {
+    font-family: "Karla", sans-serif;
+    text-align: center;
+  }
 
-   }
+  .subtitle{
+    text-align: center;
+  }
 
-   p{
-    font-family: 'Inconsolata', monospace;
+  p {
+    font-family: "Inconsolata", monospace;
     line-height: 1.25rem;
     color: #363636;
-   }
+  }
 
-   
+  .about-info{
+    width: 100%;
+    text-align: center;
+  }
 
-   .timeline-wrapper {
-  /* position: relative; */
-  width: 100%;
-  margin: auto;
-  height: 300px;
-}
+  .about-img{
+    height: 80%;
+  }
+  .about-img img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
 
+  .container-tools{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: auto;
+    height: 200px;
+  }
 
-.timeline-wrapper {
-  /* position: relative; */
-  width: 100%;
-  margin: auto;
-  height: 300px;
-}
-
-.box {
-  width: 17%;
-  /* position: relative; */
-  min-height: 300px;
-  float: right;
-}
-
-
-.box .date {
-  /* position: absolute; */
-  top: 50%;
-  left: 0px;
-  transform: translateY(-50%);
-  width: 50px;
-  height: 50px;
-  border-radius: 100%;
-  background: #fff;
-  border: 2px solid #d9d9d9;
-}
-.date p {
-  text-align: center;
-  margin-top: 3px;
-  margin-bottom: 0px;
-}
-   
-  </style>
+  
+  .box-tools{
+    margin: 10px;
+    height: 75px;
+    width: auto;
+    
+  }
+  .box-tools i{
+    font-size: 70px;
+  }
+</style>

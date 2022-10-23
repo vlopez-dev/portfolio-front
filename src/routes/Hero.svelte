@@ -5,7 +5,7 @@
 <section class="hero is-fullheight">
     <div class="hero-body">
     <div class="columns">
-      <div class="column">
+      <div class="column" style="outline: 2px solid red ;">
         <p class="title">
             Hi! My name is Victor
         </p>

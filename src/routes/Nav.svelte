@@ -58,4 +58,9 @@ window.onload=function(){
     background-color: #fced73;
   }
   
+  .navbar-menu{
+    background-color: #fced73;
+  }
+
+
 </style>
