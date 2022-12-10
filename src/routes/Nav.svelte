@@ -53,14 +53,22 @@ window.onload=function(){
   }
   a {
     font-family: "Karla", sans-serif;
+    color: #fffffe;
   }
   .navbar {
-    background-color: #fced73;
+    background-color: #0f0e17;
   }
   
   .navbar-menu{
-    background-color: #fced73;
+    background-color: #0f0e17;
   }
 
-
+.navbar-item:hover{
+  background-color: #ff8906;
+  border-radius: 3px;
+  color:#fffffe;
+}
+.nav.navbar a.active{
+  background-color: #ff8906;
+}
 </style>

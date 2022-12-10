@@ -38,7 +38,7 @@
     <div class="column is-full">
       <div class="container">
         <h4 class="title">Skills</h4>
-        <h5 class="subtitle">Alguna de las Skills que utilizo para desarrollar</h5>
+        <p class="subtitle">Alguna de las Skills que utilizo para desarrollar</p>
       </div>
       <div class="container-tools">
           <div class="box-tools">
@@ -69,22 +69,24 @@
 
 <style>
   section {
-    background-color: #fced73;
+    background-color: #0f0e17;
   }
 
   .title {
     font-family: "Karla", sans-serif;
     text-align: center;
+    color: #fffffe;
   }
 
   .subtitle{
     text-align: center;
+    color: #a7a9be;
   }
 
   p {
     font-family: "Inconsolata", monospace;
     line-height: 1.25rem;
-    color: #363636;
+    color: #a7a9be;
   }
 
   .about-info{

@@ -4,22 +4,23 @@
 </script>
 <section class="hero is-fullheight">
     <div class="hero-body">
-    <div class="columns">
-      <div class="column" style="outline: 2px solid red ;">
+    <div class="columns ">
+      <div class="column">
         <p class="title">
             Hi! My name is Victor
         </p>
         <p class="subtitle">
-         <a>Back-end developer</a> 
+         Back-end developer
         </p>
       </div>
+   
     </div>
   </div>
   </section>
 
   <style>
    .hero{
-    background-color: #fced73;
+    background-color: #0f0e17;
    }
     .hero-body{
         justify-content: center;
@@ -34,8 +35,10 @@
 
     .title{
       text-align: center;
+      color: #fffffe;
     }
     .subtitle{
       text-align: center;
+      color: #fffffe;
     }
   </style>

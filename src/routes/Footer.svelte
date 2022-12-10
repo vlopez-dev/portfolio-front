@@ -16,17 +16,17 @@
 
   <style>
     .footer{
-        background-color: #fced73;
+        background-color: #0f0e17;
 
     }
 
     a{
-        color: #363636;
+        color: #a7a9be;
         font-family: 'Karla', sans-serif;
 
     }
     p{
-        color: #363636;
+        color: #a7a9be;
         font-family: 'Karla', sans-serif;
 
     }
