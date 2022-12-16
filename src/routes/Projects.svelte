@@ -131,5 +131,6 @@
   .buttom-color{
     background-color: #ff8906;
     color: #fffffe;
+    border: none;
   }
 </style>

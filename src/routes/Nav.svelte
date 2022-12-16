@@ -71,4 +71,9 @@ window.onload=function(){
 .nav.navbar a.active{
   background-color: #ff8906;
 }
+
+.navbar-item.is-active{
+  background-color: red;
+}
+
 </style>

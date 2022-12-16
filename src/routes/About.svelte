@@ -14,6 +14,7 @@
           <div class="container about-info">
           <h3 class="title">Titulo</h3>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus temporibus nisi molestias repellendus iste nihil deserunt distinctio ab! Aliquam doloremque laudantium aut dignissimos reiciendis maxime sed ea, a repudiandae corrupti.</p>
+          <div class="btn-cv">
           <a href="">
             <button class="button">
   
@@ -24,6 +25,7 @@
   
             </button>
           </a>
+          </div>
         </div>
         </div>
         <div class="column">
@@ -37,28 +39,70 @@
     </div> -->
     <div class="column is-full">
       <div class="container">
-        <h4 class="title">Skills</h4>
-        <p class="subtitle">Alguna de las Skills que utilizo para desarrollar</p>
+        <h4 class="title">Skills and Tools</h4>
+        <p class="subtitle">skills and technologies that I utilize in projects.</p>
       </div>
       <div class="container-tools">
           <div class="box-tools">
-          <i class="devicon-django-plain"></i>
+
+
+            <i class="devicon-django-plain"></i>
+                      <p>Django</p>
+          
         </div>
         <div class="box-tools">
           <i class="devicon-html5-plain"></i>
+          <p>HTML5</p>
         </div>
         <div class="box-tools">
+
           <i class="devicon-css3-plain"></i>
+          <p>CSS3</p>
         </div>
         <div class="box-tools">
           <i class="devicon-python-plain"></i>
+          <p>Python</p>
+        </div>
+        <div class="box-tools">
+          <i class="devicon-linux-plain"></i>
+          <p>Linux</p>
         </div>
         <div class="box-tools">
 
+          <i class="devicon-bootstrap-plain"></i>
+          <p>Bootstrap</p>
+          
+        </div>
+        <div class="box-tools">
 
-          <i class="devicon-linux-plain"></i>
-                    
+          <i class="devicon-bootstrap-plain"></i>
+          <p>Bootstrap</p>
+          
+        </div><div class="box-tools">
 
+          <i class="devicon-bootstrap-plain"></i>
+          <p>Bootstrap</p>
+          
+        </div><div class="box-tools">
+
+          <i class="devicon-bootstrap-plain"></i>
+          <p>Bootstrap</p>
+          
+        </div><div class="box-tools">
+
+          <i class="devicon-bootstrap-plain"></i>
+          <p>Bootstrap</p>
+          
+        </div><div class="box-tools">
+
+          <i class="devicon-bootstrap-plain"></i>
+          <p>Bootstrap</p>
+          
+        </div><div class="box-tools">
+
+          <i class="devicon-bootstrap-plain"></i>
+          <p>Bootstrap</p>
+          
         </div>
           
       </div>
@@ -110,16 +154,27 @@
     flex-wrap: wrap;
     width: auto;
     height: 200px;
+    margin: 36px;
   }
 
   
   .box-tools{
     margin: 10px;
-    height: 75px;
+    height: 90px;
     width: auto;
     
   }
   .box-tools i{
     font-size: 70px;
+  }
+  .box-tools p{
+    text-align: center;
+    margin: 3px;
+  }
+
+  .btn-cv{
+    height: auto;
+    width: auto;
+    margin: 36px;
   }
 </style>
