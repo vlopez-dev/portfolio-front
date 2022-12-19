@@ -2,7 +2,7 @@
   export let about_title, about_description, src;
 </script>
 
-<section class="hero is-fullheight">
+<section class="hero is-fullheight" style="outline: 2px solid white;" >
     <div class="columns is-multiline m-6" >
         <div class="column "></div>
         <div class="column is-one-third">
@@ -19,7 +19,7 @@
             <button class="button">
   
               <span class="icon">
-                <img src="https://img.icons8.com/ios-glyphs/30/000000/github.png"/>
+                <img src="https://img.icons8.com/ios/50/000000/parse-resumes.png"/>
               </span>
               <span>CV</span>
   
@@ -34,13 +34,13 @@
     </div>
   
   <div class="columns is-multiline">
-    <!-- <div class="column ">
+    <div class="column ">
       
-    </div> -->
-    <div class="column is-full">
+    </div>
+    <div class="column is-half">
       <div class="container">
         <h4 class="title">Skills and Tools</h4>
-        <p class="subtitle">skills and technologies that I utilize in projects.</p>
+        <p class="subtitle">Skills and technologies that I use in my projects.</p>
       </div>
       <div class="container-tools">
           <div class="box-tools">
@@ -75,40 +75,27 @@
         </div>
         <div class="box-tools">
 
-          <i class="devicon-bootstrap-plain"></i>
-          <p>Bootstrap</p>
+          <i class="devicon-docker-plain"></i>
           
-        </div><div class="box-tools">
-
-          <i class="devicon-bootstrap-plain"></i>
-          <p>Bootstrap</p>
-          
-        </div><div class="box-tools">
-
-          <i class="devicon-bootstrap-plain"></i>
-          <p>Bootstrap</p>
-          
-        </div><div class="box-tools">
-
-          <i class="devicon-bootstrap-plain"></i>
-          <p>Bootstrap</p>
-          
-        </div><div class="box-tools">
-
-          <i class="devicon-bootstrap-plain"></i>
-          <p>Bootstrap</p>
-          
-        </div><div class="box-tools">
-
-          <i class="devicon-bootstrap-plain"></i>
-          <p>Bootstrap</p>
+          <p>Docker</p>
           
         </div>
+        <div class="box-tools">
+
+
+          <i class="devicon-svelte-plain"></i>
+                    
+          <p>Svelte</p>
           
+        </div>
+        
+        
+       
+       
       </div>
     </div>
-    <!-- <div class="column">Auto</div>
-  </div> -->
+    <div class="column"></div>
+  </div>
 </section>
 
 <style>
@@ -153,9 +140,9 @@
     justify-content: center;
     flex-wrap: wrap;
     width: auto;
-    height: 200px;
+    height: auto;
     margin: 36px;
-  }
+    }
 
   
   .box-tools{
@@ -176,5 +163,12 @@
     height: auto;
     width: auto;
     margin: 36px;
+  }
+
+  .btn-cv button{
+    background-color: #ff8906;
+    border: none;
+    color: #fffffe;
+    width: 90px;
   }
 </style>
