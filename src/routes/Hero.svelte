@@ -4,7 +4,7 @@
 import { onMount, onDestroy } from 'svelte';
 	import { slide } from 'svelte/transition';
 
-	let greetings = ['Hello my name is Victor','Bonjour je suis Victor','Oi meu nome e Victor'];
+	let greetings = ['Hello my name is Victor','Hola mi nombre es Victor','Oi meu nome e Victor'];
 	let index = 0;
 	let roller;
 
@@ -29,7 +29,7 @@ import { onMount, onDestroy } from 'svelte';
       <div class="column">
         
   {#key index}
-	<h1 transition:slide>{greetings[index]}!</h1>
+	<p class="title"transition:slide>{greetings[index]}!</p>
   {/key}
         <p class="subtitle">
          Back-end developer
