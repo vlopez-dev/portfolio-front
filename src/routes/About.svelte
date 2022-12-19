@@ -1,7 +1,9 @@
 <script>
   export let about_title, about_description, src;
-</script>
+  import Animate from './Animate.svelte';
 
+</script>
+<Animate>
 <section class="hero is-fullheight" style="outline: 2px solid white;" >
     <div class="columns is-multiline m-6" >
         <div class="column "></div>
@@ -97,7 +99,7 @@
     <div class="column"></div>
   </div>
 </section>
-
+</Animate>
 <style>
   section {
     background-color: #0f0e17;

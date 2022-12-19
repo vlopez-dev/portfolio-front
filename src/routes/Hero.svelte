@@ -18,10 +18,11 @@ import { onMount, onDestroy } from 'svelte';
 	onDestroy(() => {
 		clearInterval(roller);
 	});
-
+  import Animate from './Animate.svelte';
 
 
 </script>
+<Animate>
 <section class="hero is-fullheight">
     <div class="hero-body">
     <div class="columns ">
@@ -39,7 +40,7 @@ import { onMount, onDestroy } from 'svelte';
   </div>
 
   </section>
-
+</Animate>
   <style>
    .hero{
     background-color: #0f0e17;

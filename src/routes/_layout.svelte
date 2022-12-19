@@ -1,5 +1,7 @@
 <script>
     export let item1, item2, item3,item4
+    import { fade } from 'svelte/transition';
+
 
 </script>
 
@@ -36,7 +38,7 @@
       class="navbar-start"
       style="flex-grow: 1; justify-content: center;"
     >
-      <a class="navbar-item" href="/">{item1}</a>
+      <a class="navbar-item" href="/" >{item1}</a>
       <a class="navbar-item" href="/About">{item2}</a>
 
       <a class="navbar-item" href="/Projects">{item3}</a>
