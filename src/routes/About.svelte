@@ -90,14 +90,16 @@
           <p>Svelte</p>
           
         </div>
-        
-        
-       
-       
+      </div>
+      <div class="container">
+        <h3 class="title">Titulo</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi asperiores, aliquid voluptas unde veritatis, quasi in minima modi ea inventore accusantium distinctio perspiciatis voluptatem excepturi numquam ut ducimus hic suscipit.</p>
       </div>
     </div>
     <div class="column"></div>
   </div>
+
+  
 </section>
 </Animate>
 <style>
