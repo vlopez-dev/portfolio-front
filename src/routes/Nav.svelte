@@ -35,10 +35,10 @@ window.onload=function(){
       <div class="navbar-start " style="flex-grow: 1; justify-content: center;">
         
         <a class="navbar-item nav-link nav-link-ltr" href="#/">{item1}</a>
-       <a class="navbar-item" href="#/about">{item2}</a>
+       <a class="navbar-item nav-link nav-link-ltr" href="#/about">{item2}</a>
 
-        <a class="navbar-item" href="#/projects">{item3}</a>
-        <a class="navbar-item" href="#/contact">{item4}</a>
+        <a class="navbar-item nav-link nav-link-ltr" href="#/projects">{item3}</a>
+        <a class="navbar-item nav-link nav-link-ltr" href="#/contact">{item4}</a>
       
       </div>
     </div>
@@ -62,19 +62,7 @@ window.onload=function(){
   .navbar-menu{
     background-color: #0f0e17;
   }
-/* 
-.navbar-item:hover{
-  background-color: #ff8906;
-  border-radius: 3px;
-  color:#fffffe;
-}
-.nav.navbar a.active{
-  background-color: #ff8906;
-}
 
-.navbar-item.is-active{
-  background-color: red;
-} */
 
 
 
@@ -82,16 +70,15 @@ window.onload=function(){
 
 a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:focus, .navbar-link:focus-within, .navbar-link:hover, .navbar-link.is-active{
   background-color: #0f0e17;
+  color: white;
 }
 
 
 
+
 .nav-link {
-  font-weight: bold;
-  font-size: 14px;
-  text-transform: uppercase;
-  text-decoration: none;
   color: #fffffe;
+  font-size: 16px;
   padding: 20px 0px;
   margin: 0px 20px;
   display: inline-block;
