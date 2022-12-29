@@ -4,7 +4,7 @@
 import { onMount, onDestroy } from 'svelte';
 	import { slide } from 'svelte/transition';
 
-	let greetings = ['Hello my name is Victor','Hola mi nombre es Victor','Oi meu nome e Victor'];
+	let greetings = ['Hello my name is Victor','Hola mi nombre es Victor','Oi meu nome é Victor'];
 	let index = 0;
 	let roller;
 

@@ -22,17 +22,33 @@
   <style>
     .footer{
         background-color: #0f0e17;
+        height: 80px;
+        width: 100%;
 
     }
 
     a{
         color: #a7a9be;
         font-family: 'Karla', sans-serif;
+        padding: 10px;
 
     }
     p{
         color: #a7a9be;
         font-family: 'Karla', sans-serif;
 
+    }
+
+    .social{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      height: auto;
+      width: auto;
+    }
+
+
+    .social a{
+      padding: 2px;
     }
   </style>
