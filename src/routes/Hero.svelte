@@ -63,5 +63,8 @@ import { onMount, onDestroy } from 'svelte';
     .subtitle{
       text-align: center;
       color: #fffffe;
+      text-shadow: 1px 1px 2px rgba(255, 146, 26, 0.8), 0 0 1em rgba(255, 146, 26, 0.8), 0 0 0.2em rgba(255, 146, 26, 0.8);
+
+      
     }
   </style>

@@ -47,7 +47,7 @@
           <a href="{project.link_repo}">
           <button class="button buttom-color">
             <span class="icon">
-              <img src="https://img.icons8.com/ios-glyphs/30/000000/github.png"/>
+              <img src="https://img.icons8.com/ios-glyphs/30/ffffff/github.png"/>
             </span>
             <span>GitHub</span>
           </button>
@@ -56,7 +56,7 @@
           <button class="button buttom-color">
 
             <span class="icon">
-              <img src="https://img.icons8.com/ios-glyphs/30/000000/github.png"/>
+              <img src="https://img.icons8.com/ios-glyphs/30/ffffff/github.png"/>
             </span>
             <span>Live</span>
 
