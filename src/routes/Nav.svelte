@@ -17,14 +17,7 @@ window.onload=function(){
 <header>
   <nav class="navbar " role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <a class="navbar-item" href="https://bulma.io">
-        <img
-          src="https://bulma.io/images/bulma-logo.png"
-          alt="Bulma: a modern CSS framework based on Flexbox"
-          width="112"
-          height="28"
-        />
-      </a>
+     
       <a id="burger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
         <span aria-hidden="true" />
         <span aria-hidden="true" />
@@ -81,7 +74,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   font-size: 16px;
   padding: 20px 0px;
   margin: 0px 20px;
-  display: inline-block;
+  /* display: inline-block; */
   position: relative;
   opacity: 0.75;
 }
