@@ -1,0 +1,17 @@
+#Version django
+Django>=4.0.4 
+
+
+#Rest
+djangorestframework>=3.14.0
+
+#Pillow
+Pillow>=9.2.0
+
+
+#django-cors-headers
+django-cors-headers>=3.13.0
+
+
+#whitenoise
+whitenoise>=6.2.0
