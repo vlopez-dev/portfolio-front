@@ -9,14 +9,14 @@
 
 <Animate>
   <section class="hero is-fullheight  " >
-    <div class="columns is-multiline ">
+    <div class="columns is-multiline m-4">
       <div class="column"></div>
       <div class="column is-one-third m-6">
         <form class="mt-6" action="">
         <div class="field">
-          <label class="label">Email</label>
+          <label class="label label__contact">Email</label>
           <div class="control has-icons-left has-icons-right">
-            <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
+            <input class="input" type="email" placeholder="Email input" value="hello@">
             <span class="icon is-small is-left">
               <i class="fas fa-envelope"></i>
             </span>
@@ -24,10 +24,9 @@
               <i class="fas fa-exclamation-triangle"></i>
             </span>
           </div>
-          <p class="help is-danger">This email is invalid</p>
         </div>
         <div class="field">
-          <label class="label">Message</label>
+          <label class="label label__contact">Message</label>
           <div class="control">
             <textarea class="textarea" placeholder="Textarea"></textarea>
           </div>
@@ -67,11 +66,9 @@
     font-family: 'Karla', sans-serif;
 
    }
+.label__contact{
+  color: #fffffe;
 
-   p{
-    font-family: 'Inconsolata', monospace;
-    line-height: 1.25rem;
-    color: #363636;
-   }
-   
+}
+
   </style>

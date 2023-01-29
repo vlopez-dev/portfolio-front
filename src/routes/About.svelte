@@ -15,7 +15,7 @@
         <div class="column">
           <div class="container about-info">
           <h3 class="title">Titulo</h3>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus temporibus nisi molestias repellendus iste nihil deserunt distinctio ab! Aliquam doloremque laudantium aut dignissimos reiciendis maxime sed ea, a repudiandae corrupti.</p>
+          <p class="paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus temporibus nisi molestias repellendus iste nihil deserunt distinctio ab! Aliquam doloremque laudantium aut dignissimos reiciendis maxime sed ea, a repudiandae corrupti.</p>
           <div class="btn-cv">
           <a href="">
             <button class="button">
@@ -39,7 +39,7 @@
     <div class="column ">
       
     </div>
-    <div class="column is-half">
+    <div class="column is-half m-auto">
       <div class="container">
         <h4 class="title">Skills and Tools</h4>
         <p class="subtitle">Skills and technologies that I use in my projects.</p>
@@ -91,16 +91,29 @@
           
         </div>
       </div>
-      <div class="container">
-        <h3 class="title">Titulo</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi asperiores, aliquid voluptas unde veritatis, quasi in minima modi ea inventore accusantium distinctio perspiciatis voluptatem excepturi numquam ut ducimus hic suscipit.</p>
-      </div>
+      
     </div>
     <div class="column"></div>
   </div>
 
   
 </section>
+
+<section class="hero is-fullheight">
+  <div class="columns is-half m-auto">
+    <div class="column"></div>
+
+    <div class="column is-half">
+      <div class="container">
+        <h3 class="title">Titulo</h3>
+        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi asperiores, aliquid voluptas unde veritatis, quasi in minima modi ea inventore accusantium distinctio perspiciatis voluptatem excepturi numquam ut ducimus hic suscipit.</p>
+      </div>
+    </div>
+    <div class="column"></div>
+  </div>
+  
+</section>
+
 </Animate>
 <style>
   section {
@@ -118,11 +131,7 @@
     color: #a7a9be;
   }
 
-  p {
-    font-family: "Inconsolata", monospace;
-    line-height: 1.25rem;
-    color: #a7a9be;
-  }
+  
 
   .about-info{
     width: 100%;
@@ -174,7 +183,15 @@
     border: none;
     color: #fffffe;
     width: 90px;
-    box-shadow: -8px 0px 20px rgba(255, 146, 26, 0.3), 0px 0px 20px rgba(255, 146, 26, 0.788), 8px 0px 20px rgb(255 146 26 / 30%);
+    box-shadow: -8px 0px 20px rgba(255, 146, 26, 0.3), 0px 0px 20px rgba(255, 146, 26, 0.3), 8px 0px 20px rgb(255 146 26 / 30%);
 
+  }
+
+  .paragraph{
+    text-align: center;
+    padding: 16px;
+    font-family: "Inconsolata", monospace;
+    line-height: 1.25rem;
+    color: #a7a9be;
   }
 </style>

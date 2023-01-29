@@ -20,17 +20,17 @@
 <section class="hero is-fullheight">
   <div class="hero-body">
     <div class="container is-fluid">
-      <div class="columns is-multiline">
+      <div class="columns is-multiline m-auto">
         {#each projects as project}
 
         <div class="column is-full" >
-          <div class="container-project">
+          <div class="container-project m-auto">
             <div class="container-img" >
               <img class="" src="{project.pro_img}" alt="Placeholder image" />
             </div>
 			<div class="container-info" >
 				<h4>{project.name}</h4>
-				<p>{project.description}</p>
+				<p class="paragraph">{project.description}</p>
 
 
         <div class="container-tecno">
@@ -132,5 +132,14 @@
     background-color: #ff8906;
     color: #fffffe;
     border: none;
+  }
+
+
+  .paragraph{
+    text-align: center;
+    padding: 16px;
+    font-family: "Inconsolata", monospace;
+    line-height: 1.25rem;
+    color: #a7a9be;
   }
 </style>
