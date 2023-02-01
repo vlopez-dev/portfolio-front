@@ -18,7 +18,6 @@
 </script>
 
 <section class="hero is-fullheight">
-  <div class="hero-body">
     <div class="container is-fluid">
       <div class="columns is-multiline m-auto">
         {#each projects as project}
@@ -72,7 +71,6 @@
         {/each}
       </div>
     </div>
-  </div>
 </section>
 
 <style>

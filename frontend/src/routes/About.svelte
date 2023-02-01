@@ -4,7 +4,7 @@
 
 </script>
 <Animate>
-<section class="hero is-fullheight" style="outline: 2px solid white;" >
+<section class="hero is-fullheight"  >
     <div class="columns is-multiline m-6" >
         <div class="column "></div>
         <div class="column is-one-third">
@@ -96,6 +96,8 @@
     <div class="column"></div>
   </div>
 
+
+  
   
 </section>
 

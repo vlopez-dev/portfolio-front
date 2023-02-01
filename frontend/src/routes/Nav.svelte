@@ -1,15 +1,23 @@
 <script>
   export let item1, item2, item3, item4;
   
-window.onload=function(){
-  const burgerIcon = document.querySelector('#burger')
-  const navMenu =document.querySelector('#nav-links')
+  window.onload = function() {
+  const burgerIcon = document.querySelector("#burger");
+  const navMenu = document.querySelector("#nav-links");
+  const navLinks = document.querySelectorAll(".navbar-item");
 
-  burgerIcon.addEventListener('click', () => {
-    navMenu.classList.toggle('is-active');
+  burgerIcon.addEventListener("click", () => {
+    navMenu.classList.toggle("is-active");
   });
-}
- 
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      setTimeout(() => {
+        navMenu.classList.remove("is-active");
+      }, 500);
+    });
+  });
+};
 
 
 </script>
