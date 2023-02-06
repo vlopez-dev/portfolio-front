@@ -9,6 +9,8 @@ from django.conf.urls.static import static
 
 router = routers.DefaultRouter()
 router.register(r'project', views.ProjectViewSet)
+router.register(r'about', views.ProjectViewSet)
+
 
 urlpatterns = [
     path('', include(router.urls)),

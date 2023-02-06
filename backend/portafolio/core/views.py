@@ -1,9 +1,9 @@
 from urllib import response
 from django.shortcuts import render,get_object_or_404
-from .models import Project
+from .models import Project,About
 from rest_framework import viewsets
 
-from .serializers import ProjectSerializer
+from .serializers import ProjectSerializer,AboutSerializer
 
 # Create your views here.
 
@@ -22,3 +22,16 @@ class ProjectViewSet(viewsets.ModelViewSet):
         print(serializer)
         return response({'serializer': serializer, 'project': project},template_name='index.html')
 
+
+
+class AboutViewSet(viewsets.ModelViewSet):
+    queryset = About.objects.all()
+    serializer_class = AboutSerializer
+    template_name = 'core/index.html'
+    
+    
+    def get(self, request, id):
+        about = get_object_or_404(About, pk=id)
+        serializer = AboutSerializer(about)
+        print(serializer)
+        return response({'serializer': serializer, 'about': about},template_name='index.html')
