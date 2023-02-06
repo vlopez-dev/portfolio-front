@@ -4,7 +4,7 @@
 
 </script>
 <Animate>
-<section class="hero is-fullheight"  >
+<section class="hero is-fullheight" style="outline: 2px solid white;" >
     <div class="columns is-multiline m-6" >
         <div class="column "></div>
         <div class="column is-one-third">
@@ -93,26 +93,42 @@
       </div>
       
     </div>
-    <div class="column"></div>
+    <div class="column">
+    </div>
   </div>
 
-
-  
-  
-</section>
-
-<section class="hero is-fullheight">
-  <div class="columns is-half m-auto">
+  <div class="columns p-6">
     <div class="column"></div>
 
-    <div class="column is-half">
-      <div class="container">
-        <h3 class="title">Titulo</h3>
-        <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi asperiores, aliquid voluptas unde veritatis, quasi in minima modi ea inventore accusantium distinctio perspiciatis voluptatem excepturi numquam ut ducimus hic suscipit.</p>
+    <div class="column is-half p-6 ">
+      <div class="container" >
+        <h3 class="title title__bio">Bio</h3>
+        <div>
+          <p class="paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, vel architecto? Facilis odio expedita consequuntur dolores impedit perspiciatis aperiam officia possimus, porro excepturi, aut hic cum commodi nesciunt soluta! Labore?</p>
+        </div>
       </div>
+
     </div>
     <div class="column"></div>
+
   </div>
+
+
+  <div class="columns p-6">
+    <div class="column"></div>
+    <div class="column is-half p-6 ">
+      <div class="container">
+
+      <h3 class="title title__bio">Career</h3>
+        <h6>Support Enginer</h6>
+        <a href="">AMEC</a>
+        <p>lorem</p>
+      </div>
+    </div>
+    <div class="column m-auto"></div>
+  </div>
+ 
+
   
 </section>
 
@@ -190,10 +206,21 @@
   }
 
   .paragraph{
-    text-align: center;
+    text-align: justify;
     padding: 16px;
     font-family: "Inconsolata", monospace;
-    line-height: 1.25rem;
+    line-height: 1.70rem;
     color: #a7a9be;
+    margin: 20px 0;
   }
+
+
+  .title__bio{
+    font-family: "Karla", sans-serif;
+    color: #fffffe;
+    text-align: left;
+  }
+
+  
+
 </style>

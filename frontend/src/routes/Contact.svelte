@@ -14,6 +14,7 @@
       <div class="column is-one-third m-6">
         <div class="container">
           <h4 class="title">Contact Me</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus illum fuga, aspernatur beatae consectetur eligendi sapiente aperiam consequuntur cupiditate est quas, eius provident debitis! Ipsam aliquid fugit deserunt sit mollitia!</p>
         </div>
         <form class="mt-6" action="">
         <div class="field">

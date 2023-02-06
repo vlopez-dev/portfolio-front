@@ -3,7 +3,7 @@
 </script>
 
 
-<footer class="footer">
+<footer class="footer m-auto">
     <div class="content has-text-centered">
       <p>
         <!-- <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
@@ -11,7 +11,7 @@
         is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>. -->
       </p>
       <div class="social">
-        <a href=""><img src="https://img.icons8.com/android/24/ffffff/twitter.png"/></a>
+        <a href="https://www.linkedin.com/in/victorlopezr/"><img src="https://img.icons8.com/android/24/ffffff/twitter.png"/></a>
         <a href=""><img src="https://img.icons8.com/material-outlined/24/ffffff/github.png"/></a>
         <a href=""><img src="https://img.icons8.com/ios-glyphs/24/ffffff/linkedin-circled--v1.png"/></a>
       </div>
