@@ -71,9 +71,9 @@
     
      
         
-        <div class="field is-grouped">
-          <div class="control">
-            <button class="button btn-contact" on:click={sendEmail}>Send</button>
+        <div class="field is-grouped is-justify-content-center">
+          <div class="control btn-cv  ">
+            <button class="button  is-normal is-rounded " on:click={sendEmail}>Send</button>
           </div>
          
         </div>
@@ -130,16 +130,15 @@
     margin: 36px;
   }
 
-  .btn-contact button{
+ 
+  .btn-cv button{
     background-color: #ff8906;
     border: none;
     color: #fffffe;
     width: 90px;
-    box-shadow: -8px 0px 20px rgba(255, 146, 26, 0.3), 0px 0px 20px rgba(255, 146, 26, 0.3), 8px 0px 20px rgb(255 146 26 / 30%);
+    /* box-shadow: -8px 0px 20px rgba(255, 146, 26, 0.3), 0px 0px 20px rgba(255, 146, 26, 0.3), 8px 0px 20px rgb(255 146 26 / 30%); */
 
   }
-
-
 
 
   </style>
