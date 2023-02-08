@@ -1,21 +1,43 @@
 <script>
   export let about_title, about_description, src;
   import Animate from './Animate.svelte';
+  import { onMount } from "svelte";
+
+
+
+  let abouts = [];
+
+onMount(async () => {
+  fetch("http://127.0.0.1:8000/about/")
+    .then((response) => response.json())
+    .then((data) => {
+      abouts = data;
+      console.log(abouts);
+      // console.log(data);
+    })
+    .catch((error) => {
+      console.log(error);
+      return [];
+    });
+});
 
 </script>
 <Animate>
 <section class="hero is-fullheight" style="outline: 2px solid white;" >
+  {#each abouts as about}
+
     <div class="columns is-multiline m-6" >
         <div class="column "></div>
         <div class="column is-one-third">
           <div class="container about-img">
-            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80" alt="">
+            <img src="{about.imagenabout}" alt="">
           </div>
         </div>
         <div class="column">
           <div class="container about-info">
-          <h3 class="title">Titulo</h3>
-          <p class="paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus temporibus nisi molestias repellendus iste nihil deserunt distinctio ab! Aliquam doloremque laudantium aut dignissimos reiciendis maxime sed ea, a repudiandae corrupti.</p>
+
+          <h3 class="title">{about.title}</h3>
+          <p class="paragraph">{about.description}</p>
           <div class="btn-cv">
           <a href="">
             <button class="button">
@@ -104,7 +126,7 @@
       <div class="container" >
         <h3 class="title title__bio">Bio</h3>
         <div>
-          <p class="paragraph">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, vel architecto? Facilis odio expedita consequuntur dolores impedit perspiciatis aperiam officia possimus, porro excepturi, aut hic cum commodi nesciunt soluta! Labore?</p>
+          <p class="paragraph">{about.bio}</p>
         </div>
       </div>
 
@@ -120,7 +142,7 @@
       <div class="container">
 
       <h3 class="title title__bio">Career</h3>
-        <h6>Support Enginer</h6>
+        <h6>Support Enginer<span>-</span>02/2007 - Actualidad</h6>
         <a href="">AMEC</a>
         <p>lorem</p>
       </div>
@@ -129,7 +151,8 @@
   </div>
  
 
-  
+  {/each}
+
 </section>
 
 </Animate>
@@ -218,7 +241,7 @@
   .title__bio{
     font-family: "Karla", sans-serif;
     color: #fffffe;
-    text-align: left;
+    text-align: justify;
   }
 
   

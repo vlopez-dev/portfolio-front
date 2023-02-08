@@ -1,5 +1,37 @@
 <script>
     import Animate from "./Animate.svelte";
+    import { onMount } from "svelte";
+
+    let message;
+    let email;
+
+  const sendEmail=async () => {
+    const response = await fetch("http://127.0.0.1:8000/send_email/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ message, email }),
+    });
+
+    if (!response.ok) {
+      console.error("Error enviando correo");
+    } else {
+      console.log("Correo enviado correctamente");
+    }
+  };
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 </script>
@@ -20,7 +52,7 @@
         <div class="field">
           <label class="label label__contact">Email</label>
           <div class="control has-icons-left has-icons-right">
-            <input class="input" type="email" placeholder="Email input" value="hello@">
+            <input class="input" type="email" bind:value={email} placeholder="Email input">
             <span class="icon is-small is-left">
               <i class="fas fa-envelope"></i>
             </span>
@@ -32,7 +64,7 @@
         <div class="field">
           <label class="label label__contact">Message</label>
           <div class="control">
-            <textarea class="textarea" placeholder="Textarea"></textarea>
+            <textarea class="textarea" bind:value={message}  placeholder="Message"></textarea>
           </div>
         </div>
         
@@ -41,7 +73,7 @@
         
         <div class="field is-grouped">
           <div class="control">
-            <button class="button btn-contact">Send</button>
+            <button class="button btn-contact" on:click={sendEmail}>Send</button>
           </div>
          
         </div>
