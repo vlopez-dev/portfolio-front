@@ -40,8 +40,14 @@ let downloadCV = async () => {
         }
     };
 
+
+
 </script>
+
+
+
 <Animate>
+    <!-- aqui tu contenido -->
 <section class="hero is-fullheight" style="outline: 2px solid white;" >
   {#each abouts as about}
 
@@ -175,10 +181,10 @@ let downloadCV = async () => {
 </section>
 
 </Animate>
+
+
 <style>
-  section {
-    background-color: #0f0e17;
-  }
+
 
   .title {
     font-family: "Karla", sans-serif;

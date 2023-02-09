@@ -74,9 +74,7 @@
 </section>
 
 <style>
-  .hero {
-    background-color: #0f0e17;
-  }
+
 
   .container-project{
 	display: flex;

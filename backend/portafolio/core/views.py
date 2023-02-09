@@ -6,6 +6,7 @@ from rest_framework import viewsets
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from django.core.mail import send_mail
+from django.http import FileResponse
 
 from .serializers import ProjectSerializer,AboutSerializer
 
@@ -52,11 +53,13 @@ class EnviarCorreo(APIView):
          recipient_list = ['victorl_222@hotmail.com']
          send_mail('Subject', 'Message', 'victorl_222@hotmail.com', ['valopezr5@gmail.com'])
          return Response({'message': 'Email sent successfully'})
-     
-     
-     
+
+
+
+
+
 def download_cv(request):
-    file = open('/home/vlopez/Documents/Desarrollo/portafolio/portfolio-front/backend/portafolio/media/cv.pdf', 'rb')
+    file = open('media/cv.pdf', 'rb')
     response = FileResponse(file)
     response['Content-Disposition'] = 'attachment; filename="cv.pdf"'
     return response

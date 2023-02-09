@@ -42,9 +42,7 @@ import { onMount, onDestroy } from 'svelte';
   </section>
 </Animate>
   <style>
-   .hero{
-    background-color: #0f0e17;
-   }
+   
     .hero-body{
         justify-content: center;
     }
@@ -67,4 +65,7 @@ import { onMount, onDestroy } from 'svelte';
 
       
     }
+
+ 
+
   </style>

@@ -94,9 +94,6 @@
 
   <style>
    
-   section{
-    background-color: #0f0e17;
-   }
 
    .title{
     font-family: 'Karla', sans-serif;

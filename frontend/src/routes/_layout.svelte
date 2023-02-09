@@ -51,8 +51,13 @@
 
 
 <slot/>
+
+
 <style>
     header{
         width: 100%;
     }
+
+
+    
 </style>
