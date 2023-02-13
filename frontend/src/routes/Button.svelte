@@ -1,4 +1,6 @@
 <script>
+      import { SunIcon,MoonIcon } from 'svelte-feather-icons'
+
     function toggle() {
         window.document.body.classList.toggle('dark-mode')
     }
@@ -6,9 +8,15 @@
 
 <div class="container">
     <button on:click={toggle} class="dark-mode-toggle">
-        <span class="sun-icon">☀️</span>
+        <span class="sun-icon">
+            <SunIcon size="24" />
+
+        </span>
         
-        <span class="moon-icon">🌙</span>
+        <span class="moon-icon">
+            <MoonIcon size="24" />
+
+        </span>
     </button>
 </div>
 
@@ -28,7 +36,6 @@
         position: relative;
     }
 
-    .sun-icon,
     .moon-icon {
         display: inline-block;
         font-size: 1.5rem;
@@ -37,6 +44,17 @@
         top: 0;
         left: 0;
     }
+    .sun-icon{
+
+        display: inline-block;
+        font-size: 1.5rem;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: black;
+    }
+
 
     :global(body.dark-mode) .sun-icon {
         opacity: 0;
@@ -50,3 +68,6 @@
         transform: scale(1);
     }
 </style>
+
+
+

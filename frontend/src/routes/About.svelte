@@ -1,4 +1,6 @@
 <script>
+  import { GithubIcon } from 'svelte-feather-icons'
+
   export let about_title, about_description, src;
   import Animate from './Animate.svelte';
   import { onMount } from "svelte";
@@ -287,11 +289,15 @@ let downloadCV = async () => {
 
 
 .custom-text {
-        color: #a7a9be;
+        color: #1f1235;
 }
 
 :global(body.dark-mode) .custom-text {
         color: #f0f0f0;
+}
+
+.custom-subtitle{
+  color: #1b1425;
 }
 
 

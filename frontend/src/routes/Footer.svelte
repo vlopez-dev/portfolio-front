@@ -1,4 +1,5 @@
 <script>
+import { GithubIcon,LinkedinIcon,TwitterIcon } from 'svelte-feather-icons'
 
 </script>
 
@@ -8,9 +9,21 @@
        
       </p>
       <div class="social">
-        <a href="https://www.linkedin.com/in/victorlopezr/"><img src="https://img.icons8.com/android/24/ffffff/twitter.png"/></a>
-        <a href=""><img src="https://img.icons8.com/material-outlined/24/ffffff/github.png"/></a>
-        <a href=""><img src="https://img.icons8.com/ios-glyphs/24/ffffff/linkedin-circled--v1.png"/></a>
+        <div class="box_social custom-icons">
+          <TwitterIcon size="24" />
+
+        </div>
+        <div class="box_social custom-icons">
+          <GithubIcon size="24" />
+
+        </div>
+        <div class="box_social custom-icons">
+          <LinkedinIcon size="24" />
+
+        </div>
+        
+
+
       </div>
       
     </div>
@@ -49,7 +62,9 @@
     }
 
 
-
+    .box_social{
+      margin: 10px;
+    }
 
 
 
@@ -62,6 +77,21 @@
 
 
 :global(body.dark-mode) .custom-component {
+        background-color: #0f0e17;
+        color: #fffffe;
+    }
+
+
+    .custom-icons {
+      color: black;
+      
+    }
+
+
+    
+
+
+:global(body.dark-mode) .custom-icons {
         background-color: #0f0e17;
         color: #fffffe;
     }

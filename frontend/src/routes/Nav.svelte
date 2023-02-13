@@ -1,4 +1,5 @@
 <script>
+
   import { writable } from "svelte/store";
   import DarkModeToggle from './Button.svelte';
 
@@ -150,7 +151,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 
 :global(body.dark-mode) .custom-component {
         background-color: #0f0e17;
-        color: #a7a9be;
+        color: #fffffe;
     }
 
 
