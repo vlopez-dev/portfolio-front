@@ -48,7 +48,7 @@ let downloadCV = async () => {
 
 <Animate>
     <!-- aqui tu contenido -->
-<section class="hero is-fullheight" style="outline: 2px solid white;" >
+<section class="hero is-fullheight custom-component"  >
   {#each abouts as about}
 
     <div class="columns is-multiline m-6" >
@@ -61,8 +61,8 @@ let downloadCV = async () => {
         <div class="column">
           <div class="container about-info">
 
-          <h3 class="title">{about.title}</h3>
-          <p class="paragraph">{about.description}</p>
+          <h3 class="title custom-text">{about.title}</h3>
+          <p class="paragraph custom-text">{about.description}</p>
           <div class="btn-cv">
           <a href=""  on:click={downloadCV}>
             <button class="button">
@@ -88,43 +88,43 @@ let downloadCV = async () => {
     </div>
     <div class="column is-half m-auto">
       <div class="container">
-        <h4 class="title">Skills and Tools</h4>
-        <p class="subtitle">Skills and technologies that I use in my projects.</p>
+        <h4 class="title custom-text">Skills and Tools</h4>
+        <p class="subtitle custom-text">Skills and technologies that I use in my projects.</p>
       </div>
       <div class="container-tools">
           <div class="box-tools">
 
 
-            <i class="devicon-django-plain"></i>
+            <i class="devicon-django-plain custom-icon"></i>
                       <p>Django</p>
           
         </div>
         <div class="box-tools">
-          <i class="devicon-html5-plain"></i>
+          <i class="devicon-html5-plain custom-icon"></i>
           <p>HTML5</p>
         </div>
         <div class="box-tools">
 
-          <i class="devicon-css3-plain"></i>
+          <i class="devicon-css3-plain custom-icon"></i>
           <p>CSS3</p>
         </div>
         <div class="box-tools">
-          <i class="devicon-python-plain"></i>
+          <i class="devicon-python-plain custom-icon "></i>
           <p>Python</p>
         </div>
         <div class="box-tools">
-          <i class="devicon-linux-plain"></i>
+          <i class="devicon-linux-plain custom-icon"></i>
           <p>Linux</p>
         </div>
         <div class="box-tools">
 
-          <i class="devicon-bootstrap-plain"></i>
+          <i class="devicon-bootstrap-plain custom-icon"></i>
           <p>Bootstrap</p>
           
         </div>
         <div class="box-tools">
 
-          <i class="devicon-docker-plain"></i>
+          <i class="devicon-docker-plain custom-icon"></i>
           
           <p>Docker</p>
           
@@ -132,7 +132,7 @@ let downloadCV = async () => {
         <div class="box-tools">
 
 
-          <i class="devicon-svelte-plain"></i>
+          <i class="devicon-svelte-plain custom-icon"></i>
                     
           <p>Svelte</p>
           
@@ -149,9 +149,9 @@ let downloadCV = async () => {
 
     <div class="column is-half p-6 ">
       <div class="container" >
-        <h3 class="title title__bio">Bio</h3>
+        <h3 class="title title__bio custom-text">Bio</h3>
         <div>
-          <p class="paragraph">{about.bio}</p>
+          <p class="paragraph custom-text">{about.bio}</p>
         </div>
       </div>
 
@@ -166,8 +166,8 @@ let downloadCV = async () => {
     <div class="column is-half p-6 ">
       <div class="container">
 
-      <h3 class="title title__bio">Career</h3>
-        <h6>Support Enginer<span>-</span>02/2007 - Actualidad</h6>
+      <h3 class="title title__bio custom-text">Career</h3>
+        <h6 class="custom-text">Support Enginer<span>-</span>02/2007 - Actualidad</h6>
         <a href="">AMEC</a>
         <p>lorem</p>
       </div>
@@ -270,5 +270,37 @@ let downloadCV = async () => {
   }
 
   
+
+ 
+  .custom-component {
+        background-color: #fffffe;
+    }
+
+
+    
+
+
+:global(body.dark-mode) .custom-component {
+        background-color: #0f0e17;
+        color: #fffffe;
+    }
+
+
+.custom-text {
+        color: #a7a9be;
+}
+
+:global(body.dark-mode) .custom-text {
+        color: #f0f0f0;
+}
+
+
+.custom-icon{
+  color: #a7a9be;
+}
+
+:global(body.dark-mode) .custom-icon {
+        color: #f0f0f0;
+}
 
 </style>

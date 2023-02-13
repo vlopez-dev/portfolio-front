@@ -2,7 +2,7 @@
 
 </script>
 
-<footer class="footer m-auto ">
+<footer class="footer m-auto custom-component ">
     <div class="content has-text-centered">
       <p>
        
@@ -12,6 +12,7 @@
         <a href=""><img src="https://img.icons8.com/material-outlined/24/ffffff/github.png"/></a>
         <a href=""><img src="https://img.icons8.com/ios-glyphs/24/ffffff/linkedin-circled--v1.png"/></a>
       </div>
+      
     </div>
   </footer>
 
@@ -46,4 +47,24 @@
     .social a{
       padding: 2px;
     }
+
+
+
+
+
+
+    .custom-component {
+        background-color: #fffffe;
+    }
+
+
+    
+
+
+:global(body.dark-mode) .custom-component {
+        background-color: #0f0e17;
+        color: #fffffe;
+    }
+
+
   </style>

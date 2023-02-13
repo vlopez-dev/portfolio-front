@@ -1,5 +1,6 @@
 <script>
 
+import DarkModeToggle from './Button.svelte';
 
 import { onMount, onDestroy } from 'svelte';
 	import { slide } from 'svelte/transition';
@@ -19,19 +20,20 @@ import { onMount, onDestroy } from 'svelte';
 		clearInterval(roller);
 	});
   import Animate from './Animate.svelte';
+  export let darkMode;
 
 
 </script>
 <Animate>
-<section class="hero is-fullheight">
+<section class="hero is-fullheight custom-component">
     <div class="hero-body">
     <div class="columns ">
       <div class="column">
         
   {#key index}
-	<p class="title"transition:slide>{greetings[index]}!</p>
+	<p class="title custom-text"transition:slide>{greetings[index]}!</p>
   {/key}
-        <p class="subtitle">
+        <p class="subtitle custom-text-color ">
          Back-end developer
         </p>
       </div>
@@ -67,5 +69,34 @@ import { onMount, onDestroy } from 'svelte';
     }
 
  
+    .custom-component {
+        background-color: #fffffe;
+    }
 
+
+    
+
+
+:global(body.dark-mode) .custom-component {
+        background-color: #0f0e17;
+        color: #FFFFFF;
+    }
+
+
+.custom-text {
+        color: #1f1235;
+}
+
+:global(body.dark-mode) .custom-text {
+        color: #FFFFFF;
+}
+
+.custom-text-color{
+color: #ff6e6c;
+text-shadow: none;
+}
+:global(body.dark-mode) .custom-text-color {
+        color: #FFFFFF;
+}
+    
   </style>

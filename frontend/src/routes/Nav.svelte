@@ -1,4 +1,8 @@
 <script>
+  import { writable } from "svelte/store";
+  import DarkModeToggle from './Button.svelte';
+
+
   export let item1, item2, item3, item4;
   
   window.onload = function() {
@@ -20,28 +24,37 @@
 };
 
 
+
+
+
+
+
 </script>
 
+
 <header>
-  <nav class="navbar " role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
+  <nav class="navbar custom-component  " role="navigation" aria-label="main navigation ">
+    <div class="navbar-brand custom-component">
      
-      <a id="burger" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <a id="burger" role="button" class="navbar-burger custom-component" aria-label="menu" aria-expanded="false">
         <span aria-hidden="true" />
         <span aria-hidden="true" />
         <span aria-hidden="true" />
       </a>
     </div>
-    <div id="nav-links" class="navbar-menu">
-      <div class="navbar-start " style="flex-grow: 1; justify-content: center;">
+    <div id="nav-links" class="navbar-menu custom-component">
+      <div class="navbar-start custom-component " style="flex-grow: 1; justify-content: center;">
         
-        <a class="navbar-item nav-link nav-link-ltr" href="#/">{item1}</a>
-       <a class="navbar-item nav-link nav-link-ltr" href="#/about">{item2}</a>
+        <a class="navbar-item nav-link nav-link-ltr custom-component" href="#/">{item1}</a>
+       <a class="navbar-item nav-link nav-link-ltr custom-component " href="#/about">{item2}</a>
 
-        <a class="navbar-item nav-link nav-link-ltr" href="#/projects">{item3}</a>
-        <a class="navbar-item nav-link nav-link-ltr" href="#/contact">{item4}</a>
+        <a class="navbar-item nav-link nav-link-ltr custom-component" href="#/projects">{item3}</a>
+        <a class="navbar-item nav-link nav-link-ltr custom-component" href="#/contact">{item4}</a>
       
       </div>
+    </div>
+    <div class="navbar-end">
+      <DarkModeToggle />
     </div>
   </nav>
 </header>
@@ -129,13 +142,16 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   height: 5px;
 }
 
+.custom-component {
+        background-color: #FFFFFF;
+        color: #1f1235;
+    }
 
 
-
-
-
-
-
+:global(body.dark-mode) .custom-component {
+        background-color: #0f0e17;
+        color: #a7a9be;
+    }
 
 
 </style>

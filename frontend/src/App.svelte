@@ -6,7 +6,6 @@
   import Contact from "./routes/Contact.svelte";
   import Router from "svelte-spa-router"
   import Footer from "./routes/Footer.svelte";
-  import Button from "./routes/Button.svelte";
   let routes={
     "/":Hero,
     "/about":About,
@@ -14,24 +13,25 @@
     "/Contact":Contact,
 
   }
-  </script>
+  let darkMode = false;
 
-
-
-<Button>
-	Toggle
-</Button>
+</script>
 
 <Nav
 item1="Home"
 item2="About"
 item3="Projects"
 item4="Contact"
+
+
 >
 </Nav>
 
+
+
+
 <Router {routes}></Router>
-<Footer>
+<Footer  >
 
 </Footer>
 
@@ -46,17 +46,5 @@ item4="Contact"
     
 	}
 
-  :global(body.dark-mode ) {
-		background-color: white !important;
-		color: #bfc2c7;
-	}
-  :global(footer.dark-mode ) {
-		background-color: white !important;
-		color: #bfc2c7;
-	}
-  :global(.nav-links.dark-mode ) {
-		background-color: white !important;
-		color: #bfc2c7;
-	}
   
 </style>
