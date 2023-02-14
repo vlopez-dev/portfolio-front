@@ -67,7 +67,7 @@ let downloadCV = async () => {
           <p class="paragraph custom-text">{about.description}</p>
           <div class="btn-cv">
           <a href=""  on:click={downloadCV}>
-            <button class="button">
+            <button class="button custom-bottom">
   
               <span class="icon">
                 <img src="https://img.icons8.com/ios/50/ffffff/parse-resumes.png"/>
@@ -94,39 +94,39 @@ let downloadCV = async () => {
         <p class="subtitle custom-text">Skills and technologies that I use in my projects.</p>
       </div>
       <div class="container-tools">
-          <div class="box-tools">
+          <div class="box-tools ">
 
 
-            <i class="devicon-django-plain custom-icon"></i>
+            <i class="devicon-django-plain custom-icon custom-box-tools"></i>
                       <p>Django</p>
           
         </div>
         <div class="box-tools">
-          <i class="devicon-html5-plain custom-icon"></i>
+          <i class="devicon-html5-plain custom-icon custom-box-tools"></i>
           <p>HTML5</p>
         </div>
         <div class="box-tools">
 
-          <i class="devicon-css3-plain custom-icon"></i>
+          <i class="devicon-css3-plain custom-icon custom-box-tools"></i>
           <p>CSS3</p>
         </div>
         <div class="box-tools">
-          <i class="devicon-python-plain custom-icon "></i>
+          <i class="devicon-python-plain custom-icon custom-box-tools "></i>
           <p>Python</p>
         </div>
         <div class="box-tools">
-          <i class="devicon-linux-plain custom-icon"></i>
+          <i class="devicon-linux-plain custom-icon custom-box-tools"></i>
           <p>Linux</p>
         </div>
         <div class="box-tools">
 
-          <i class="devicon-bootstrap-plain custom-icon"></i>
+          <i class="devicon-bootstrap-plain custom-icon custom-box-tools"></i>
           <p>Bootstrap</p>
           
         </div>
         <div class="box-tools">
 
-          <i class="devicon-docker-plain custom-icon"></i>
+          <i class="devicon-docker-plain custom-icon custom-box-tools"></i>
           
           <p>Docker</p>
           
@@ -134,7 +134,7 @@ let downloadCV = async () => {
         <div class="box-tools">
 
 
-          <i class="devicon-svelte-plain custom-icon"></i>
+          <i class="devicon-svelte-plain custom-icon custom-box-tools"></i>
                     
           <p>Svelte</p>
           
@@ -213,7 +213,11 @@ let downloadCV = async () => {
     height: 100%;
     width: 100%;
     object-fit: contain;
+    
   }
+
+
+  
 
   .container-tools{
     display: flex;
@@ -246,14 +250,6 @@ let downloadCV = async () => {
     margin: 36px;
   }
 
-  .btn-cv button{
-    background-color: #ff8906;
-    border: none;
-    color: #fffffe;
-    width: 90px;
-    box-shadow: -8px 0px 20px rgba(255, 146, 26, 0.3), 0px 0px 20px rgba(255, 146, 26, 0.3), 8px 0px 20px rgb(255 146 26 / 30%);
-
-  }
 
   .paragraph{
     text-align: justify;
@@ -296,9 +292,6 @@ let downloadCV = async () => {
         color: #f0f0f0;
 }
 
-.custom-subtitle{
-  color: #1b1425;
-}
 
 
 .custom-icon{
@@ -308,5 +301,40 @@ let downloadCV = async () => {
 :global(body.dark-mode) .custom-icon {
         color: #f0f0f0;
 }
+
+
+
+.custom-bottom{
+  background-color: #ff6e6c;
+  width: 90px;
+  color: #fffffe;
+}
+
+
+:global(body.dark-mode) .custom-bottom {
+  background-color: #ff8906;
+    border: none;
+    color: #fffffe;
+    width: 90px;
+    box-shadow: -8px 0px 20px rgba(255, 146, 26, 0.3), 0px 0px 20px rgba(255, 146, 26, 0.3), 8px 0px 20px rgb(255 146 26 / 30%);
+
+}
+
+
+
+
+
+
+
+
+
+.custom-box-tools{
+  color: #ff6e6c;
+}
+
+:global(body.dark-mode) .custom-icon {
+        color: #f0f0f0;
+}
+
 
 </style>

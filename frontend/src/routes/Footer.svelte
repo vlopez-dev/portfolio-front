@@ -10,16 +10,19 @@ import { GithubIcon,LinkedinIcon,TwitterIcon } from 'svelte-feather-icons'
       </p>
       <div class="social">
         <div class="box_social custom-icons">
+          <a href="https://twitter.com/vic_mde" class="custom-icons" target="_blank">
           <TwitterIcon size="24" />
-
+        </a>
         </div>
         <div class="box_social custom-icons">
+          <a href="https://github.com/vlopez-dev" class="custom-icons" target="_blank">
           <GithubIcon size="24" />
-
+        </a>
         </div>
         <div class="box_social custom-icons">
+          <a href="https://www.linkedin.com/in/victorlopezr/" class="custom-icons" target="_blank">
           <LinkedinIcon size="24" />
-
+        </a>
         </div>
         
 
