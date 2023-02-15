@@ -46,11 +46,11 @@
     <div id="nav-links" class="navbar-menu custom-component">
       <div class="navbar-start custom-component " style="flex-grow: 1; justify-content: center;">
         
-        <a class="navbar-item nav-link nav-link-ltr custom-component" href="#/">{item1}</a>
-       <a class="navbar-item nav-link nav-link-ltr custom-component " href="#/about">{item2}</a>
+        <a class="navbar-item nav-link nav-link-ltr custom-navitem" href="#/">{item1}</a>
+       <a class="navbar-item nav-link nav-link-ltr custom-navitem " href="#/about">{item2}</a>
 
-        <a class="navbar-item nav-link nav-link-ltr custom-component" href="#/projects">{item3}</a>
-        <a class="navbar-item nav-link nav-link-ltr custom-component" href="#/contact">{item4}</a>
+        <a class="navbar-item nav-link nav-link-ltr custom-navitem" href="#/projects">{item3}</a>
+        <a class="navbar-item nav-link nav-link-ltr custom-navitem" href="#/contact">{item4}</a>
       
       </div>
     </div>
@@ -66,7 +66,7 @@
   header {
     width: 100%;
   }
-  a {
+  /* a {
     font-family: "Karla", sans-serif;
     color: #fffffe;
   }
@@ -76,17 +76,17 @@
   
   .navbar-menu{
     background-color: #0f0e17;
-  }
+  } */
 
 
 
 
-
+/* 
 
 a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:focus, .navbar-link:focus-within, .navbar-link:hover, .navbar-link.is-active{
   background-color: #0f0e17;
   color: white;
-}
+} */
 
 
 
@@ -152,6 +152,18 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 :global(body.dark-mode) .custom-component {
         background-color: #0f0e17;
         color: #fffffe;
+    }
+
+
+
+.custom-navitem {
+        background-color: #1f1235;
+        color: #1f1235;
+    }
+
+
+:global(body.dark-mode) .custom-component {
+        background-color: #0f0e17;
     }
 
 

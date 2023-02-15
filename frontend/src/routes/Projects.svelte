@@ -17,7 +17,7 @@
   });
 </script>
 
-<section class="hero is-fullheight">
+<section class="hero is-fullheight custom-component">
     <div class="container is-fluid">
       <div class="columns is-multiline m-auto">
         {#each projects as project}
@@ -28,8 +28,8 @@
               <img class="" src="{project.pro_img}" alt="Placeholder image" />
             </div>
 			<div class="container-info" >
-				<h4>{project.name}</h4>
-				<p class="paragraph">{project.description}</p>
+				<h4 class="custom-title">{project.name}</h4>
+				<p class="paragraph custom-text">{project.description}</p>
 
 
         <div class="container-tecno">
@@ -96,17 +96,6 @@
 	width: 682px;
   }
 
-  .container-info h4{
-	font-size: 36px;
-    font-family: "Inconsolata", monospace;
-	color: #fffffe;
-  }
-
-  .container-info p{
-	line-height: 1.25rem;
-	color: #a7a9be;
-
-  }
 
   .container-code{
     margin: 16px;
@@ -138,4 +127,39 @@
     line-height: 1.25rem;
     color: #a7a9be;
   }
+
+
+  .custom-component {
+        background-color: #fffffe;
+    }
+
+  :global(body.dark-mode) .custom-component {
+        background-color: #0f0e17;
+        color: #fffffe;
+    }
+
+
+    .custom-text {
+        color: #1f1235;
+        line-height: 1.25rem;
+
+}
+
+:global(body.dark-mode) .custom-text {
+        color: #f0f0f0;
+}
+
+
+.custom-title{
+  font-size: 36px;
+    font-family: "Inconsolata", monospace;
+	color: #1f1235;
+}
+
+
+
+:global(body.dark-mode) .custom-title {
+        color: #f0f0f0;
+}
+
 </style>

@@ -98,37 +98,37 @@ let downloadCV = async () => {
 
 
             <i class="devicon-django-plain custom-icon custom-box-tools"></i>
-                      <p>Django</p>
+                      <p class="custom-text">Django</p>
           
         </div>
         <div class="box-tools">
           <i class="devicon-html5-plain custom-icon custom-box-tools"></i>
-          <p>HTML5</p>
+          <p class="custom-text">HTML5</p>
         </div>
         <div class="box-tools">
 
           <i class="devicon-css3-plain custom-icon custom-box-tools"></i>
-          <p>CSS3</p>
+          <p class="custom-text">CSS3</p>
         </div>
         <div class="box-tools">
           <i class="devicon-python-plain custom-icon custom-box-tools "></i>
-          <p>Python</p>
+          <p class="custom-text">Python</p>
         </div>
         <div class="box-tools">
           <i class="devicon-linux-plain custom-icon custom-box-tools"></i>
-          <p>Linux</p>
+          <p class="custom-text">Linux</p>
         </div>
         <div class="box-tools">
 
           <i class="devicon-bootstrap-plain custom-icon custom-box-tools"></i>
-          <p>Bootstrap</p>
+          <p class="custom-text">Bootstrap</p>
           
         </div>
         <div class="box-tools">
 
           <i class="devicon-docker-plain custom-icon custom-box-tools"></i>
           
-          <p>Docker</p>
+          <p class="custom-text">Docker</p>
           
         </div>
         <div class="box-tools">
@@ -136,7 +136,7 @@ let downloadCV = async () => {
 
           <i class="devicon-svelte-plain custom-icon custom-box-tools"></i>
                     
-          <p>Svelte</p>
+          <p class="custom-text">Svelte</p>
           
         </div>
       </div>

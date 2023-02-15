@@ -39,20 +39,20 @@
 
 
 
-<Animate>
-  <section class="hero is-fullheight  " >
+<Animate >
+  <section class="hero is-fullheight custom-component  " >
     <div class="columns is-multiline m-4">
       <div class="column"></div>
       <div class="column is-one-third m-6">
         <div class="container">
-          <h4 class="title">Contact Me</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus illum fuga, aspernatur beatae consectetur eligendi sapiente aperiam consequuntur cupiditate est quas, eius provident debitis! Ipsam aliquid fugit deserunt sit mollitia!</p>
+          <h4 class="title custom-text">Contact Me</h4>
+          <p class="custom-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus illum fuga, aspernatur beatae consectetur eligendi sapiente aperiam consequuntur cupiditate est quas, eius provident debitis! Ipsam aliquid fugit deserunt sit mollitia!</p>
         </div>
         <form class="mt-6" action="">
         <div class="field">
           <label class="label label__contact">Email</label>
           <div class="control has-icons-left has-icons-right">
-            <input class="input" type="email" bind:value={email} placeholder="Email input">
+            <input class="input " type="email" bind:value={email} placeholder="Email input">
             <span class="icon is-small is-left">
               <i class="fas fa-envelope"></i>
             </span>
@@ -137,5 +137,33 @@
 
   }
 
+
+  .custom-component {
+        background-color: #fffffe;
+    }
+
+  :global(body.dark-mode) .custom-component {
+        background-color: #0f0e17;
+        color: #fffffe;
+    }
+
+    .custom-text {
+        color: #1f1235;
+}
+
+:global(body.dark-mode) .custom-text {
+        color: #f0f0f0;
+}
+
+
+
+
+.custom-form {
+        color: #1f1235;
+}
+
+:global(body.dark-mode) .custom-text {
+        color: #f0f0f0;
+}
 
   </style>
