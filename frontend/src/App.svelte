@@ -15,7 +15,7 @@
     "/Contact":Contact,
 
   }
-  let darkMode = false;
+  let darkMode = true
 
 </script>
 
