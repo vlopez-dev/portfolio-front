@@ -1,4 +1,6 @@
 <script>
+  import { GithubIcon,CloudIcon } from 'svelte-feather-icons'
+
   import { onMount } from "svelte";
   let projects = [];
 
@@ -44,18 +46,19 @@
         </div>
 				<div class="container-code" >
           <a href="{project.link_repo}">
-          <button class="button buttom-color">
-            <span class="icon">
-              <img src="https://img.icons8.com/ios-glyphs/30/ffffff/github.png"/>
+          <button class="button  custom-buttom-color  is-normal is-rounded">
+            <span class="icon ">
+              <GithubIcon size="24" />
             </span>
             <span>GitHub</span>
           </button>
         </a>
         <a href="{project.link_live}">
-          <button class="button buttom-color">
+          <button class="button  custom-buttom-color is-normal is-rounded">
 
             <span class="icon">
-              <img src="https://img.icons8.com/ios-glyphs/30/ffffff/github.png"/>
+              <CloudIcon size="24" />
+
             </span>
             <span>Live</span>
 
@@ -112,12 +115,12 @@
     font-size: 16px;
     margin: 4px;
   }
-
+/* 
   .buttom-color{
     background-color: #ff8906;
     color: #fffffe;
     border: none;
-  }
+  } */
 
 
   .paragraph{
@@ -161,5 +164,23 @@
 :global(body.dark-mode) .custom-title {
         color: #f0f0f0;
 }
+
+
+
+.custom-buttom-color{
+  background-color: #ff6e6c;
+
+    color: #fffffe;
+    border: none;
+  }
+
+
+
+:global(body.dark-mode) .custom-buttom-color {
+        color: #f0f0f0;
+        background-color: #ff8906;
+
+}
+
 
 </style>

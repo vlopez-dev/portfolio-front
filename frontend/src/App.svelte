@@ -39,12 +39,16 @@ item4="Contact"
 
 
 <style>
+
+  body{
+    background-color: white;
+  }
  :global(body) {
     display: flex;
     color: white;
     flex-direction: column;
     place-items:normal;
-    background-color: #0f0e17 !important;
+    /* background-color: #0f0e17 !important; */
     
 	}
 

@@ -45,11 +45,11 @@
     <div id="nav-links" class="navbar-menu custom-component">
       <div class="navbar-start custom-component " style="flex-grow: 1; justify-content: center;">
         
-        <a class="navbar-item nav-link nav-link-ltr custom-navitem" href="#/">{item1}</a>
-       <a class="navbar-item nav-link nav-link-ltr custom-navitem " href="#/about">{item2}</a>
+        <a class="navbar-item nav-link nav-link-ltr custom-navitem custom-nav-link" href="#/">{item1}</a>
+       <a class="navbar-item nav-link nav-link-ltr custom-navitem custom-nav-link " href="#/about">{item2}</a>
 
-        <a class="navbar-item nav-link nav-link-ltr custom-navitem" href="#/projects">{item3}</a>
-        <a class="navbar-item nav-link nav-link-ltr custom-navitem" href="#/contact">{item4}</a>
+        <a class="navbar-item nav-link nav-link-ltr custom-navitem custom-nav-link" href="#/projects">{item3}</a>
+        <a class="navbar-item nav-link nav-link-ltr custom-navitem custom-nav-link" href="#/contact">{item4}</a>
       
       </div>
     </div>
@@ -65,30 +65,7 @@
   header {
     width: 100%;
   }
-  /* a {
-    font-family: "Karla", sans-serif;
-    color: #fffffe;
-  }
-  .navbar {
-    background-color: #0f0e17;
-  }
   
-  .navbar-menu{
-    background-color: #0f0e17;
-  } */
-
-
-
-
-/* 
-
-a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-item.is-active, .navbar-link:focus, .navbar-link:focus-within, .navbar-link:hover, .navbar-link.is-active{
-  background-color: #0f0e17;
-  color: white;
-} */
-
-
-
 
 .nav-link {
   color: #fffffe;
@@ -103,14 +80,14 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 .nav-link:hover {
   opacity: 1;
 }
-
+/* 
 .nav-link::before {
   transition: 300ms;
   height: 5px;
   content: "";
   position: absolute;
   background-color: #ff8906;
-}
+} */
 
 .nav-link-ltr::before {
   width: 0%;
@@ -167,5 +144,23 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
         
     }
 
+
+  .custom-nav-link::before{
+    transition: 300ms;
+    height: 5px;
+    content: "";
+     position: absolute;
+    background-color: #ff6e6c;
+
+  }
+  :global(body.dark-mode) .custom-nav-link::before {
+
+  transition: 300ms;
+  height: 5px;
+  content: "";
+  position: absolute;
+  background-color: #ff8906;
+        
+    }
 
 </style>

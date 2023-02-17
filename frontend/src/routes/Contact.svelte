@@ -1,4 +1,6 @@
 <script>
+    import { SendIcon } from 'svelte-feather-icons'
+
     import Animate from "./Animate.svelte";
     import { onMount } from "svelte";
 
@@ -50,9 +52,9 @@
         </div>
         <form class="mt-6" action="">
         <div class="field">
-          <label class="label label__contact">Email</label>
+          <label class="label custom-label">Email</label>
           <div class="control has-icons-left has-icons-right">
-            <input class="input " type="email" bind:value={email} placeholder="Email input">
+            <input class="input custom-input " type="email" bind:value={email} placeholder="Email input">
             <span class="icon is-small is-left">
               <i class="fas fa-envelope"></i>
             </span>
@@ -62,9 +64,9 @@
           </div>
         </div>
         <div class="field">
-          <label class="label label__contact">Message</label>
+          <label class="label custom-label">Message</label>
           <div class="control">
-            <textarea class="textarea" bind:value={message}  placeholder="Message"></textarea>
+            <textarea class="textarea custom-input" bind:value={message}  placeholder="Message"></textarea>
           </div>
         </div>
         
@@ -73,7 +75,11 @@
         
         <div class="field is-grouped is-justify-content-center">
           <div class="control btn-cv  ">
-            <button class="button  is-normal is-rounded " on:click={sendEmail}>Send</button>
+            <button class="button custom-button  is-normal is-rounded " on:click={sendEmail}>
+              <span>
+              <SendIcon size="24" />
+            </span>
+              Send</button>
           </div>
          
         </div>
@@ -93,12 +99,9 @@
 
 
   <style>
-   
 
-   .title{
-    font-family: 'Karla', sans-serif;
 
-   }
+  
 .label__contact{
   color: #fffffe;
 
@@ -121,21 +124,12 @@
 
 
   .btn-contact{
-    
     height: auto;
     width: auto;
     margin: 36px;
   }
 
- 
-  .btn-cv button{
-    background-color: #ff8906;
-    border: none;
-    color: #fffffe;
-    width: 90px;
-    /* box-shadow: -8px 0px 20px rgba(255, 146, 26, 0.3), 0px 0px 20px rgba(255, 146, 26, 0.3), 8px 0px 20px rgb(255 146 26 / 30%); */
-
-  }
+  
 
 
   .custom-component {
@@ -165,5 +159,46 @@
 :global(body.dark-mode) .custom-text {
         color: #f0f0f0;
 }
+
+
+.custom-button{
+  background-color: #ff6e6c;
+    border: none;
+    color: #fffffe;
+    width: 90px;
+
+}
+
+
+
+:global(body.dark-mode) .custom-button {
+
+  background-color: #ff8906;
+    border: none;
+    color: #fffffe;
+    width: 90px;
+}
+
+
+.custom-input{
+border-color:#1f1235 ;
+}
+
+:global(body.dark-mode) .custom-input {
+
+
+}
+
+.custom-label{
+  color: #1f1235;
+  
+
+}
+
+:global(body.dark-mode) .custom-label {
+
+color: white;
+}
+
 
   </style>

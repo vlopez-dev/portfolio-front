@@ -1,5 +1,5 @@
 <script>
-      import { SunIcon,MoonIcon } from 'svelte-feather-icons'
+    import { SunIcon,MoonIcon } from 'svelte-feather-icons'
 
     function toggle() {
         window.document.body.classList.toggle('dark-mode')
@@ -12,7 +12,7 @@
             <SunIcon size="24" />
 
         </span>
-        
+
         <span class="moon-icon">
             <MoonIcon size="24" />
 
@@ -22,9 +22,7 @@
 
 <style>
     .container {
-        
         width: 60px;
-
         margin: 0 auto;
     }
 
@@ -42,7 +40,7 @@
         transition: opacity 0.3s ease, transform 0.3s ease;
         position: absolute;
         top: 0;
-        left: 0;
+        left: 20px;
     }
     .sun-icon{
 
@@ -51,7 +49,7 @@
         transition: opacity 0.3s ease, transform 0.3s ease;
         position: absolute;
         top: 0;
-        left: 0;
+        left: 20px;
         color: black;
     }
 

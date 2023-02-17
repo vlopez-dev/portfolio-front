@@ -1,5 +1,5 @@
 <script>
-  import { GithubIcon } from 'svelte-feather-icons'
+  import { FileTextIcon,DownloadIcon } from 'svelte-feather-icons'
 
   export let about_title, about_description, src;
   import Animate from './Animate.svelte';
@@ -67,10 +67,10 @@ let downloadCV = async () => {
           <p class="paragraph custom-text">{about.description}</p>
           <div class="btn-cv">
           <a href=""  on:click={downloadCV}>
-            <button class="button custom-bottom">
+            <button class="button custom-bottom   is-normal is-rounded">
   
               <span class="icon">
-                <img src="https://img.icons8.com/ios/50/ffffff/parse-resumes.png"/>
+                <DownloadIcon size="24" />
               </span>
               <span>CV</span>
   
