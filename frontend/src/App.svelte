@@ -6,7 +6,6 @@
   import Contact from "./routes/Contact.svelte";
   import Router from "svelte-spa-router"
   import Footer from "./routes/Footer.svelte";
-  import Fa from 'svelte-fa/src/fa.svelte'
     
   let routes={
     "/":Hero,
