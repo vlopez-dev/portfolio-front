@@ -9,12 +9,13 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^1.0.2",
+    "@sveltejs/vite-plugin-svelte": "^1.4.0",
     "bulma": "^0.9.4",
     "sass": "^1.53.0",
     "svelte": "^3.49.0",
     "svelte-fa": "^3.0.3",
     "svelte-feather-icons": "^4.0.0",
+    "svelte-motion": "^0.11.5",
     "svelte-preprocess": "^4.10.7",
     "vite": "^3.1.0"
   },
@@ -23,6 +24,7 @@
     "@fortawesome/free-brands-svg-icons": "^6.3.0",
     "@fortawesome/free-solid-svg-icons": "^6.3.0",
     "svelte-navigator": "^3.2.2",
-    "svelte-spa-router": "^3.3.0"
+    "svelte-spa-router": "^3.3.0",
+    "svelte-transition": "^0.0.7"
   }
 }

@@ -45,7 +45,7 @@
                     
         </div>
 				<div class="container-code" >
-          <a href="{project.link_repo}">
+          <a href="{project.link_repo}" target=”_blank”>
           <button class="button  custom-buttom-color  is-normal is-rounded">
             <span class="icon ">
               <GithubIcon size="24" />
@@ -53,7 +53,7 @@
             <span>GitHub</span>
           </button>
         </a>
-        <a href="{project.link_live}">
+        <a href="{project.link_live}" target=”_blank”>
           <button class="button  custom-buttom-color is-normal is-rounded">
 
             <span class="icon">
@@ -169,15 +169,17 @@
 
 .custom-buttom-color{
   background-color: #ff6e6c;
-
-    color: #fffffe;
-    border: none;
+  width: 115px;
+  color: #fffffe;
+  border: none;
   }
 
 
 
 :global(body.dark-mode) .custom-buttom-color {
         color: #f0f0f0;
+        width: 115px;
+
         background-color: #ff8906;
 
 }

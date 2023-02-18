@@ -165,7 +165,7 @@
   background-color: #ff6e6c;
     border: none;
     color: #fffffe;
-    width: 90px;
+    width: 115px;
 
 }
 
@@ -176,7 +176,7 @@
   background-color: #ff8906;
     border: none;
     color: #fffffe;
-    width: 90px;
+    width: 115px;
 }
 
 

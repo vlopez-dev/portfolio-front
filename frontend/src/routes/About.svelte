@@ -63,7 +63,7 @@ let downloadCV = async () => {
         <div class="column">
           <div class="container about-info">
 
-          <h3 class="title custom-text">{about.title}</h3>
+          <h3 class="title custom-text">{about.title}<span class="dot"></span></h3>
           <p class="paragraph custom-text">{about.description}</p>
           <div class="btn-cv">
           <a href=""  on:click={downloadCV}>
@@ -169,9 +169,11 @@ let downloadCV = async () => {
       <div class="container">
 
       <h3 class="title title__bio custom-text">Career</h3>
+      <div>
         <h6 class="custom-text">Support Enginer<span>-</span>02/2007 - Actualidad</h6>
         <a href="">AMEC</a>
         <p>lorem</p>
+      </div>
       </div>
     </div>
     <div class="column m-auto"></div>
@@ -306,7 +308,7 @@ let downloadCV = async () => {
 
 .custom-bottom{
   background-color: #ff6e6c;
-  width: 90px;
+  width: 115px;
   color: #fffffe;
 }
 
@@ -315,7 +317,7 @@ let downloadCV = async () => {
   background-color: #ff8906;
     border: none;
     color: #fffffe;
-    width: 90px;
+    width: 115px;
     box-shadow: -8px 0px 20px rgba(255, 146, 26, 0.3), 0px 0px 20px rgba(255, 146, 26, 0.3), 8px 0px 20px rgb(255 146 26 / 30%);
 
 }
@@ -336,5 +338,12 @@ let downloadCV = async () => {
         color: #f0f0f0;
 }
 
-
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ff8906;
+  margin-left: 5px;
+}
 </style>

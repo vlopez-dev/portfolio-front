@@ -4,6 +4,20 @@
     function toggle() {
         window.document.body.classList.toggle('dark-mode')
     }
+
+    function setDarkMode() {
+    const hour = new Date().getHours();
+    if (hour >= 20 || hour < 6) { // Si es de noche, activar modo oscuro
+        window.document.body.classList.add('dark-mode');
+    } else { // Si es de día, desactivar modo oscuro
+        window.document.body.classList.remove('dark-mode');
+    }
+}
+
+setDarkMode(); // Llamar a la función al cargar la página
+
+
+
 </script>
 
 <div class="container">
@@ -65,6 +79,9 @@
         opacity: 1;
         transform: scale(1);
     }
+
+
+    
 </style>
 
 

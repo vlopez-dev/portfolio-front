@@ -19,7 +19,6 @@ import { onMount, onDestroy } from 'svelte';
 		clearInterval(roller);
 	});
   import Animate from './Animate.svelte';
-  export let darkMode;
 
 
 </script>

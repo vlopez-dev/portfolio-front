@@ -2,6 +2,10 @@
     import {slide} from 'svelte/transition'
 </script>
 
-<div transition:slide={{ delay: 150 }}>
+<div transition:slide={{ delay: 200 }} >
     <slot />
-</div>
+</div> 
+
+<style>
+   
+</style>

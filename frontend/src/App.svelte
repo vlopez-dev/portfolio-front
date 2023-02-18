@@ -15,7 +15,7 @@
     "/Contact":Contact,
 
   }
-  let darkMode = true
+  let darkMode = false
 
 </script>
 
@@ -40,17 +40,20 @@ item4="Contact"
 
 <style>
 
-  body{
-    background-color: white;
-  }
+ 
  :global(body) {
     display: flex;
     color: white;
     flex-direction: column;
     place-items:normal;
-    /* background-color: #0f0e17 !important; */
-    
+    background-color: white;
 	}
-
+  :global(body.dark-mode) {
+    display: flex;
+    color: white;
+    flex-direction: column;
+    place-items:normal;
+    background-color: #0f0e17;
+	}
   
 </style>
