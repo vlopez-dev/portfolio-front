@@ -11,13 +11,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
       
-      - name: SSH deploy
+      - name: Check SSH connectivity
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.IP_ADRESS }}
           username: ${{ secrets.USER_NAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          script: |
+          script: echo "SSH connection successful"
             cd /home/vlopez/portafolio
             docker-compose build
             docker-compose up -d
