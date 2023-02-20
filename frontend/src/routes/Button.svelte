@@ -23,12 +23,12 @@ setDarkMode(); // Llamar a la función al cargar la página
 <div class="container">
     <button on:click={toggle} class="dark-mode-toggle">
         <span class="sun-icon">
-            <SunIcon size="24" />
+            <SunIcon size="28" />
 
         </span>
 
         <span class="moon-icon">
-            <MoonIcon size="24" />
+            <MoonIcon size="28" />
 
         </span>
     </button>
@@ -42,6 +42,7 @@ setDarkMode(); // Llamar a la función al cargar la página
 
     .dark-mode-toggle {
         background-color: transparent;
+        outline: none;
         border: none;
         cursor: pointer;
         padding: 0;
@@ -55,6 +56,7 @@ setDarkMode(); // Llamar a la función al cargar la página
         position: absolute;
         top: 0;
         left: 20px;
+        color: transparent;
     }
     .sun-icon{
 
@@ -78,6 +80,7 @@ setDarkMode(); // Llamar a la función al cargar la página
     :global(body.dark-mode) .moon-icon {
         opacity: 1;
         transform: scale(1);
+        color:white
     }
 
 
