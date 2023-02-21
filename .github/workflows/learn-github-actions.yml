@@ -25,6 +25,7 @@ jobs:
           script: |
             echo "SSH connection successful"
             cd /home/vlopez/portafolio/portafolio
+            git pull origin master
             docker-compose build
             echo "Deteniendo contenedores..."
             docker-compose down
