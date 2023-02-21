@@ -11,9 +11,9 @@ RUN apk add --no-cache --virtual .build-deps build-base linux-headers \
 
 
 
-COPY portafolio/requirements.txt .
+COPY portafolio/requeriments.txt .
 
-RUN pip install -r requirements.txt
+RUN pip install -r requeriments.txt
 COPY ./portafolio /app
 
 WORKDIR /app
