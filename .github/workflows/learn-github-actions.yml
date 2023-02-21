@@ -17,7 +17,8 @@ jobs:
           host: ${{ secrets.IP_ADRESS }}
           username: ${{ secrets.USER_NAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          script: echo "SSH connection successful"
+          script: |
+            echo "SSH connection successful"
             cd /home/vlopez/portafolio
             docker-compose build
             echo "Deteniendo contenedores..."
