@@ -24,7 +24,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             echo "SSH connection successful"
-            cd /home/vlopez/portafolio
+            cd /home/vlopez/portafolio/portafolio
             docker-compose build
             echo "Deteniendo contenedores..."
             docker-compose down
