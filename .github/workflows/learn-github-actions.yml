@@ -13,8 +13,6 @@ jobs:
       
       - name: Check SSH connectivity
         uses: appleboy/ssh-action@master
-      - name: Pull latest changes
-      - name: Build and run Docker
         with:
           host: ${{ secrets.IP_ADRESS }}
           username: ${{ secrets.USER_NAME }}
