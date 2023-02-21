@@ -12,8 +12,9 @@ jobs:
         uses: actions/checkout@v3
         with:
           ref: 'master'
+      - name: Pull changes
         run: |
-          git pull
+            git pull
       
       - name: Check SSH connectivity
         uses: appleboy/ssh-action@master
