@@ -14,7 +14,6 @@ jobs:
           ref: 'master'
       - name: Pull changes
         run: |
-         cd portafolio/frontend/portafolio
             git pull
       
       - name: Check SSH connectivity
