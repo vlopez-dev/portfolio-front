@@ -20,5 +20,7 @@ jobs:
           script: echo "SSH connection successful"
             cd /home/vlopez/portafolio
             docker-compose build
+            echo "Deteniendo contenedores..."
             docker-compose down
+            script: echo "SSH connection successful"
             docker-compose up -d --remove-orphans
