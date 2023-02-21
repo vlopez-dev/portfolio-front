@@ -14,7 +14,8 @@ jobs:
           ref: 'master'
       - name: Pull changes
         run: |
-          git pull origin master
+         cd frontend
+            git pull
       
       - name: Check SSH connectivity
         uses: appleboy/ssh-action@master
