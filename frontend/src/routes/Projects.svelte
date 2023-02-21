@@ -13,7 +13,7 @@
         // console.log(data);
       })
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
         return [];
       });
   });
@@ -104,13 +104,6 @@
     margin: 16px;
   }
 
-  /* .container-tecno{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    height: 30px;
-    margin: 16px;
-  } */
   .custom-container-tecno i{
     font-size: 16px;
     margin: 4px;

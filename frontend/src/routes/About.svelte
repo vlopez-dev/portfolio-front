@@ -1,7 +1,6 @@
 <script>
   import { FileTextIcon,DownloadIcon } from 'svelte-feather-icons'
 
-  export let about_title, about_description, src;
   import Animate from './Animate.svelte';
   import { onMount } from "svelte";
 
@@ -18,7 +17,7 @@ onMount(async () => {
       // console.log(data);
     })
     .catch((error) => {
-      console.log(error);
+      // console.log(error);
       return [];
     });
 });
@@ -38,7 +37,7 @@ let downloadCV = async () => {
                 window.URL.revokeObjectURL(url);
             });
         } catch (error) {
-            console.error(error);
+            // console.error(error);
         }
     };
 
@@ -49,7 +48,6 @@ let downloadCV = async () => {
 
 
 <Animate>
-    <!-- aqui tu contenido -->
 <section class="hero is-fullheight custom-component"  >
   {#each abouts as about}
 
@@ -149,7 +147,7 @@ let downloadCV = async () => {
   <div class="columns p-6">
     <div class="column"></div>
 
-    <div class="column is-half p-6 ">
+    <div class="column is-half ">
       <div class="container" >
         <h3 class="title title__bio custom-text">Bio</h3>
         <div>
@@ -165,7 +163,7 @@ let downloadCV = async () => {
 
   <div class="columns p-6">
     <div class="column"></div>
-    <div class="column is-half p-6 ">
+    <div class="column is-half ">
       <div class="container">
 
       <h3 class="title title__bio custom-text">Career</h3>
