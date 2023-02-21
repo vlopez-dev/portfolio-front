@@ -170,9 +170,7 @@ let downloadCV = async () => {
 
       <h3 class="title title__bio custom-text">Career</h3>
       <div>
-        <h6 class="custom-text">Support Enginer<span>-</span>02/2007 - Actualidad</h6>
-        <a href="">AMEC</a>
-        <p>lorem</p>
+        <p class="paragraph custom-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum consectetur eum culpa quidem repellendus doloribus voluptas, deserunt quod ipsam quae cumque rem provident earum, fugiat nihil expedita, ratione hic ea.</p>
       </div>
       </div>
     </div>
