@@ -63,7 +63,7 @@ let downloadCV = async () => {
         <div class="column">
           <div class="container about-info">
 
-          <h3 class="title custom-text">{about.title}<span class="dot"></span></h3>
+          <h3 class="title custom-text">{about.title}</h3>
           <p class="paragraph custom-text">{about.description}</p>
           <div class="btn-cv">
           <a href=""  on:click={downloadCV}>
@@ -338,12 +338,5 @@ let downloadCV = async () => {
         color: #f0f0f0;
 }
 
-.dot {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #ff8906;
-  margin-left: 5px;
-}
+
 </style>
