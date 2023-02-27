@@ -40,9 +40,6 @@ let downloadCV = async () => {
             // console.error(error);
         }
     };
-
-
-
 </script>
 
 
@@ -50,7 +47,6 @@ let downloadCV = async () => {
 <Animate>
 <section class="hero is-fullheight custom-component"  >
   {#each abouts as about}
-
     <div class="columns is-multiline m-6" >
         <div class="column "></div>
         <div class="column is-one-third">
@@ -66,12 +62,10 @@ let downloadCV = async () => {
           <div class="btn-cv">
           <a href=""  on:click={downloadCV}>
             <button class="button custom-bottom   is-normal is-rounded">
-  
               <span class="icon">
                 <DownloadIcon size="24" />
               </span>
               <span>CV</span>
-  
             </button>
           </a>
           </div>
@@ -79,12 +73,9 @@ let downloadCV = async () => {
         </div>
         <div class="column">
         </div>
-
     </div>
-  
   <div class="columns is-multiline">
     <div class="column ">
-      
     </div>
     <div class="column is-half m-auto">
       <div class="container">
@@ -93,11 +84,8 @@ let downloadCV = async () => {
       </div>
       <div class="container-tools">
           <div class="box-tools ">
-
-
             <i class="devicon-django-plain custom-icon custom-box-tools"></i>
                       <p class="custom-text">Django</p>
-          
         </div>
         <div class="box-tools">
           <i class="devicon-html5-plain custom-icon custom-box-tools"></i>
@@ -120,25 +108,19 @@ let downloadCV = async () => {
 
           <i class="devicon-bootstrap-plain custom-icon custom-box-tools"></i>
           <p class="custom-text">Bootstrap</p>
-          
         </div>
         <div class="box-tools">
 
           <i class="devicon-docker-plain custom-icon custom-box-tools"></i>
-          
           <p class="custom-text">Docker</p>
-          
         </div>
         <div class="box-tools">
 
 
           <i class="devicon-svelte-plain custom-icon custom-box-tools"></i>
-                    
           <p class="custom-text">Svelte</p>
-          
         </div>
       </div>
-      
     </div>
     <div class="column">
     </div>
@@ -174,7 +156,6 @@ let downloadCV = async () => {
     </div>
     <div class="column m-auto"></div>
   </div>
- 
 
   {/each}
 
@@ -197,7 +178,6 @@ let downloadCV = async () => {
     color: #a7a9be;
   }
 
-  
 
   .about-info{
     width: 100%;
