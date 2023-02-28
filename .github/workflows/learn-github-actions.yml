@@ -9,15 +9,25 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+        with:
+          ref: 'master'
+      - name: Pull changes
+        run: |
+            git pull
       
-      - name: SSH deploy
+      - name: Check SSH connectivity
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.IP_ADRESS }}
           username: ${{ secrets.USER_NAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd /home/vlopez/portafolio
+            echo "SSH connection successful"
+            cd /home/vlopez/portafolio/portfolio-front
+            git pull origin master
             docker-compose build
-            docker-compose up -d
+            echo "Deteniendo contenedores..."
+            docker-compose down
+            script: echo "SSH connection successful"
+            docker-compose up -d --remove-orphans

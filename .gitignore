@@ -22,3 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+backend/.env
+backend/Dockerfile
+backend/entrypoint.sh
+frontend/.gitignore
+frontend/Dockerfile
+frontend/nginx/

@@ -24,22 +24,7 @@
   };
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 </script>
-
-
-
 
 <Animate >
   <section class="hero is-fullheight custom-component  " >
@@ -147,6 +132,7 @@
 
 :global(body.dark-mode) .custom-text {
         color: #f0f0f0;
+        text-align: center;
 }
 
 
@@ -158,6 +144,7 @@
 
 :global(body.dark-mode) .custom-text {
         color: #f0f0f0;
+        text-align: center;
 }
 
 

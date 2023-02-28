@@ -5,7 +5,7 @@
   let projects = [];
 
   onMount(async () => {
-    fetch("http://127.0.0.1:8000/project/")
+    fetch("http://vic.uy/project/")
       .then((response) => response.json())
       .then((data) => {
         projects = data;
@@ -13,7 +13,7 @@
         // console.log(data);
       })
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
         return [];
       });
   });
@@ -34,7 +34,7 @@
 				<p class="paragraph custom-text">{project.description}</p>
 
 
-        <div class="container-tecno">
+        <div class="custom-container-tecno">
           
           <i class="devicon-django-plain"></i>
           <i class="devicon-html5-plain"></i>
@@ -104,23 +104,10 @@
     margin: 16px;
   }
 
-  .container-tecno{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    height: 30px;
-    margin: 16px;
-  }
-  .container-tecno i{
+  .custom-container-tecno i{
     font-size: 16px;
     margin: 4px;
   }
-/* 
-  .buttom-color{
-    background-color: #ff8906;
-    color: #fffffe;
-    border: none;
-  } */
 
 
   .paragraph{
@@ -183,6 +170,34 @@
         background-color: #ff8906;
 
 }
+
+
+
+
+.custom-container-tecno{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 30px;
+    margin: 16px;
+    color: gray;
+  }
+
+
+
+:global(body.dark-mode) .custom-container-tecno {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 30px;
+    margin: 16px;
+    color:white
+
+}
+
+
+
+
 
 
 </style>

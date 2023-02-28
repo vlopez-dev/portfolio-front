@@ -1,7 +1,6 @@
 <script>
   import { FileTextIcon,DownloadIcon } from 'svelte-feather-icons'
 
-  export let about_title, about_description, src;
   import Animate from './Animate.svelte';
   import { onMount } from "svelte";
 
@@ -10,7 +9,7 @@
   let abouts = [];
 
 onMount(async () => {
-  fetch("http://127.0.0.1:8000/about/")
+  fetch("http://vic.uy/about/")
     .then((response) => response.json())
     .then((data) => {
       abouts = data;
@@ -18,7 +17,7 @@ onMount(async () => {
       // console.log(data);
     })
     .catch((error) => {
-      console.log(error);
+      // console.log(error);
       return [];
     });
 });
@@ -26,7 +25,7 @@ onMount(async () => {
 
 let downloadCV = async () => {
         try {
-            let response = await fetch('http://127.0.0.1:8000/download_cv/');
+            let response = await fetch('http://vic.uy/download_cv/');
             response.blob().then(blob => {
                 let url = window.URL.createObjectURL(blob);
                 let a = document.createElement('a');
@@ -38,7 +37,7 @@ let downloadCV = async () => {
                 window.URL.revokeObjectURL(url);
             });
         } catch (error) {
-            console.error(error);
+            // console.error(error);
         }
     };
 
@@ -49,7 +48,6 @@ let downloadCV = async () => {
 
 
 <Animate>
-    <!-- aqui tu contenido -->
 <section class="hero is-fullheight custom-component"  >
   {#each abouts as about}
 
@@ -63,7 +61,7 @@ let downloadCV = async () => {
         <div class="column">
           <div class="container about-info">
 
-          <h3 class="title custom-text">{about.title}<span class="dot"></span></h3>
+          <h3 class="title custom-text">{about.title}</h3>
           <p class="paragraph custom-text">{about.description}</p>
           <div class="btn-cv">
           <a href=""  on:click={downloadCV}>
@@ -149,7 +147,7 @@ let downloadCV = async () => {
   <div class="columns p-6">
     <div class="column"></div>
 
-    <div class="column is-half p-6 ">
+    <div class="column is-half ">
       <div class="container" >
         <h3 class="title title__bio custom-text">Bio</h3>
         <div>
@@ -165,14 +163,12 @@ let downloadCV = async () => {
 
   <div class="columns p-6">
     <div class="column"></div>
-    <div class="column is-half p-6 ">
+    <div class="column is-half ">
       <div class="container">
 
       <h3 class="title title__bio custom-text">Career</h3>
       <div>
-        <h6 class="custom-text">Support Enginer<span>-</span>02/2007 - Actualidad</h6>
-        <a href="">AMEC</a>
-        <p>lorem</p>
+        <p class="paragraph custom-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum consectetur eum culpa quidem repellendus doloribus voluptas, deserunt quod ipsam quae cumque rem provident earum, fugiat nihil expedita, ratione hic ea.</p>
       </div>
       </div>
     </div>
@@ -338,12 +334,5 @@ let downloadCV = async () => {
         color: #f0f0f0;
 }
 
-.dot {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #ff8906;
-  margin-left: 5px;
-}
+
 </style>
