@@ -9,7 +9,7 @@
   let abouts = [];
 
 onMount(async () => {
-  fetch("http://vic.uy/about/")
+  fetch("https://vic.uy/about/")
     .then((response) => response.json())
     .then((data) => {
       abouts = data;
@@ -25,7 +25,7 @@ onMount(async () => {
 
 let downloadCV = async () => {
         try {
-            let response = await fetch('http://vic.uy/download_cv/');
+            let response = await fetch('https://vic.uy/download_cv/');
             response.blob().then(blob => {
                 let url = window.URL.createObjectURL(blob);
                 let a = document.createElement('a');
