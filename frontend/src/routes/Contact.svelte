@@ -187,5 +187,11 @@ border-color:#1f1235 ;
 color: white;
 }
 
+.custom-text{
+  text-align: center;
+  color: #1f1235;
+  font-family: "Inconsolata", monospace;
+  line-height: 1.70rem;
+}
 
   </style>
