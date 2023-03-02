@@ -8,7 +8,7 @@
     let email;
 
   const sendEmail=async () => {
-    const response = await fetch("http://127.0.0.1:8000/send_email/", {
+    const response = await fetch("https://vic.uy/send_email/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

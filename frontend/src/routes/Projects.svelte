@@ -5,7 +5,7 @@
   let projects = [];
 
   onMount(async () => {
-    fetch("http://vic.uy/project/")
+    fetch("https://vic.uy/project/")
       .then((response) => response.json())
       .then((data) => {
         projects = data;

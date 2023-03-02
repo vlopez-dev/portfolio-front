@@ -12,6 +12,18 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 import os
 from pathlib import Path
+from decouple import config
+from dotenv import load_dotenv
+
+
+load_dotenv()
+
+# Obtiene el valor de la variable de entorno DATABASE_URL
+DB_PORTA_NAME = os.getenv('DB_PORTA_NAME')
+DB_PORTA_USER = os.getenv('DB_PORTA_USER')
+DB_PORTA_PASSWORD = os.getenv('DB_PORTA_PASSWORD')
+DB_HOST = os.getenv('DB_HOST')
+DB_PORT = os.getenv('DB_PORT')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -24,7 +36,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-jienf(j#njp@^*^()5lzp6a4%+243^zp#rky&eu9ak3lnd6+^9'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['vic.uy','www.vic.uy','127.0.0.1']
 
@@ -81,14 +93,27 @@ WSGI_APPLICATION = 'portafolio.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+
+
+
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    "default": {
+        "ENGINE": "django.db.backends.mysql",
+        "NAME":DB_PORTA_NAME,
+        "USER":DB_PORTA_USER,
+        "PASSWORD":DB_PORTA_PASSWORD,
+        "HOST":DB_HOST,
+        "PORT":DB_PORT,
     }
 }
-
-
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
@@ -140,3 +165,8 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+
+
+
+CSRF_TRUSTED_ORIGINS = ['https://vic.uy']
