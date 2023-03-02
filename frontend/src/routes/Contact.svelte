@@ -48,6 +48,8 @@
             </span>
           </div>
         </div>
+      
+
         <div class="field">
           <label class="label custom-label">Message</label>
           <div class="control">
@@ -66,9 +68,14 @@
             </span>
               Send</button>
           </div>
+          
          
         </div>
+        
       </form>
+      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+        <div class="g-recaptcha" data-sitekey="TU_CLAVE_DE_SITIO"></div>
       </div>
       
       <div class="column"></div>

@@ -1,4 +1,5 @@
 from urllib import response
+from mailjet_rest import Client
 
 from django.shortcuts import render,get_object_or_404
 from .models import Project,About
@@ -9,8 +10,9 @@ from django.core.mail import send_mail
 from django.http import FileResponse
 
 from .serializers import ProjectSerializer,AboutSerializer
+from django.conf import settings
 
-# Create your views here.
+from captcha.decorators import validate_recaptcha
 
 
 
@@ -47,12 +49,49 @@ class AboutViewSet(viewsets.ModelViewSet):
 
 class EnviarCorreo(APIView):
 
+    # def post(self, request, *args, **kwargs):
+    #      message = request.data.get('message')
+    #      from_email = request.data.get('email')
+    #      recipient_list = ['victorl_222@hotmail.com']
+    #      send_mail('Subject', 'Message', 'victorl_222@hotmail.com', ['valopezr5@gmail.com'])
+    #      return Response({'message': 'Email sent successfully'})
+
+
+    @validate_recaptcha
     def post(self, request, *args, **kwargs):
-         message = request.data.get('message')
-         from_email = request.data.get('email')
-         recipient_list = ['victorl_222@hotmail.com']
-         send_mail('Subject', 'Message', 'victorl_222@hotmail.com', ['valopezr5@gmail.com'])
-         return Response({'message': 'Email sent successfully'})
+        message = request.data.get('message')
+        from_email = request.data.get('email')
+        recipient_list = ['victorl_222@hotmail.com']
+        captcha = ReCaptchaField()
+        print("Tengo los datos")
+
+        mailjet = Client(auth=(settings.MJ_APIKEY_PUBLIC, settings.MJ_APIKEY_PRIVATE), version='v3.1')
+        data = {
+            'Messages': [
+                {
+                    'From': {
+                        'Email': settings.DEFAULT_FROM_EMAIL
+                    },
+                    'To': [
+                        {
+                            'Email': settings.MJ_TO_EMAIL,
+                            'Name': settings.MJ_TO_NAME
+                        }
+                    ],
+                    'Subject': 'Mensaje de contacto desde tu sitio web',
+                    'TextPart': message,
+                    'ReplyTo': {
+                        'Email': from_email
+                    }
+                }
+            ]
+        }
+        result = mailjet.send.create(data=data)
+
+        if result.status_code == 200:
+            return Response({'message': 'Email sent successfully'})
+        else:
+            return Response({'message': 'Error sending email'}, status=status.HTTP_400_BAD_REQUEST)
 
 
 

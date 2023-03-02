@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'core',
     'rest_framework',
     'corsheaders',
+    'captcha',
 ]
 
 MIDDLEWARE = [
@@ -140,3 +141,17 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+
+#valores envio mails desde form con victorl_222@hotmail.com
+
+MJ_APIKEY_PUBLIC = ''
+MJ_APIKEY_PRIVATE = ''
+MJ_TO_EMAIL = ''
+MJ_TO_NAME = ''
+DEFAULT_FROM_EMAIL = ''
+
+
+
+RECAPTCHA_PUBLIC_KEY = 'TU_CLAVE_DE_SITIO'
+RECAPTCHA_PRIVATE_KEY = 'TU_CLAVE_SECRETA'
