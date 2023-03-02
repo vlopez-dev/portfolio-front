@@ -31,3 +31,4 @@ backend/entrypoint.sh
 frontend/Dockerfile
 frontend/nginx/
 .gitignore
+.env

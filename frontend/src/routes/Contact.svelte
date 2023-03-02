@@ -24,6 +24,15 @@
   };
 
 
+
+
+  let recaptchaResponse = null;
+
+function onRecaptcha(response) {
+  recaptchaResponse = response;
+}
+
+
 </script>
 
 <Animate >
@@ -48,6 +57,8 @@
             </span>
           </div>
         </div>
+      
+
         <div class="field">
           <label class="label custom-label">Message</label>
           <div class="control">
@@ -66,9 +77,24 @@
             </span>
               Send</button>
           </div>
+<!-- 
+          <div class="field">
+            <label class="label custom-label">reCAPTCHA</label>
+            <div class="control">
+              <div class="g-recaptcha" data-sitekey="TU_SITE_KEY" data-callback="onRecaptcha"></div>
+              <input type="hidden" name="recaptcha_response" bind:value={recaptchaResponse} />
+            </div>
+          </div> -->
+          
+         
          
         </div>
+        
       </form>
+      <div class="g-recaptcha" data-sitekey="6Ld7NskkAAAAAJKzdpVtsTXKBUdX_TT3dizQHxA8"></div>
+
+      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
       </div>
       
       <div class="column"></div>
