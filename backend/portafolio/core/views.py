@@ -1,3 +1,4 @@
+from http.client import HTTPResponse
 from urllib import response
 from mailjet_rest import Client
 
@@ -11,8 +12,8 @@ from django.http import FileResponse
 
 from .serializers import ProjectSerializer,AboutSerializer
 from django.conf import settings
+# from recaptcha2 import Recaptcha
 
-from captcha.decorators import validate_recaptcha
 
 
 
@@ -57,13 +58,17 @@ class EnviarCorreo(APIView):
     #      return Response({'message': 'Email sent successfully'})
 
 
-    @validate_recaptcha
     def post(self, request, *args, **kwargs):
         message = request.data.get('message')
         from_email = request.data.get('email')
         recipient_list = ['victorl_222@hotmail.com']
-        captcha = ReCaptchaField()
         print("Tengo los datos")
+        
+        
+        # Verificar ReCAPTCHA
+        captcha_response = request.data.get('g-recaptcha-response')
+        if not captcha_contact(captcha_response):
+            return Response({'message': 'Invalid ReCAPTCHA'}, status=status.HTTP_400_BAD_REQUEST)
 
         mailjet = Client(auth=(settings.MJ_APIKEY_PUBLIC, settings.MJ_APIKEY_PRIVATE), version='v3.1')
         data = {
@@ -102,3 +107,22 @@ def download_cv(request):
     response = FileResponse(file)
     response['Content-Disposition'] = 'attachment; filename="cv.pdf"'
     return response
+
+
+
+
+def captcha_contact(request):
+  # Obtener la respuesta del captcha del formulario
+  recaptcha_response = request.POST.get('recaptcha_response', None)
+
+  # Verificar la respuesta del captcha
+  recaptcha = Recaptcha(
+    site_key='RECAPTCHA_PUBLIC_KEY',
+    secret_key='RECAPTCHA_PRIVATE_KEY',
+  )
+  if not recaptcha.verify(recaptcha_response, request.META.get('REMOTE_ADDR')):
+    # Si la respuesta no es válida, mostrar un error
+    return HTTPResponse('reCAPTCHA inválido')
+
+  # Si la respuesta es válida, procesar el formulario
+  # ...
