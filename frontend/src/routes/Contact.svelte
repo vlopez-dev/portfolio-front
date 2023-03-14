@@ -85,18 +85,16 @@ function onRecaptcha(response) {
               <input type="hidden" name="recaptcha_response" bind:value={recaptchaResponse} />
             </div>
           </div> -->
-          
-         
-         
+
         </div>
-        
+
       </form>
-      <div class="g-recaptcha" data-sitekey="6Ld7NskkAAAAAJKzdpVtsTXKBUdX_TT3dizQHxA8"></div>
+      <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
 
       <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
       </div>
-      
+
       <div class="column"></div>
 
     </div>

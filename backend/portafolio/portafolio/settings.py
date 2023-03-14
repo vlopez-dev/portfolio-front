@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'core',
     'rest_framework',
     'corsheaders',
-    'captcha',
+     'captcha',
 ]
 
 MIDDLEWARE = [
@@ -144,14 +144,16 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 
 #valores envio mails desde form con victorl_222@hotmail.com
+EMAIL_BACKEND=EMAIL_BACKEND
+EMAIL_HOST=EMAIL_HOST
+EMAIL_PORT=EMAIL_PORT
+EMAIL_HOST_USER=EMAIL_HOST_USER
+EMAIL_HOST_PASSWORD=EMAIL_HOST_PASSWORD
+EMAIL_USE_TLS=EMAIL_USE_TLS
+EMAIL_USE_SSL=EMAIL_USE_SSL
 
-MJ_APIKEY_PUBLIC = ''
-MJ_APIKEY_PRIVATE = ''
-MJ_TO_EMAIL = ''
-MJ_TO_NAME = ''
-DEFAULT_FROM_EMAIL = ''
 
 
-
-RECAPTCHA_PUBLIC_KEY = ''
-RECAPTCHA_PRIVATE_KEY = ''
+RECAPTCHA_PUBLIC_KEY = '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'
+RECAPTCHA_PRIVATE_KEY = '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe'
+SILENCED_SYSTEM_CHECKS = ['captcha.recaptcha_test_key_error']
