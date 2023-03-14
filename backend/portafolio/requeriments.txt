@@ -23,3 +23,11 @@ gunicorn>=20.1.0
 tzdata
 
 tzdata>= 2022.7
+
+#recaptcha
+django-recaptcha>= 3.0.0
+
+#mailjet
+mailjet-rest>= 1.3.4
+
+
