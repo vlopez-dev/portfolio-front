@@ -2,6 +2,9 @@
 Django>=4.0.4 
 
 
+#mysqlclient
+mysqlclient>=2.1.1
+
 #Rest
 djangorestframework>=3.14.0
 
@@ -20,9 +23,17 @@ whitenoise>=6.2.0
 
 gunicorn>=20.1.0
 
-tzdata
+#tzdata
 
 tzdata>= 2022.7
+
+
+#decouple
+python-decouple>= 3.7
+
+#DOTENV
+
+python-dotenv>= 1.0.0
 
 #recaptcha
 django-recaptcha>= 3.0.0
