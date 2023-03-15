@@ -1,4 +1,4 @@
-from .models import Project,About
+from .models import Project,About,Contact
 
 from rest_framework import serializers
 
@@ -12,4 +12,10 @@ class ProjectSerializer(serializers.ModelSerializer):
 class AboutSerializer(serializers.ModelSerializer):
     class Meta:
         model = About
-        fields = ('title','description','imagenabout','bio')
+        fields = ('title','description','imagenabout')
+        
+        
+class ContactSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Contact
+        fields = ('title','description')
