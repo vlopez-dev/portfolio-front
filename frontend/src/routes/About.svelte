@@ -9,7 +9,7 @@
   let abouts = [];
 
 onMount(async () => {
-  fetch("http://vic.uy/about/")
+  fetch("http://127.0.0.1:8000/about/")
     .then((response) => response.json())
     .then((data) => {
       abouts = data;
@@ -54,7 +54,7 @@ let downloadCV = async () => {
             <img src="{about.imagenabout}" alt="">
           </div>
         </div>
-        <div class="column">
+        <div class="column is-one-third-desktop">
           <div class="container about-info">
 
           <h3 class="title custom-text">{about.title}</h3>
@@ -133,28 +133,13 @@ let downloadCV = async () => {
       <div class="container" >
         <h3 class="title title__bio custom-text">Bio</h3>
         <div>
-          <p class="paragraph custom-text">{about.bio}</p>
+          <p class="paragraph custom-text"></p>
         </div>
       </div>
 
     </div>
     <div class="column"></div>
 
-  </div>
-
-
-  <div class="columns p-6">
-    <div class="column"></div>
-    <div class="column is-half ">
-      <div class="container">
-
-      <h3 class="title title__bio custom-text">Career</h3>
-      <div>
-        <p class="paragraph custom-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum consectetur eum culpa quidem repellendus doloribus voluptas, deserunt quod ipsam quae cumque rem provident earum, fugiat nihil expedita, ratione hic ea.</p>
-      </div>
-      </div>
-    </div>
-    <div class="column m-auto"></div>
   </div>
 
   {/each}

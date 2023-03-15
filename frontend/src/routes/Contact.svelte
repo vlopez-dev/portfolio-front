@@ -4,8 +4,29 @@
     import Animate from "./Animate.svelte";
     import { onMount } from "svelte";
 
+
+
+
+
+    
+
     let message;
     let email;
+    let contacts = [];
+
+  onMount(async () => {
+    fetch("http://127.0.0.1:8000/contact/")
+      .then((response) => response.json())
+      .then((data) => {
+        contacts = data;
+        console.log(contacts);
+        // console.log(data);
+      })
+      .catch((error) => {
+        // console.log(error);
+        return [];
+      });
+  });
 
   const sendEmail=async () => {
     const response = await fetch("http://127.0.0.1:8000/send_email/", {
@@ -41,8 +62,12 @@ function onRecaptcha(response) {
       <div class="column"></div>
       <div class="column is-one-third m-6">
         <div class="container">
-          <h4 class="title custom-text">Contact Me</h4>
-          <p class="custom-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus illum fuga, aspernatur beatae consectetur eligendi sapiente aperiam consequuntur cupiditate est quas, eius provident debitis! Ipsam aliquid fugit deserunt sit mollitia!</p>
+          {#each contacts as contact}
+
+          <h4 class="title custom-text">{contact.title}</h4>
+          <p class="custom-text">{contact.description}</p>
+          {/each}
+
         </div>
         <form class="mt-6" action="">
         <div class="field">

@@ -4,13 +4,13 @@ from urllib import response
 from mailjet_rest import Client
 from django.conf import settings
 from django.shortcuts import render,get_object_or_404
-from .models import Project,About
+from .models import Project,About,Contact
 from rest_framework import viewsets
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from django.http import FileResponse
 
-from .serializers import ProjectSerializer,AboutSerializer
+from .serializers import ProjectSerializer,AboutSerializer,ContactSerializer
 from django.conf import settings
 import requests
 import json
@@ -48,6 +48,20 @@ class AboutViewSet(viewsets.ModelViewSet):
         serializer = AboutSerializer(about)
         print(serializer)
         return response({'serializer': serializer, 'about': about},template_name='index.html')
+
+
+
+class ContactViewSet(viewsets.ModelViewSet):
+    queryset = Contact.objects.all()
+    serializer_class = ContactSerializer
+    template_name = 'core/index.html'
+    
+    
+    def get(self, request, id):
+        contact = get_object_or_404(Contact, pk=id)
+        serializer = ContactSerializer(contact)
+        print(serializer)
+        return response({'serializer': serializer, 'contact': contact},template_name='index.html')
 
 
 

@@ -12,6 +12,10 @@ class Project(models.Model):
 
 class About(models.Model):
     title = models.CharField(max_length=50)
-    description= models.CharField(max_length=250)
+    description= models.CharField(max_length=1000)
     imagenabout = models.ImageField()
-    bio = models.CharField(max_length=250)
+    
+    
+class Contact(models.Model):
+    title = models.CharField(max_length=50)
+    description = models.CharField(max_length=500)
