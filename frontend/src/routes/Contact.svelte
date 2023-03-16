@@ -15,7 +15,7 @@
     let contacts = [];
 
   onMount(async () => {
-    fetch("http://127.0.0.1:8000/contact/")
+    fetch("https://vic.uy/contact/")
       .then((response) => response.json())
       .then((data) => {
         contacts = data;
