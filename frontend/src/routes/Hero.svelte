@@ -25,7 +25,7 @@ import { onMount, onDestroy } from 'svelte';
 <Animate>
 <section class="hero is-fullheight custom-component">
     <div class="hero-body">
-    <div class="columns ">
+    <div class="columns mx-2 my-6 ">
       <div class="column">
         
   {#key index}
