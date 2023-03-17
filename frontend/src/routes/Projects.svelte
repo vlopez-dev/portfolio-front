@@ -5,7 +5,7 @@
   let projects = [];
 
   onMount(async () => {
-    fetch("http://vic.uy/project/")
+    fetch("http://127.0.0.1:8000/project/")
       .then((response) => response.json())
       .then((data) => {
         projects = data;
@@ -156,7 +156,7 @@
 
 .custom-buttom-color{
   background-color: #ff6e6c;
-  width: 115px;
+  width: 105px;
   color: #fffffe;
   border: none;
   }
@@ -165,7 +165,7 @@
 
 :global(body.dark-mode) .custom-buttom-color {
         color: #f0f0f0;
-        width: 115px;
+        width: 105px;
 
         background-color: #ff8906;
 

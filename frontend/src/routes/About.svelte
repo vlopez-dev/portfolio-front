@@ -47,7 +47,7 @@ let downloadCV = async () => {
 <Animate>
 <section class="hero is-fullheight custom-component"  >
   {#each abouts as about}
-    <div class="columns is-multiline m-6" >
+    <div class="columns is-multiline mx-2 my-6" >
         <div class="column "></div>
         <div class="column is-one-third">
           <div class="container about-img">
@@ -269,7 +269,7 @@ let downloadCV = async () => {
 
 .custom-bottom{
   background-color: #ff6e6c;
-  width: 115px;
+  width: 105px;
   color: #fffffe;
 }
 
@@ -278,7 +278,7 @@ let downloadCV = async () => {
   background-color: #ff8906;
     border: none;
     color: #fffffe;
-    width: 115px;
+    width: 105px;
     box-shadow: -8px 0px 20px rgba(255, 146, 26, 0.3), 0px 0px 20px rgba(255, 146, 26, 0.3), 8px 0px 20px rgb(255 146 26 / 30%);
 
 }
