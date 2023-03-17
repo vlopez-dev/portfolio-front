@@ -1,7 +1,6 @@
 from http.client import HTTPResponse
 from telnetlib import STATUS
 from urllib import response
-from mailjet_rest import Client
 from django.conf import settings
 from django.shortcuts import render,get_object_or_404
 from .models import Project,About,Contact
