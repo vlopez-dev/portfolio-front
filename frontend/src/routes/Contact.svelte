@@ -58,9 +58,9 @@ function onRecaptcha(response) {
 
 <Animate >
   <section class="hero is-fullheight custom-component  " >
-    <div class="columns is-multiline m-4">
+    <div class="columns is-multiline mx-3 my-6">
       <div class="column"></div>
-      <div class="column is-one-third m-6">
+      <div class="column is-one-third">
         <div class="container">
           {#each contacts as contact}
 
@@ -201,7 +201,7 @@ function onRecaptcha(response) {
   background-color: #ff6e6c;
     border: none;
     color: #fffffe;
-    width: 115px;
+    width: 105px;
 
 }
 
@@ -212,7 +212,7 @@ function onRecaptcha(response) {
   background-color: #ff8906;
     border: none;
     color: #fffffe;
-    width: 115px;
+    width: 105px;
 }
 
 
