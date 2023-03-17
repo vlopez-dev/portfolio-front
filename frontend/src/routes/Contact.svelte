@@ -64,7 +64,7 @@ function onRecaptcha(response) {
         <div class="container">
           {#each contacts as contact}
 
-          <h4 class="title custom-text">{contact.title}</h4>
+          <h4 class="title custom-title">{contact.title}</h4>
           <p class="custom-text">{contact.description}</p>
           {/each}
 
@@ -175,26 +175,20 @@ function onRecaptcha(response) {
         color: #fffffe;
     }
 
-    .custom-text {
-        color: #1f1235;
+.custom-title{
+  color:#0f0e17;
+  text-align: center;
 }
 
-:global(body.dark-mode) .custom-text {
-        color: #f0f0f0;
+:global(body.dark-mode) .custom-title {
         text-align: center;
-}
-
-
-
+        color: #fffffe;
+    }
 
 .custom-form {
         color: #1f1235;
 }
 
-:global(body.dark-mode) .custom-text {
-        color: #f0f0f0;
-        text-align: center;
-}
 
 
 .custom-button{
@@ -236,8 +230,12 @@ border-color:#1f1235 ;
 color: white;
 }
 
+:global(body.dark-mode) .custom-text {
+        color: #f0f0f0;
+        text-align: justify;
+}
 .custom-text{
-  text-align: center;
+  text-align: justify;
   color: #1f1235;
   font-family: "Inconsolata", monospace;
   line-height: 1.70rem;
