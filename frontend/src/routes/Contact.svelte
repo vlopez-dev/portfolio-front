@@ -38,9 +38,13 @@
     });
 
     if (!response.ok) {
-      console.error("Error enviando correo");
+      const data = await response.json();
+
+      console.error("Error enviando correo",data);
     } else {
-      console.log("Correo enviado correctamente");
+      const data = await response.json();
+
+      console.log("Correo enviado correctamente",data);
     }
   };
 
