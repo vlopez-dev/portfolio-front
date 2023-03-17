@@ -24,6 +24,7 @@ dist-ssr
 *.sw?
 
 
+.env
 backend/.env
 backend/Dockerfile
 backend/entrypoint.sh
