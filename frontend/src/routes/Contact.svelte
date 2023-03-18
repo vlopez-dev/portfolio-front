@@ -28,11 +28,24 @@
       });
   });
 
+  function getCookie(name) {
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; ${name}=`);
+  if (parts.length === 2) {
+    return parts.pop().split(";").shift();
+  }
+}
+
+
+
   const sendEmail=async () => {
+    const csrftoken = getCookie('csrftoken');
+
     const response = await fetch("https://vic.uy/send_email/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        "X-CSRFToken": csrftoken 
       },
       body: JSON.stringify({ message, email }),
     });
