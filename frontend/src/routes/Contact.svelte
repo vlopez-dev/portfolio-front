@@ -48,6 +48,7 @@
         "X-CSRFToken": csrftoken 
       },
       body: JSON.stringify({ message, email }),
+      credentials: 'include',
     });
 
     if (!response.ok) {
@@ -86,7 +87,7 @@ function onRecaptcha(response) {
           {/each}
 
         </div>
-        <form class="mt-6" action="">
+        <form class="mt-6" action="" on:submit|preventDefault={sendEmail}>
         <div class="field">
           <label class="label custom-label">Email</label>
           <div class="control has-icons-left has-icons-right">
