@@ -191,6 +191,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_CREDENTIALS = True
 CSRF_TRUSTED_ORIGINS = ['https://vic.uy']
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
@@ -213,4 +214,44 @@ RECAPTCHA_PUBLIC_KEY=RECAPTCHA_PUBLIC_KEY
 RECAPTCHA_PRIVATE_KEY=RECAPTCHA_PRIVATE_KEY
 
 
-CSRF_COOKIE_NAME = '__csrf'
+CSRF_COOKIE_NAME = 'csrftoken'
+
+
+import os
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+LOG_DIR = os.path.join(BASE_DIR, 'logs')
+if not os.path.exists(LOG_DIR):
+    os.mkdir(LOG_DIR)
+
+LOGGING = {
+    'version': 1,
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'logs', 'django.log'),
+            'formatter': 'verbose'
+        },
+    },
+    'formatters': {
+        'verbose': {
+            'format': '%(asctime)s [%(levelname)s] %(name)s %(message)s'
+        }
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+        
+        
+    'portafolio': {
+        'handlers': ['file'],
+        'level': 'DEBUG',
+        'propagate': True,
+    },
+    },
+}

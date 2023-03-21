@@ -28,37 +28,55 @@
       });
   });
 
+  
   function getCookie(name) {
-  const value = `; ${document.cookie}`;
-  const parts = value.split(`; ${name}=`);
-  if (parts.length === 2) {
-    return parts.pop().split(";").shift();
+  let cookieValue = null;
+  if (document.cookie && document.cookie !== "") {
+    const cookies = document.cookie.split(";");
+    for (let i = 0; i < cookies.length; i++) {
+      const cookie = cookies[i].trim();
+      if (cookie.substring(0, name.length + 1) === name + "=") {
+        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+        break;
+      }
+    }
   }
+  return cookieValue;
+
 }
 
 
 
+
   const sendEmail=async () => {
-    const csrftoken = getCookie('csrftoken');
+
+    const csrfCookie = getCookie("csrftoken");
+
+    const recaptchaResponse = grecaptcha.getResponse();
 
     const response = await fetch("https://vic.uy/send_email/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "X-CSRFToken": csrftoken 
+        "X-CSRFToken": csrfCookie, 
       },
-      body: JSON.stringify({ message, email }),
+      body: JSON.stringify({ message, email,recaptchaResponse }),
       credentials: 'include',
     });
 
     if (!response.ok) {
+      console.log(response)
       const data = await response.json();
-
       console.error("Error enviando correo",data);
-    } else {
-      const data = await response.json();
+      document.getElementById("message").textContent = "Error enviando correo";
 
-      console.log("Correo enviado correctamente",data);
+    } else {
+      console.log(response)
+
+      // const data = await response.json();
+      document.getElementById("message").textContent = "Correo enviado correctamente";
+
+      console.log("Correo enviado correctamente");
     }
   };
 
@@ -85,6 +103,7 @@ function onRecaptcha(response) {
           <h4 class="title custom-title">{contact.title}</h4>
           <p class="custom-text">{contact.description}</p>
           {/each}
+          <div id="message"></div>
 
         </div>
         <form class="mt-6" action="" on:submit|preventDefault={sendEmail}>
@@ -114,7 +133,7 @@ function onRecaptcha(response) {
         
         <div class="field is-grouped is-justify-content-center">
           <div class="control btn-cv  ">
-            <button class="button custom-button  is-normal is-rounded " on:click={sendEmail}>
+            <button class="button custom-button  is-normal is-rounded ">
               <span>
               <SendIcon size="24" />
             </span>

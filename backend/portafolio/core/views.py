@@ -15,8 +15,13 @@ import requests
 import json
 from django.core.mail import send_mail
 from django.core.mail import EmailMessage
-
+from django.http import JsonResponse
+from rest_framework import status
 from captcha.fields import CaptchaField
+import logging
+
+logger = logging.getLogger('portafolio')
+
 public_key = settings.RECAPTCHA_PUBLIC_KEY
 secret_key = settings.RECAPTCHA_PRIVATE_KEY
 
@@ -70,17 +75,18 @@ class EnviarCorreo(APIView):
     
     
     def post(self, request, *args, **kwargs):
+        csrf_cookie_value = request.COOKIES.get('csrftoken')
         message = request.data.get('message')
         reply_to = request.data.get('email')
         sender_email = 'web@vic.uy'
         recipient_list = ['web@vic.uy']
 
         # Verificar ReCAPTCHA
-        captcha_response = request.data.get('g-recaptcha-response')
+        captcha_response = request.data.get('recaptchaResponse')
         success = captcha_contact(captcha_response, request.META.get('REMOTE_ADDR'))
-        if not success:
-            return Response({'message': 'Invalid reCAPTCHA'}, status=STATUS.HTTP_400_BAD_REQUEST)
-        else:
+        logger = logging.getLogger('portafolio')
+        logger.debug(f'The value of success is {success}')
+        if success:
 
             email = EmailMessage(
                 subject='Correo desde Web',
@@ -91,9 +97,11 @@ class EnviarCorreo(APIView):
                 headers={'Reply-To': reply_to}
             )
             email.send()
-            return Response({'message': 'Correo enviado exitosamente'})
 
-
+            return JsonResponse({'message': 'Correo enviado exitosamente'})
+        else:
+            
+            return JsonResponse({'message': 'Invalid reCAPTCHA'}, status=400)
 
 def download_cv(request):
     file = open('media/cv.pdf', 'rb')
@@ -105,16 +113,20 @@ def download_cv(request):
 
 
 def captcha_contact(captcha_response,remote_ip):
+
       # Obtener la respuesta del captcha del formulario
    
     # Realizar la verificación del captcha con Google
+   
     verify_url = 'https://www.google.com/recaptcha/api/siteverify'
     params = {
         'secret': secret_key,
         'response': captcha_response,
-        'remoteip': remote_ip
+        'remoteip': remote_ip,
     }
     response = requests.post(verify_url, data=params)
     response_json = json.loads(response.text)
+    logger = logging.getLogger('portafolio')
+    logger.debug(f'The value of secret_key is {secret_key}, remoteip{remote_ip}')
 
     return response_json.get('success', False)
