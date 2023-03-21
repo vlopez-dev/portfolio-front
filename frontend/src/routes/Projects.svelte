@@ -21,7 +21,7 @@
 
 <section class="hero is-fullheight custom-component">
     <div class="container is-fluid">
-      <div class="columns is-multiline mx-2 my-6 ">
+      <div class="columns is-multiline mx-1 my-6 ">
         {#each projects as project}
 
         <div class="column is-full" >
