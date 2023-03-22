@@ -15,7 +15,7 @@
     let contacts = [];
 
   onMount(async () => {
-    fetch("http://127.0.0.1:8000/contact/")
+    fetch("http://127.0.0.1:8001/contact/")
       .then((response) => response.json())
       .then((data) => {
         contacts = data;
@@ -29,7 +29,7 @@
   });
 
   const sendEmail=async () => {
-    const response = await fetch("http://127.0.0.1:8000/send_email/", {
+    const response = await fetch("http://127.0.0.1:8001/send_email/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -106,7 +106,7 @@ function onRecaptcha(response) {
         </div>
 
       </form>
-      <div class="g-recaptcha" data-sitekey="6Ld7NskkAAAAAJKzdpVtsTXKBUdX_TT3dizQHxA8"></div>
+      <div class="g-recaptcha " data-sitekey="6Ld7NskkAAAAAJKzdpVtsTXKBUdX_TT3dizQHxA8"></div>
 
       <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
@@ -188,6 +188,7 @@ function onRecaptcha(response) {
     border: none;
     color: #fffffe;
     width: 105px;
+    margin-bottom: 15px;
 
 }
 
@@ -199,6 +200,8 @@ function onRecaptcha(response) {
     border: none;
     color: #fffffe;
     width: 105px;
+    margin-bottom: 15px;
+
 }
 
 

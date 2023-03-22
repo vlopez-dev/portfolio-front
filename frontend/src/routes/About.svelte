@@ -9,7 +9,7 @@
   let abouts = [];
 
 onMount(async () => {
-  fetch("http://127.0.0.1:8000/about/")
+  fetch("http://127.0.0.1:8001/about/")
     .then((response) => response.json())
     .then((data) => {
       abouts = data;
@@ -25,7 +25,7 @@ onMount(async () => {
 
 let downloadCV = async () => {
         try {
-            let response = await fetch('http://vic.uy/download_cv/');
+            let response = await fetch('http://127.0.0.1:8001/download_cv/');
             response.blob().then(blob => {
                 let url = window.URL.createObjectURL(blob);
                 let a = document.createElement('a');
@@ -131,9 +131,10 @@ let downloadCV = async () => {
 
     <div class="column is-half ">
       <div class="container" >
-        <h3 class="title title__bio custom-text">Bio</h3>
+        <h3 class="title title__bio custom-text">Certifications</h3>
         <div>
-          <p class="paragraph custom-text"></p>
+
+
         </div>
       </div>
 
