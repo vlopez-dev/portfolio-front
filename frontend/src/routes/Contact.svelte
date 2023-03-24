@@ -68,13 +68,13 @@
       console.log(response)
       const data = await response.json();
       console.error("Error enviando correo",data);
-      document.getElementById("message").textContent = "Error enviando correo";
+      document.getElementById("message").textContent = "Error al enviar e mensaje, intentelo nuevamente";
 
     } else {
       console.log(response)
 
       // const data = await response.json();
-      document.getElementById("message").textContent = "Correo enviado correctamente";
+      document.getElementById("message").textContent = "Mensaje enviado con exito";
 
       console.log("Correo enviado correctamente");
     }
@@ -103,7 +103,7 @@ function onRecaptcha(response) {
           <h4 class="title custom-title">{contact.title}</h4>
           <p class="custom-text">{contact.description}</p>
           {/each}
-          <div id="message"></div>
+          <div class="custom-message" id="message"></div>
 
         </div>
         <form class="mt-6" action="" on:submit|preventDefault={sendEmail}>
@@ -270,4 +270,15 @@ color: white;
   line-height: 1.70rem;
 }
 
+
+.custom-message{
+  color: green;
+  text-align: center;
+}
+
+
+:global(body.dark-mode) .custom-message {
+        color: #f0f0f0;
+        text-align: center;
+}
   </style>
