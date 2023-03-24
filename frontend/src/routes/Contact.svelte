@@ -94,7 +94,7 @@ function onRecaptcha(response) {
 
 <Animate >
   <section class="hero is-fullheight custom-component  " >
-    <div class="columns is-multiline mx-3 my-6">
+    <div class="columns is-multiline mx-2 my-6">
       <div class="column"></div>
       <div class="column is-one-third">
         <div class="container">
@@ -143,7 +143,7 @@ function onRecaptcha(response) {
         </div>
 
       </form>
-      <div class="g-recaptcha" data-sitekey="6Ld7NskkAAAAAJKzdpVtsTXKBUdX_TT3dizQHxA8"></div>
+      <div class="g-recaptcha " data-sitekey="6Ld7NskkAAAAAJKzdpVtsTXKBUdX_TT3dizQHxA8"></div>
 
       <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
@@ -225,6 +225,7 @@ function onRecaptcha(response) {
     border: none;
     color: #fffffe;
     width: 105px;
+    margin-bottom: 15px;
 
 }
 
@@ -236,6 +237,8 @@ function onRecaptcha(response) {
     border: none;
     color: #fffffe;
     width: 105px;
+    margin-bottom: 15px;
+
 }
 
 

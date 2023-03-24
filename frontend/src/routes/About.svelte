@@ -131,9 +131,10 @@ let downloadCV = async () => {
 
     <div class="column is-half ">
       <div class="container" >
-        <h3 class="title title__bio custom-text">Bio</h3>
+        <h3 class="title title__bio custom-text">Certifications</h3>
         <div>
-          <p class="paragraph custom-text"></p>
+
+
         </div>
       </div>
 
