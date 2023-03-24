@@ -58,7 +58,7 @@ function onRecaptcha(response) {
 
 <Animate >
   <section class="hero is-fullheight custom-component  " >
-    <div class="columns is-multiline mx-3 my-6">
+    <div class="columns is-multiline mx-2 my-6">
       <div class="column"></div>
       <div class="column is-one-third">
         <div class="container">

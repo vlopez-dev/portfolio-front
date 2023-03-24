@@ -48,7 +48,7 @@ import { onMount, onDestroy } from 'svelte';
     }
     .title{
       font-family: 'Karla', sans-serif;
-      font-size: 60px;
+      font-size: 48px;
     }
     .subtitle{
       font-family: 'Inconsolata', monospace;
