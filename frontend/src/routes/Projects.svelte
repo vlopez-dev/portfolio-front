@@ -101,7 +101,7 @@
 
 
   .container-code{
-    margin: 16px;
+    margin: 12px;
   }
 
   .custom-container-tecno i{
