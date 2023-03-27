@@ -15,12 +15,12 @@
     "bulma": "^0.9.4",
     "sass": "^1.53.0",
     "svelte": "^3.49.0",
+    "svelte-carousel": "^1.0.24",
     "svelte-preprocess": "^4.10.7",
     "vite": "^3.2.5"
   },
   "dependencies": {
     "await": "^0.2.6",
-    "svelte-carousel": "^1.0.24",
     "svelte-feather-icons": "^4.0.0",
     "svelte-navigator": "^3.2.2",
     "svelte-recaptcha-v2": "^0.0.2",
