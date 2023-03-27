@@ -5,7 +5,7 @@
   let projects = [];
 
   onMount(async () => {
-    fetch("https://vic.uy/project/")
+    fetch("http://127.0.0.1:8001/project/")
       .then((response) => response.json())
       .then((data) => {
         projects = data;
@@ -21,7 +21,7 @@
 
 <section class="hero is-fullheight custom-component">
     <div class="container is-fluid">
-      <div class="columns is-multiline mx-1 my-6 ">
+      <div class="columns is-multiline mx-2 my-6 ">
         {#each projects as project}
 
         <div class="column is-full" >

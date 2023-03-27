@@ -15,7 +15,7 @@
     let contacts = [];
 
   onMount(async () => {
-    fetch("https://vic.uy/contact/")
+    fetch("http://127.0.0.1:8001/contact/")
       .then((response) => response.json())
       .then((data) => {
         contacts = data;
@@ -49,12 +49,7 @@
 
 
   const sendEmail=async () => {
-
-    const csrfCookie = getCookie("csrftoken");
-
-    const recaptchaResponse = grecaptcha.getResponse();
-
-    const response = await fetch("https://vic.uy/send_email/", {
+    const response = await fetch("http://127.0.0.1:8001/send_email/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -94,7 +89,7 @@ function onRecaptcha(response) {
 
 <Animate >
   <section class="hero is-fullheight custom-component  " >
-    <div class="columns is-multiline mx-3 my-6">
+    <div class="columns is-multiline mx-2 my-6">
       <div class="column"></div>
       <div class="column is-one-third">
         <div class="container">
@@ -139,14 +134,11 @@ function onRecaptcha(response) {
 
         </div>
 
-        </form>
-        <div class="columns is-centered">
-          <div class="column is-one-third has-text-centered">
-            <div class="container is-flex justify-content-center" style="outline: 2px solid white;">
-              <div class="g-recaptcha" data-sitekey="6Ld7NskkAAAAAJKzdpVtsTXKBUdX_TT3dizQHxA8"></div>
-            </div>
-          </div>
-        </div>
+      </form>
+      <div class="g-recaptcha " data-sitekey="6Ld7NskkAAAAAJKzdpVtsTXKBUdX_TT3dizQHxA8"></div>
+
+      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
       </div>
 
       <div class="column"></div>
@@ -227,6 +219,7 @@ function onRecaptcha(response) {
     border: none;
     color: #fffffe;
     width: 105px;
+    margin-bottom: 15px;
 
 }
 
@@ -238,6 +231,8 @@ function onRecaptcha(response) {
     border: none;
     color: #fffffe;
     width: 105px;
+    margin-bottom: 15px;
+
 }
 
 

@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "await": "^0.2.6",
+    "svelte-carousel": "^1.0.24",
     "svelte-feather-icons": "^4.0.0",
     "svelte-navigator": "^3.2.2",
     "svelte-recaptcha-v2": "^0.0.2",
