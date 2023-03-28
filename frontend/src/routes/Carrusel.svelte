@@ -31,7 +31,7 @@
   };
 
   let loaded = [];
-
+  let i=[];
   function handleLoad(index) {
     loaded = [...loaded, index];
   }
@@ -39,10 +39,11 @@
 </script>
 
 <Carousel let:loaded {options}>
+
   {#if certificates.length === 0}
     <div>No images to show</div>
   {:else}
-    {#each certificates as certificate}
+    {#each certificates as certificate,i}
       <img
         transition:slide
         src={certificate.imagecert}
@@ -57,7 +58,7 @@
 
 <style>
   .img-container {
-    height: 300px;
+    height: 200;
     display: flex;
     align-items: center;
     justify-content: center;
