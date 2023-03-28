@@ -27,7 +27,7 @@ onMount(async () => {
 let certificates = [];
 
   onMount(async () => {
-    fetch("http://127.0.0.1:8001/certificates/")
+    fetch("https://vic.uy/certificates/")
       .then((response) => response.json())
       .then((data) => {
         certificates = Object.values(data);
