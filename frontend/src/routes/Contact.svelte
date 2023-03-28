@@ -127,10 +127,7 @@ function onRecaptcha(response) {
             <textarea class="textarea custom-input" bind:value={message}  placeholder="Message"></textarea>
           </div>
         </div>
-        
-    
-     
-        
+
         <div class="field is-grouped is-justify-content-center">
           <div class="control btn-cv  ">
             <button class="button custom-button  is-normal is-rounded ">
@@ -152,6 +149,8 @@ function onRecaptcha(response) {
       <div class="column"></div>
 
     </div>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
   </section>
 </Animate>
 
@@ -283,5 +282,11 @@ color: white;
 :global(body.dark-mode) .custom-message {
         color: #f0f0f0;
         text-align: center;
+}
+
+
+.captcha-format{
+  margin-top: 36px;
+  margin-left: 13px;
 }
   </style>

@@ -1,4 +1,4 @@
-from .models import Project,About,Contact
+from .models import Project,About,Contact,Certificate
 
 from rest_framework import serializers
 
@@ -19,3 +19,10 @@ class ContactSerializer(serializers.ModelSerializer):
     class Meta:
         model = Contact
         fields = ('title','description')
+        
+        
+
+class CertificateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Certificate
+        fields = ('title','imagecert')

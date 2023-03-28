@@ -1,9 +1,10 @@
 <script>
+  
   import { FileTextIcon,DownloadIcon } from 'svelte-feather-icons'
-
+  import Carrusel from './Carrusel.svelte';
   import Animate from './Animate.svelte';
   import { onMount } from "svelte";
-
+  
 
 
   let abouts = [];
@@ -21,6 +22,27 @@ onMount(async () => {
       return [];
     });
 });
+
+
+let certificates = [];
+
+  onMount(async () => {
+    fetch("http://127.0.0.1:8001/certificates/")
+      .then((response) => response.json())
+      .then((data) => {
+        certificates = Object.values(data);
+        console.log(certificates);
+        console.log(data);
+      })
+      .catch((error) => {
+        console.log(error);
+        return [];
+      });
+  });
+
+
+
+
 
 
 let downloadCV = async () => {
@@ -131,11 +153,8 @@ let downloadCV = async () => {
 
     <div class="column is-half ">
       <div class="container" >
-        <h3 class="title title__bio custom-text">Certifications</h3>
-        <div>
-
-
-        </div>
+        <h3 class="title title__bio custom-text">Certificates</h3>
+       <Carrusel certificates={certificates}></Carrusel>
       </div>
 
     </div>
@@ -228,7 +247,7 @@ let downloadCV = async () => {
   .title__bio{
     font-family: "Karla", sans-serif;
     color: #fffffe;
-    text-align: justify;
+    text-align: center;
   }
 
   

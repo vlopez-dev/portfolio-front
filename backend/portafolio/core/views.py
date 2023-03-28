@@ -3,13 +3,13 @@ from telnetlib import STATUS
 from urllib import response
 from django.conf import settings
 from django.shortcuts import render,get_object_or_404
-from .models import Project,About,Contact
+from .models import Project,About,Contact,Certificate
 from rest_framework import viewsets
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from django.http import FileResponse
 
-from .serializers import ProjectSerializer,AboutSerializer,ContactSerializer
+from .serializers import ProjectSerializer,AboutSerializer,ContactSerializer,CertificateSerializer
 from django.conf import settings
 import requests
 import json
@@ -66,6 +66,32 @@ class ContactViewSet(viewsets.ModelViewSet):
         serializer = ContactSerializer(contact)
         print(serializer)
         return response({'serializer': serializer, 'contact': contact},template_name='index.html')
+
+
+
+
+class CertificateViewSet(viewsets.ModelViewSet):
+
+    queryset = Certificate.objects.all().order_by('id')
+    serializer_class = CertificateSerializer
+    template_name = 'core/index.html'
+
+
+    def get(self, request, id):
+        certificate = get_object_or_404(Certificate, pk=id)
+        serializer = CertificateSerializer(certificate)
+        print(serializer)
+        return response({'serializer': serializer, 'certificate': certificate},template_name='index.html')
+
+
+
+
+
+
+
+
+
+
 
 
 

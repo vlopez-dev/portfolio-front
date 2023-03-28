@@ -58,7 +58,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-jienf(j#njp@^*^()5lzp6a4%+243^zp#rky&eu9ak3lnd6+^9'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['vic.uy','www.vic.uy','127.0.0.1']
 load_dotenv()
