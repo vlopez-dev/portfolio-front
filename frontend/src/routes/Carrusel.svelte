@@ -1,42 +1,44 @@
 <script>
   import Carousel from 'svelte-carousel';
-  import { onMount } from "svelte";
   import { slide } from "svelte/transition";
 
-  let certificates = [];
-  let currentSlide = 0;
+  export let certificates = [];
   
-  onMount(async () => {
-    fetch("http://127.0.0.1:8001/certificates/")
-      .then((response) => response.json())
-      .then((data) => {
-        certificates = data;
-        console.log(certificates);
-        console.log(data);
-      })
-      .catch((error) => {
-        console.log(error);
-        return [];
-      });
-  });
-
-  const nextImage = () => {
-    currentSlide += 1;
+  let options = {
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: false,
+    dots: true,
+    infinite: true,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
+  let loaded = [];
 
-  const prevImage = () => {
-    currentSlide -= 1;
-  };
-
-
-
+  function handleLoad(index) {
+    loaded = [...loaded, index];
+  }
 
 </script>
 
-<Carousel
-let:loaded
->
+<Carousel let:loaded {options}>
   {#if certificates.length === 0}
     <div>No images to show</div>
   {:else}
@@ -47,15 +49,23 @@ let:loaded
         alt={certificate.title}
         width={400}
         height={300}
+        on:load={(event) => handleLoad(i)}
       />
     {/each}
   {/if}
 </Carousel>
 
-
-
-
-
 <style>
-
+  .img-container {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .img-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
 </style>
