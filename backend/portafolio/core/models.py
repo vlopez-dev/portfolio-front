@@ -4,12 +4,28 @@ from django.db import models
 from django.forms.widgets import Textarea
 
 # Create your models here.
+
+
+
+
 class Project(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField(max_length=500)
     pro_img=models.ImageField()
     link_repo = models.CharField(max_length=100,default="")
     link_live = models.CharField(max_length=100,default="")
+    technologys=models.ManyToManyField('Technology',related_name='technologys')
+
+
+    def __str__(self):
+                return self.name
+
+
+
+class Technology(models.Model):
+    name = models.CharField(max_length=50)
+    icon = models.CharField(max_length=200)
+
 
 
 

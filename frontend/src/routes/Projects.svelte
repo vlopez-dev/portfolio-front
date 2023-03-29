@@ -5,15 +5,15 @@
   let projects = [];
 
   onMount(async () => {
-    fetch("https://vic.uy/project/")
+    fetch("https://vic.uy/project-list/")
       .then((response) => response.json())
       .then((data) => {
         projects = data;
         console.log(projects);
-        // console.log(data);
+        console.log(data);
       })
       .catch((error) => {
-        // console.log(error);
+        console.log(error);
         return [];
       });
   });
@@ -35,14 +35,12 @@
 
 
         <div class="custom-container-tecno">
-          
-          <i class="devicon-django-plain"></i>
+          <!-- <i class="devicon-django-plain"></i>
           <i class="devicon-html5-plain"></i>
           <i class="devicon-javascript-plain"></i>
-          <i class="devicon-css3-plain"></i>
-          
+          <i class="devicon-css3-plain"></i> -->
 
-                    
+
         </div>
 				<div class="container-code" >
           <a href="{project.link_repo}" target=”_blank”>
