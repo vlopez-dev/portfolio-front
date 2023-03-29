@@ -39,6 +39,8 @@
           <i class="devicon-django-plain"></i>
           <i class="devicon-html5-plain"></i>
           <i class="devicon-javascript-plain"></i>
+          {project.icon}
+
           <i class="devicon-css3-plain"></i>
           
 

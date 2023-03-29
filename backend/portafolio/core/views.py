@@ -3,7 +3,7 @@ from telnetlib import STATUS
 from urllib import response
 from django.conf import settings
 from django.shortcuts import render,get_object_or_404
-from .models import Project,About,Contact,Certificate
+from .models import Project,About,Contact,Certificate,Technology
 from rest_framework import viewsets
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -28,7 +28,9 @@ secret_key = settings.RECAPTCHA_PRIVATE_KEY
 
 class ProjectViewSet(viewsets.ModelViewSet):
 
-    queryset = Project.objects.all().order_by('id')
+    # queryset = Project.objects.all().order_by('id')
+    queryset = Project.objects.prefetch_related('technologys').all().order_by('id')
+    print(queryset)
     serializer_class = ProjectSerializer
     template_name = 'core/index.html'
 
@@ -38,6 +40,11 @@ class ProjectViewSet(viewsets.ModelViewSet):
         serializer = ProjectSerializer(project)
         print(serializer)
         return response({'serializer': serializer, 'project': project},template_name='index.html')
+    
+    
+    
+
+
 
 
 
