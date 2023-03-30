@@ -11,7 +11,6 @@ class TechnologySerializer(serializers.ModelSerializer):
 
 class ProjectSerializer(serializers.ModelSerializer):
     
-    technologys=TechnologySerializer(many=True,read_only=True)
 
     class Meta:
         model = Project
