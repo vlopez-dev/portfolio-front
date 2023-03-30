@@ -3,7 +3,7 @@ from telnetlib import STATUS
 from urllib import response
 from django.conf import settings
 from django.shortcuts import render,get_object_or_404
-from .models import Project,About,Contact,Certificate
+from .models import Project,About,Contact,Certificate,Technology
 from rest_framework import viewsets
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -36,6 +36,15 @@ class ProjectViewSet(viewsets.ModelViewSet):
         project = get_object_or_404(Project, pk=id)
         serializer = ProjectSerializer(project)
         return response({'serializer': serializer, 'project': project},template_name='index.html')
+
+
+class ProjectListAPIView(APIView):
+    def get(self, request):
+        project = Project.objects.prefetch_related('technologys').all()
+        serializer = ProjectSerializer(project, many=True)
+        return Response(serializer.data)
+
+
 
 
 
