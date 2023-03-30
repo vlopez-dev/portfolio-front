@@ -33,15 +33,6 @@ class Technology(models.Model):
             return self.name
 
 
-class Technology(models.Model):
-    name = models.CharField(max_length=50)
-    icon = models.CharField(max_length=200)
-    project=models.ManyToManyField('Project',related_name='technologys')
-
-
-    def __str__(self):
-        return self.name
-
 
 
 
