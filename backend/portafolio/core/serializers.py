@@ -28,14 +28,13 @@ class AboutSerializer(serializers.ModelSerializer):
     class Meta:
         model = About
         fields = ('title','description','imagenabout')
-        
-        
+
+
+
 class ContactSerializer(serializers.ModelSerializer):
     class Meta:
         model = Contact
         fields = ('title','description')
-        
-        
 
 class CertificateSerializer(serializers.ModelSerializer):
     class Meta:

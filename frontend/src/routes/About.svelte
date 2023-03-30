@@ -10,7 +10,7 @@
   let abouts = [];
 
 onMount(async () => {
-  fetch("http://127.0.0.1:8001/about/")
+  fetch("https://vic.uy/about/")
     .then((response) => response.json())
     .then((data) => {
       abouts = data;
@@ -27,7 +27,7 @@ onMount(async () => {
 let certificates = [];
 
   onMount(async () => {
-    fetch("http://127.0.0.1:8001/certificates/")
+    fetch("https://vic.uy/certificates/")
       .then((response) => response.json())
       .then((data) => {
         certificates = Object.values(data);
@@ -47,7 +47,7 @@ let certificates = [];
 
 let downloadCV = async () => {
         try {
-            let response = await fetch('http://127.0.0.1:8001/download_cv/');
+            let response = await fetch('https://vic.uy/download_cv/');
             response.blob().then(blob => {
                 let url = window.URL.createObjectURL(blob);
                 let a = document.createElement('a');

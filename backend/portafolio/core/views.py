@@ -8,7 +8,7 @@ from rest_framework import viewsets
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from django.http import FileResponse
-
+from rest_framework.generics import ListAPIView
 from .serializers import ProjectSerializer,AboutSerializer,ContactSerializer,CertificateSerializer
 from django.conf import settings
 import requests
@@ -27,7 +27,6 @@ secret_key = settings.RECAPTCHA_PRIVATE_KEY
 
 
 class ProjectViewSet(viewsets.ModelViewSet):
-
     queryset = Project.objects.all().order_by('id')
     serializer_class = ProjectSerializer
     template_name = 'core/index.html'
@@ -36,7 +35,6 @@ class ProjectViewSet(viewsets.ModelViewSet):
     def get(self, request, id):
         project = get_object_or_404(Project, pk=id)
         serializer = ProjectSerializer(project)
-        print(serializer)
         return response({'serializer': serializer, 'project': project},template_name='index.html')
 
 
@@ -48,6 +46,13 @@ class ProjectListAPIView(APIView):
 
 
 
+
+
+class ProjectList(ListAPIView):
+   def get(self, request):
+        queryset = Project.objects.all().prefetch_related('technologys')
+        serializer = ProjectSerializer(queryset, many=True)
+        return Response(serializer.data)
 
 
 class AboutViewSet(viewsets.ModelViewSet):

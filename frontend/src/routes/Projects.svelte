@@ -4,20 +4,21 @@
   import { onMount } from "svelte";
   let projects = [];
 
-  onMount(async () => {
-    fetch("http://127.0.0.1:8001/list/")
-      .then((response) => response.json())
-      .then((data) => {
-        projects = data;
-        console.log(projects);
-        // console.log(data);
-      })
-      .catch((error) => {
-        // console.log(error);
-        return [];
-      });
-  });
+  let certificates = [];
 
+onMount(async () => {
+  fetch("https://vic.uy/list/")
+    .then((response) => response.json())
+    .then((data) => {
+      projects = Object.values(data);
+      console.log(projects);
+      console.log(data);
+    })
+    .catch((error) => {
+      console.log(error);
+      return [];
+    });
+});
 </script>
 
 <section class="hero is-fullheight custom-component">
@@ -98,7 +99,7 @@
 
 
   .container-code{
-    margin: 16px;
+    margin: 12px;
   }
 
   .custom-container-tecno i{

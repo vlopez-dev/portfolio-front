@@ -15,7 +15,7 @@
     let contacts = [];
 
   onMount(async () => {
-    fetch("http://127.0.0.1:8001/contact/")
+    fetch("https://vic.uy/contact/")
       .then((response) => response.json())
       .then((data) => {
         contacts = data;
@@ -49,7 +49,12 @@
 
 
   const sendEmail=async () => {
-    const response = await fetch("http://127.0.0.1:8001/send_email/", {
+
+    const csrfCookie = getCookie("csrftoken");
+
+    const recaptchaResponse = grecaptcha.getResponse();
+
+    const response = await fetch("https://vic.uy/send_email/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

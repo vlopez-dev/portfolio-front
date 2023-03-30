@@ -6,7 +6,7 @@ from django.conf.urls.static import static
 from . import views
 from .views import EnviarCorreo, ProjectListAPIView
 from .views import download_cv
-
+from .views import ProjectList
 
 router = routers.DefaultRouter()
 router.register(r'project', views.ProjectViewSet)
@@ -19,7 +19,7 @@ router.register(r'certificates', views.CertificateViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
-    
+
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('send_email/', EnviarCorreo.as_view(), name='send_email'),
     path('list/', ProjectListAPIView.as_view(), name='list'),
