@@ -17,6 +17,7 @@
         return [];
       });
   });
+
 </script>
 
 <section class="hero is-fullheight custom-component">
@@ -35,16 +36,10 @@
 
 
         <div class="custom-container-tecno">
-          
-          <i class="devicon-django-plain"></i>
-          <i class="devicon-html5-plain"></i>
-          <i class="devicon-javascript-plain"></i>
-          {project.icon}
 
-          <i class="devicon-css3-plain"></i>
-          
-
-                    
+          {#each project.technologys as technology}
+            <i class={technology.icon}></i>
+          {/each}
         </div>
 				<div class="container-code" >
           <a href="{project.link_repo}" target=”_blank”>

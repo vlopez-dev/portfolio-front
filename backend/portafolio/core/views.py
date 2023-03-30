@@ -42,8 +42,8 @@ class ProjectViewSet(viewsets.ModelViewSet):
 
 class ProjectListAPIView(APIView):
     def get(self, request):
-        projects = Project.objects.prefetch_related('technologys').all()
-        serializer = ProjectSerializer(projects, many=True)
+        project = Project.objects.prefetch_related('technologys').all()
+        serializer = ProjectSerializer(project, many=True)
         return Response(serializer.data)
 
 
