@@ -14,7 +14,6 @@ class Project(models.Model):
     pro_img=models.ImageField()
     link_repo = models.CharField(max_length=100,default="")
     link_live = models.CharField(max_length=100,default="")
-    technologys=models.ManyToManyField('Technology',related_name='technologys')
 
 
     def __str__(self):
@@ -25,6 +24,7 @@ class Project(models.Model):
 class Technology(models.Model):
     name = models.CharField(max_length=50)
     icon = models.CharField(max_length=200)
+    project=models.ManyToManyField('Project',related_name='technologys')
 
 
 
