@@ -40,12 +40,6 @@ class ProjectViewSet(viewsets.ModelViewSet):
         return response({'serializer': serializer, 'project': project},template_name='index.html')
 
 
-class ProjectListAPIView(APIView):
-    def get(self, request):
-        project = Project.objects.prefetch_related('technologys').all()
-        serializer = ProjectSerializer(project, many=True)
-        return Response(serializer.data)
-
 
 
 

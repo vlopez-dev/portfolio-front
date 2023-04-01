@@ -5,7 +5,7 @@
   let projects = [];
 
   onMount(async () => {
-    fetch("http://127.0.0.1:8001/list/")
+    fetch("http://127.0.0.1:8001/project/")
       .then((response) => response.json())
       .then((data) => {
         projects = data;
