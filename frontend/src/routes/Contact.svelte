@@ -135,10 +135,13 @@ function onRecaptcha(response) {
         </div>
 
       </form>
+      <div class="column">
+      <div class="container">
       <div class="g-recaptcha " data-sitekey="6Ld7NskkAAAAAJKzdpVtsTXKBUdX_TT3dizQHxA8"></div>
 
       <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
+    </div>
+  </div>
       </div>
 
       <div class="column"></div>
@@ -283,5 +286,11 @@ color: white;
 .captcha-format{
   margin-top: 36px;
   margin-left: 13px;
+}
+
+
+.g-recaptcha{
+  margin: 0 auto;
+  width: 304px;
 }
   </style>

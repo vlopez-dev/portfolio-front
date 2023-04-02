@@ -26,7 +26,7 @@ import { onMount, onDestroy } from 'svelte';
 <section class="hero is-fullheight custom-component">
     <div class="hero-body">
     <div class="columns mx-2 my-6 ">
-      <div class="column">
+      <div class="column is-full">
         
   {#key index}
 	<p class="title custom-text"transition:slide>{greetings[index]}!</p>
