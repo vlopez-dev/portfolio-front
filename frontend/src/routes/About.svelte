@@ -151,7 +151,7 @@ let downloadCV = async () => {
   <div class="columns p-6">
     <div class="column"></div>
 
-    <div class="column is-half ">
+    <div class="column is-one-third-desktop ">
       <div class="container" >
         <h3 class="title title__bio custom-text">Certificates</h3>
        <Carrusel certificates={certificates}></Carrusel>
