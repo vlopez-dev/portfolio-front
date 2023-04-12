@@ -19,6 +19,7 @@ from django.http import JsonResponse
 from rest_framework import status
 from captcha.fields import CaptchaField
 import logging
+from django.core.files.storage import default_storage
 
 logger = logging.getLogger('portafolio')
 
