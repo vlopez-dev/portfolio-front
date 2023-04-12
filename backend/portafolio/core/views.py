@@ -38,21 +38,8 @@ class ProjectViewSet(viewsets.ModelViewSet):
         return response({'serializer': serializer, 'project': project},template_name='index.html')
 
 
-class ProjectListAPIView(APIView):
-    def get(self, request):
-        project = Project.objects.prefetch_related('technologys').all()
-        serializer = ProjectSerializer(project, many=True)
-        return Response(serializer.data)
 
 
-
-
-
-class ProjectList(ListAPIView):
-   def get(self, request):
-        queryset = Project.objects.all().prefetch_related('technologys')
-        serializer = ProjectSerializer(queryset, many=True)
-        return Response(serializer.data)
 
 
 class AboutViewSet(viewsets.ModelViewSet):
