@@ -7,7 +7,7 @@ from django.forms.widgets import Textarea
 class Project(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField(max_length=500)
-    pro_img=models.ImageField()
+    pro_img=models.ImageField(upload_to='media/')
     link_repo = models.CharField(max_length=100,default="")
     link_live = models.CharField(max_length=100,default="")
 
@@ -16,6 +16,9 @@ class Project(models.Model):
     def __str__(self):
             return self.name
 
+
+
+    
 
 class Technology(models.Model):
     name = models.CharField(max_length=50)
@@ -33,7 +36,7 @@ class Technology(models.Model):
 class About(models.Model):
     title = models.CharField(max_length=50)
     description= models.TextField(max_length=1000)
-    imagenabout = models.ImageField()
+    imagenabout = models.ImageField(upload_to='media/')
 
 
 
@@ -52,7 +55,7 @@ class Contact(models.Model):
             return self.title
 class Certificate(models.Model):
     title = models.CharField(max_length=50)
-    imagecert = models.ImageField()
+    imagecert = models.ImageField(upload_to='media/')
 
 
 

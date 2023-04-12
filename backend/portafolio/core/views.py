@@ -19,6 +19,7 @@ from django.http import JsonResponse
 from rest_framework import status
 from captcha.fields import CaptchaField
 import logging
+from django.core.files.storage import default_storage
 
 logger = logging.getLogger('portafolio')
 
@@ -36,15 +37,24 @@ class ProjectViewSet(viewsets.ModelViewSet):
     def get(self, request, id):
         project = get_object_or_404(Project, pk=id)
         serializer = ProjectSerializer(project)
-        print(serializer)
         return response({'serializer': serializer, 'project': project},template_name='index.html')
 
 
 class ProjectListAPIView(APIView):
     def get(self, request):
-        project = Project.objects.prefetch_related('technologys').all()
-        serializer = ProjectSerializer(project, many=True)
-        return Response(serializer.data)
+        projects = Project.objects.prefetch_related('technologys').all()
+        data = []
+        for project in projects:
+            project_data = {
+                'name': project.name,
+                'description': project.description,
+                'pro_img': default_storage.url(project.pro_img.name),
+                'link_repo': project.link_repo,
+                'link_live': project.link_live,
+                'technologys': [{'icon': t.icon} for t in project.technologys.all()]
+            }
+            data.append(project_data)
+        return Response(data)
 
 
 
