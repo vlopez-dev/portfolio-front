@@ -40,22 +40,6 @@ class ProjectViewSet(viewsets.ModelViewSet):
         return response({'serializer': serializer, 'project': project},template_name='index.html')
 
 
-class ProjectListAPIView(APIView):
-    def get(self, request):
-        projects = Project.objects.prefetch_related('technologys').all()
-        data = []
-        for project in projects:
-            project_data = {
-                'name': project.name,
-                'description': project.description,
-                'pro_img': default_storage.url(project.pro_img.name),
-                'link_repo': project.link_repo,
-                'link_live': project.link_live,
-                'technologys': [{'icon': t.icon} for t in project.technologys.all()]
-            }
-            data.append(project_data)
-        return Response(data)
-
 
 
 

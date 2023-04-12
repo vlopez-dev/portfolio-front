@@ -1,3 +1,4 @@
+from django.conf import settings
 from .models import Project,About,Contact,Certificate,Technology
 
 from rest_framework import serializers
@@ -9,12 +10,16 @@ class TechnologySerializer(serializers.ModelSerializer):
         model = Technology
         fields = ('name','icon')
 
+
+
+
+
 class ProjectSerializer(serializers.ModelSerializer):
     technologys = serializers.SerializerMethodField()
 
     class Meta:
         model = Project
-        fields = ('id', 'name', 'description', 'pro_img', 'technologys')
+        fields = ('id', 'name', 'description', 'pro_img', 'link_repo','link_live','technologys')
 
     def get_technologys(self, obj):
         technology_ids = obj.technologys.values_list('id', flat=True)
