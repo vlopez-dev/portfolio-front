@@ -92,14 +92,6 @@ class CertificateViewSet(viewsets.ModelViewSet):
 
 
 
-
-
-
-
-
-
-
-
 class EnviarCorreo(APIView):
     
     
@@ -129,8 +121,13 @@ class EnviarCorreo(APIView):
 
             return JsonResponse({'message': 'Correo enviado exitosamente'})
         else:
-            
             return JsonResponse({'message': 'Invalid reCAPTCHA'}, status=400)
+
+
+
+
+
+
 
 def download_cv(request):
     file = open('media/cv.pdf', 'rb')
