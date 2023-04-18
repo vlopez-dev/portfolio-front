@@ -5,12 +5,8 @@
   import { onMount } from "svelte";
   
 
-  let showModal = false;
-  function clickModal(){
-    showModal = true;
-    console.log("Ejecute click Modal")
-    console.log(showModal)
-  }
+  let showModal
+  
   let projects = [];
 
 
@@ -73,8 +69,8 @@
           </button>
         </a>
 
-        <a type="button" href="" >
-          <button  on:click={() => { showModal = true }} class="button  custom-buttom-color is-normal is-rounded">
+       
+          <button   on:click={() => { showModal = true;  }} class="button  custom-buttom-color is-normal is-rounded">
 
             <span class="icon">
               <InfoIcon size="24" />
@@ -83,7 +79,6 @@
             <span>Info</span>
 
           </button>
-        </a>
 
         <Modal {showModal}
         ></Modal>

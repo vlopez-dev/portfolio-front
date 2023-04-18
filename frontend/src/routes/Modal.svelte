@@ -2,13 +2,18 @@
 <script>
     import { onMount } from "svelte";
     
-    export let showModal = false;
+    export let showModal
     
   function clickModal(event){
     event.preventDefault();
     showModal = true;
     console.log("Ejecute click Modal")
     console.log(showModal)
+  }
+
+
+  function closeModal(){
+    showModal=false;
   }
    
 
@@ -33,7 +38,7 @@
       </section>
       <footer class="modal-card-foot">
         <button class="button is-success">Save changes</button>
-        <button class="button">Cancel</button>
+        <button on:click={closeModal} class="button">Cancel</button>
       </footer>
     </div>
   </div>
