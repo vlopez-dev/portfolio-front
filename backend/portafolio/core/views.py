@@ -124,12 +124,17 @@ class EnviarCorreo(APIView):
                 reply_to=[reply_to],
                 headers={'Reply-To': reply_to}
             )
-            email.send()
+            try:
+                email.send()
 
-            return JsonResponse({'message': 'Correo enviado exitosamente'})
-        else:
+                return JsonResponse({'message': 'Correo enviado exitosamente'})
+            except Exception as e:
             
-            return JsonResponse({'message': 'Invalid reCAPTCHA'}, status=400)
+                return JsonResponse({'message': 'Invalid reCAPTCHA'}, status=400)
+            
+            finally:
+                email.get_connection().close()
+                print("Conexión SMTP cerrada correctamente.")
 
 def download_cv(request):
     file = open('media/cv.pdf', 'rb')
