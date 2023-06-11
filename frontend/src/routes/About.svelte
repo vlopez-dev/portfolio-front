@@ -7,40 +7,23 @@
   
 
 
-  let abouts = [];
-
-onMount(async () => {
-  fetch("http://127.0.0.1:8001/about/")
-    .then((response) => response.json())
-    .then((data) => {
-      abouts = data;
-      console.log(abouts);
-      // console.log(data);
-    })
-    .catch((error) => {
-      // console.log(error);
-      return [];
-    });
-});
-
-
+let abouts = [];
 let certificates = [];
 
+
   onMount(async () => {
-    fetch("http://127.0.0.1:8001/certificates/")
-      .then((response) => response.json())
-      .then((data) => {
-        certificates = Object.values(data);
-        console.log(certificates);
-        console.log(data);
-      })
-      .catch((error) => {
-        console.log(error);
-        return [];
-      });
+    try{
+      const[aboutResponse,certificateResponse] = await Promise.all([
+        fetch("http://127.0.0.1:8001/about/").then((response) => response.json()),
+        fetch("http://127.0.0.1:8001/certificates/").then((response) => response.json())
+      ]);
+      abouts = aboutResponse;
+      certificates = Object.values(certificateResponse);
+
+    }catch(error){
+      console.log(error);
+    }
   });
-
-
 
 
 
