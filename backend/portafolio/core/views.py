@@ -91,14 +91,6 @@ class CertificateViewSet(viewsets.ModelViewSet):
 
 
 
-
-
-
-
-
-
-
-
 class EnviarCorreo(APIView):
     
     
@@ -127,14 +119,15 @@ class EnviarCorreo(APIView):
             try:
                 email.send()
 
-                return JsonResponse({'message': 'Correo enviado exitosamente'})
-            except Exception as e:
-            
-                return JsonResponse({'message': 'Invalid reCAPTCHA'}, status=400)
-            
-            finally:
-                email.get_connection().close()
-                print("Conexión SMTP cerrada correctamente.")
+            return JsonResponse({'message': 'Correo enviado exitosamente'})
+        else:
+            return JsonResponse({'message': 'Invalid reCAPTCHA'}, status=400)
+
+
+
+
+
+
 
 def download_cv(request):
     file = open('media/cv.pdf', 'rb')
