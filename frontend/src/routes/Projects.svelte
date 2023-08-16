@@ -1,8 +1,15 @@
 <script>
-  import { GithubIcon,CloudIcon } from 'svelte-feather-icons'
+  import { GithubIcon,CloudIcon,InfoIcon } from 'svelte-feather-icons'
+  import Modal from './Modal.svelte';
 
   import { onMount } from "svelte";
+  
+
+  let showModal
+  
   let projects = [];
+
+
 
   onMount(async () => {
     fetch("https://vic.uy/project/")
@@ -61,12 +68,24 @@
 
           </button>
         </a>
+
+       
+          <button   on:click={() => { showModal = true;  }} class="button  custom-buttom-color is-normal is-rounded">
+
+            <span class="icon">
+              <InfoIcon size="24" />
+
+            </span>
+            <span>Info</span>
+
+          </button>
+
+        <Modal {showModal}
+        ></Modal>
 				  </div>
 			  </div>
 			</div>
-			
-		
-        </div>
+			        </div>
 
         {/each}
       </div>

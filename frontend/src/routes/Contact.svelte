@@ -13,6 +13,7 @@
     let message;
     let email;
     let contacts = [];
+    const csrfCookie = getCookie("csrftoken");
 
   onMount(async () => {
     fetch("https://vic.uy/contact/")
@@ -41,6 +42,7 @@
       }
     }
   }
+  console.log(cookieValue)
   return cookieValue;
 
 }
@@ -58,7 +60,7 @@
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "X-CSRFToken": csrfCookie, 
+        "X-CSRFToken": csrfCookie,
       },
       body: JSON.stringify({ message, email,recaptchaResponse }),
       credentials: 'include',
@@ -142,7 +144,7 @@ function onRecaptcha(response) {
       </form>
       <div class="column">
       <div class="container">
-      <div class="g-recaptcha " data-sitekey="6Ld7NskkAAAAAJKzdpVtsTXKBUdX_TT3dizQHxA8"></div>
+      <div class="g-recaptcha " data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
 
       <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     </div>
