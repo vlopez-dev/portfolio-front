@@ -23,6 +23,7 @@
   })();
 
   let routes={
+    
     "/":Hero,
     "/about":About,
     "/projects":Projects,

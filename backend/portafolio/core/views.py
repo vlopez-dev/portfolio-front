@@ -119,7 +119,10 @@ class EnviarCorreo(APIView):
             try:
                 email.send()
 
-            return JsonResponse({'message': 'Correo enviado exitosamente'})
+                return JsonResponse({'message': 'Correo enviado exitosamente'})
+            except:
+              return JsonResponse({'message': 'Correo no enviado'}, status=400)
+            
         else:
             return JsonResponse({'message': 'Invalid reCAPTCHA'}, status=400)
 
