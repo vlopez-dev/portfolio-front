@@ -69,7 +69,7 @@
           </button>
         </a>
 
-       
+<!--        
           <button   on:click={() => { showModal = true;  }} class="button  custom-buttom-color is-normal is-rounded">
 
             <span class="icon">
@@ -78,7 +78,7 @@
             </span>
             <span>Info</span>
 
-          </button>
+          </button> -->
 
         <Modal {showModal}
         ></Modal>
