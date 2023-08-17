@@ -79,9 +79,9 @@
             <span>Info</span>
 
           </button> -->
-
+<!-- 
         <Modal {showModal}
-        ></Modal>
+        ></Modal> -->
 				  </div>
 			  </div>
 			</div>
