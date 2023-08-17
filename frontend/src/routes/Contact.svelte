@@ -144,7 +144,7 @@ function onRecaptcha(response) {
       </form>
       <div class="column">
       <div class="container">
-      <div class="g-recaptcha " data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
+      <div class="g-recaptcha " data-sitekey="6Ld7NskkAAAAAJKzdpVtsTXKBUdX_TT3dizQHxA8"></div>
 
       <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     </div>
