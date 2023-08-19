@@ -33,7 +33,7 @@
 
 
 <header>
-  <nav class="navbar custom-component  " role="navigation" aria-label="main navigation ">
+  <nav class="navbar custom-component  "  aria-label="main navigation ">
     <div class="navbar-brand custom-component">
      
       <a id="burger" role="button" class="navbar-burger custom-component" aria-label="menu" aria-expanded="false">
@@ -97,19 +97,19 @@
 .nav-link-ltr:hover::before {
   width: 100%;
 }
-
+/* 
 .nav-link-fade-up::before {
   width: 100%;
   bottom: 5px;
   opacity: 0;
-}
+} */
 
-.nav-link-fade-up:hover::before {
+/* .nav-link-fade-up:hover::before {
   bottom: 10px;
   opacity: 1;
-}
+} */
 
-.nav-link-grow-up::before {
+/* .nav-link-grow-up::before {
   height: 0%;
   width: 100%;
   bottom: 0px;
@@ -117,7 +117,7 @@
 
 .nav-link-grow-up:hover::before {
   height: 5px;
-}
+} */
 
 .custom-component {
         background-color: #FFFFFF;

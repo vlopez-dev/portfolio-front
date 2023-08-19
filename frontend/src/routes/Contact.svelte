@@ -20,7 +20,7 @@
       .then((response) => response.json())
       .then((data) => {
         contacts = data;
-        console.log(contacts);
+        // console.log(contacts);
         // console.log(data);
       })
       .catch((error) => {
@@ -42,7 +42,7 @@
       }
     }
   }
-  console.log(cookieValue)
+  // console.log(cookieValue)
   return cookieValue;
 
 }
@@ -67,18 +67,18 @@
     });
 
     if (!response.ok) {
-      console.log(response)
+      // console.log(response)
       const data = await response.json();
-      console.error("Error enviando correo",data);
+      // console.error("Error enviando correo",data);
       document.getElementById("message").textContent = "Error al enviar e mensaje, intentelo nuevamente";
 
     } else {
-      console.log(response)
+      // console.log(response)
 
       // const data = await response.json();
       document.getElementById("message").textContent = "Mensaje enviado con exito";
 
-      console.log("Correo enviado correctamente");
+      // console.log("Correo enviado correctamente");
     }
   };
 
@@ -168,11 +168,11 @@ function onRecaptcha(response) {
   <style>
 
 
-  
+/*   
 .label__contact{
   color: #fffffe;
 
-}
+} */
 
 
 
@@ -181,22 +181,22 @@ function onRecaptcha(response) {
     text-align: center;
     color: #fffffe;
   }
-
+/* 
   .subtitle{
     text-align: center;
     color: #a7a9be;
-  }
+  } */
 
 
 
 
-  .btn-contact{
+  /* .btn-contact{
     height: auto;
     width: auto;
     margin: 36px;
   }
 
-  
+   */
 
 
   .custom-component {
@@ -217,10 +217,10 @@ function onRecaptcha(response) {
         text-align: center;
         color: #fffffe;
     }
-
+/* 
 .custom-form {
         color: #1f1235;
-}
+} */
 
 
 
@@ -289,11 +289,11 @@ color: white;
         text-align: center;
 }
 
-
+/* 
 .captcha-format{
   margin-top: 36px;
   margin-left: 13px;
-}
+} */
 
 
 .g-recaptcha{
