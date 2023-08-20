@@ -20,11 +20,11 @@
       .then((response) => response.json())
       .then((data) => {
         contacts = data;
-        // console.log(contacts);
-        // console.log(data);
+        console.log(contacts);
+        console.log(data);
       })
       .catch((error) => {
-        // console.log(error);
+        console.log(error);
         return [];
       });
   });
@@ -67,7 +67,7 @@
     });
 
     if (!response.ok) {
-      // console.log(response)
+      console.log(response)
       const data = await response.json();
       // console.error("Error enviando correo",data);
       document.getElementById("message").textContent = "Error al enviar e mensaje, intentelo nuevamente";
@@ -78,7 +78,7 @@
       // const data = await response.json();
       document.getElementById("message").textContent = "Mensaje enviado con exito";
 
-      // console.log("Correo enviado correctamente");
+      console.log("Correo enviado correctamente");
     }
   };
 
