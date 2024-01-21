@@ -1,5 +1,5 @@
 from django.conf import settings
-from .models import Project,About,Contact,Certificate,Technology
+from .models import Project,About,Contact,Certificate,Technology,Personalcv
 
 from rest_framework import serializers
 
@@ -45,3 +45,9 @@ class CertificateSerializer(serializers.ModelSerializer):
     class Meta:
         model = Certificate
         fields = ('title','imagecert')
+        
+        
+class PersonalcvSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Personalcv
+        fields = ('title','document')
