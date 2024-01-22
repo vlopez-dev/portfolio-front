@@ -16,7 +16,7 @@
       .then((response) => response.json())
       .then((data) => {
         projects = data;
-        console.log(projects);
+        // console.log(projects);
         // console.log(data);
       })
       .catch((error) => {
