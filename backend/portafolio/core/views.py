@@ -133,7 +133,7 @@ class EnviarCorreo(APIView):
 
 
 def download_cv(request):
-    file = open('media/cv.pdf', 'rb')
+    file = open('media/media/cv.pdf', 'rb')
     response = FileResponse(file)
     response['Content-Disposition'] = 'attachment; filename="cv.pdf"'
     return response

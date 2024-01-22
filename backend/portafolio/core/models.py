@@ -69,3 +69,13 @@ class Certificate(models.Model):
 
     def __str__(self):
             return self.title
+        
+        
+class Personalcv(models.Model):
+    title = models.CharField(max_length=50)
+    document = models.FileField(upload_to='media/')
+    
+    
+    
+    def __str__(self):
+        return self.title
