@@ -37,6 +37,7 @@ let downloadCV = async () => {
                 a.style.display = 'none';
                 a.href = url;
                 a.download = 'cv.pdf';
+                a.type = 'application/pdf';
                 document.body.appendChild(a);
                 a.click();
                 window.URL.revokeObjectURL(url);
