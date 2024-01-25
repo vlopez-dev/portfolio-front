@@ -30,7 +30,7 @@ let certificates = [];
 
 let downloadCV = async () => {
         try {
-            let response = await fetch('http://127.0.0.1:8000/download_cv/');
+            let response = await fetch('https://vic.uy:8000/download_cv/');
             response.blob().then(blob => {
                 let url = window.URL.createObjectURL(blob);
                 let a = document.createElement('a');
