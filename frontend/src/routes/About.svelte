@@ -30,13 +30,14 @@ let certificates = [];
 
 let downloadCV = async () => {
         try {
-            let response = await fetch('https://vic.uy/download_cv/');
+            let response = await fetch('http://127.0.0.1:8000/download_cv/');
             response.blob().then(blob => {
                 let url = window.URL.createObjectURL(blob);
                 let a = document.createElement('a');
                 a.style.display = 'none';
                 a.href = url;
                 a.download = 'cv.pdf';
+                a.type = 'application/pdf';
                 document.body.appendChild(a);
                 a.click();
                 window.URL.revokeObjectURL(url);
@@ -65,14 +66,12 @@ let downloadCV = async () => {
           <h3 class="title custom-text">{about.title}</h3>
           <p class="paragraph custom-text">{about.description}</p>
           <div class="btn-cv">
-          <a href=""  on:click={downloadCV}>
-            <button class="button custom-bottom   is-normal is-rounded">
+            <button class="button custom-bottom   is-normal is-rounded" on:click={downloadCV}>
               <span class="icon">
                 <DownloadIcon size="24" />
               </span>
               <span>CV</span>
             </button>
-          </a>
           </div>
         </div>
         </div>
