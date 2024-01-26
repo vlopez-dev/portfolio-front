@@ -53,7 +53,7 @@ let certificates = [];
     async function downloadCV() {
     try {
       // Realiza una solicitud al servidor para obtener el archivo PDF
-      let response = await fetch('http://127.0.0.1:8000/download_cv/');
+      let response = await fetch('https://vic.uy/download_cv/');
       let blob = await response.blob();
       // Utiliza saveAs para iniciar la descarga del archivo en el navegador
       saveAs(blob, 'cv.pdf');
