@@ -12,4 +12,10 @@ export default defineConfig({
       },
     },
   },
+  build: {
+    rollupOptions: {
+      external: ['file-saver'] 
+    }
+  }
+
 });
