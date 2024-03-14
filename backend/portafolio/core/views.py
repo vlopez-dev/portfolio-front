@@ -19,6 +19,7 @@ from django.http import JsonResponse
 from rest_framework import status
 from captcha.fields import CaptchaField
 import logging
+import sys
 from django.core.files.storage import default_storage
 
 logger = logging.getLogger('portafolio')
@@ -118,11 +119,12 @@ class EnviarCorreo(APIView):
             )
             try:
                 email.send()
-
                 return JsonResponse({'message': 'Correo enviado exitosamente'})
-            except:
+            except Exception as e:
+              logger.error(f'Error al enviar correo electrónico: {str(e)}')
+              logger.error(f'Type of exception: {sys.exc_info()[0]}')
               return JsonResponse({'message': 'Correo no enviado'}, status=400)
-            
+                
         else:
             return JsonResponse({'message': 'Invalid reCAPTCHA'}, status=400)
 
