@@ -55,7 +55,10 @@
     const csrfCookie = getCookie("csrftoken");
 
     const recaptchaResponse = grecaptcha.getResponse();
-
+    console.log("csrfCookie:", csrfCookie); // Imprime el valor de csrfCookie en la consola
+    console.log("recaptchaResponse:", recaptchaResponse); // Imprime el valor de recaptchaResponse en la consola
+    console.log("message:", message); // Imprime el valor de message en la consola
+    console.log("email:", email); // Imprime el valor de email en la consola
     const response = await fetch("https://vic.uy/send_email/", {
       method: "POST",
       headers: {
