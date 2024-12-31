@@ -4,8 +4,8 @@
   import Carrusel from './Carrusel.svelte';
   import Animate from './Animate.svelte';
   import { onMount } from "svelte";
-  import fileSaver from 'file-saver';
-   const { saveAs } = fileSaver;
+  import { saveAs } from 'file-saver';
+
   
 
 
@@ -29,6 +29,25 @@ let certificates = [];
 
 
 
+
+// let downloadCV = async () => {
+//         try {
+//             let response = await fetch('http://127.0.0.1:8000/download_cv/');
+//             response.blob().then(blob => {
+//                 let url = window.URL.createObjectURL(blob);
+//                 let a = document.createElement('a');
+//                 a.style.display = 'none';
+//                 a.href = url;
+//                 a.download = 'cv.pdf';
+//                 a.type = 'application/pdf';
+//                 document.body.appendChild(a);
+//                 a.click();
+//                 window.URL.revokeObjectURL(url);
+//             });
+//         } catch (error) {
+//             // console.error(error);
+//         }
+//     };
 
 
     async function downloadCV() {

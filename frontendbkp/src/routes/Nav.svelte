@@ -1,11 +1,11 @@
 <script>
-  import { onMount } from 'svelte';
+
   import DarkModeToggle from './Button.svelte';
 
 
   export let item1, item2, item3, item4;
   
-  onMount(() => {
+  window.onload = function() {
   const burgerIcon = document.querySelector("#burger");
   const navMenu = document.querySelector("#nav-links");
   const navLinks = document.querySelectorAll(".navbar-item");
@@ -21,8 +21,7 @@
       }, 500);
     });
   });
-});
-
+};
 
 
 
@@ -46,11 +45,11 @@
     <div id="nav-links" class="navbar-menu custom-component">
       <div class="navbar-start custom-component " style="flex-grow: 1; justify-content: center;">
         
-        <a class="navbar-item nav-link nav-link-ltr custom-navitem custom-nav-link" href="/">{item1}</a>
-       <a class="navbar-item nav-link nav-link-ltr custom-navitem custom-nav-link " href="/about">{item2}</a>
+        <a class="navbar-item nav-link nav-link-ltr custom-navitem custom-nav-link" href="#/">{item1}</a>
+       <a class="navbar-item nav-link nav-link-ltr custom-navitem custom-nav-link " href="#/about">{item2}</a>
 
-        <a class="navbar-item nav-link nav-link-ltr custom-navitem custom-nav-link" href="/projects">{item3}</a>
-        <a class="navbar-item nav-link nav-link-ltr custom-navitem custom-nav-link" href="/contact">{item4}</a>
+        <a class="navbar-item nav-link nav-link-ltr custom-navitem custom-nav-link" href="#/projects">{item3}</a>
+        <a class="navbar-item nav-link nav-link-ltr custom-navitem custom-nav-link" href="#/contact">{item4}</a>
       
       </div>
     </div>
@@ -110,8 +109,15 @@
   opacity: 1;
 }
 
+.nav-link-grow-up::before {
+  height: 0%;
+  width: 100%;
+  bottom: 0px;
+}
 
-
+.nav-link-grow-up:hover::before {
+  height: 5px;
+}
 
 .custom-component {
         background-color: #FFFFFF;

@@ -169,6 +169,11 @@ function onRecaptcha(response) {
 
 
   
+.label__contact{
+  color: #fffffe;
+
+}
+
 
 
 .title {
@@ -177,11 +182,19 @@ function onRecaptcha(response) {
     color: #fffffe;
   }
 
- 
+  .subtitle{
+    text-align: center;
+    color: #a7a9be;
+  }
 
 
 
 
+  .btn-contact{
+    height: auto;
+    width: auto;
+    margin: 36px;
+  }
 
   
 
@@ -201,12 +214,13 @@ function onRecaptcha(response) {
 }
 
 :global(body.dark-mode) .custom-title {
-        background-color: #0f0e17;
         text-align: center;
         color: #fffffe;
     }
 
-
+.custom-form {
+        color: #1f1235;
+}
 
 
 
@@ -276,7 +290,10 @@ color: white;
 }
 
 
-
+.captcha-format{
+  margin-top: 36px;
+  margin-left: 13px;
+}
 
 
 .g-recaptcha{

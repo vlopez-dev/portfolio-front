@@ -57,5 +57,16 @@
 </Carousel>
 
 <style>
-
+  .img-container {
+    height: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .img-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
 </style>
