@@ -35,3 +35,5 @@ frontend/nginx/
 .env
 
  backend/portafolio/core/__pycache__/
+
+.codegpt
