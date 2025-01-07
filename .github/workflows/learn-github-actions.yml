@@ -12,10 +12,11 @@ jobs:
         uses: actions/checkout@v3
         with:
           ref: 'master'
-      - name: Pull changes
+      - name: Check out code
         run: |
-            git pull
-      
+            echo "Checking out code..."
+            git status
+            git log -1
       - name: Check SSH connectivity
         uses: appleboy/ssh-action@master
         with:
