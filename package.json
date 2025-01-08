@@ -1,5 +1,15 @@
 {
+  "name": "portafolio-frontend",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node build/index.js", 
+    "dev": "vite",
+    "build": "vite build",
+    "test": "vitest"
+  },
   "dependencies": {
     "bigger-picture": "^1.1.8"
+  },
+  "devDependencies": {
   }
 }
