@@ -11,7 +11,7 @@ const config = {
             precompress: false, // Precomprimir archivos
             env: {
                 host: '0.0.0.0',
-                port: process.env.PORT || 5173
+                port: process.env.PORT || 4173
             }
         })
     }
