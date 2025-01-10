@@ -16,8 +16,8 @@ let certificates = [];
   onMount(async () => {
     try{
       const[aboutResponse,certificateResponse] = await Promise.all([
-        fetch("http://127.0.0.1:8000/about/").then((response) => response.json()),
-        fetch("http://127.0.0.1:8000/certificates/").then((response) => response.json())
+        fetch("https://vic.uy/about/").then((response) => response.json()),
+        fetch("https://vic.uy/certificates/").then((response) => response.json())
       ]);
       abouts = aboutResponse;
       certificates = Object.values(certificateResponse);
@@ -36,7 +36,6 @@ let certificates = [];
       // Realiza una solicitud al servidor para obtener el archivo PDF
       let response = await fetch('https://vic.uy/download_cv/');
       let blob = await response.blob();
-      // Utiliza saveAs para iniciar la descarga del archivo en el navegador
       saveAs(blob, 'cv.pdf');
     } catch (error) {
       console.error(error);

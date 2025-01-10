@@ -39,7 +39,6 @@ item4="Contact"
 
 <style>
 
- 
  :global(body) {
     display: flex;
     color: white;

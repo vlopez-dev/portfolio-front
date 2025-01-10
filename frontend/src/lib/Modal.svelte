@@ -18,7 +18,6 @@
    
 
     onMount(() => {
-    // aquí puedes realizar alguna tarea al momento de montar el componente
     console.log('Componente Modal montado correctamente');
   });
 
