@@ -27,11 +27,11 @@ jobs:
             echo "SSH connection successful"
             cd /home/vlopez/portafolio/portfolio-front
             git pull origin master
-            echo "Deteniendo contenedores..."
-            docker-compose down
-            echo "Reconstruyendo contenedores..."
-            docker-compose build --no-cache
-            echo "Deteniendo contenedores..."
-            docker-compose down
-            echo "Levantando contenedores con nuevos cambios..."
-            docker-compose up -d --remove-orphans
+            echo "Deteniendo los contenedores del backend y frontend..."
+            docker-compose stop frontend portafolioback
+            echo "Reconstruyendo los contenedores del backend y frontend..."
+            docker-compose build --no-cache frontend portafolioback
+            echo "Levantando los contenedores del backend y frontend con nuevos cambios..."
+            docker-compose up -d --remove-orphans frontend portafolioback
+
+
