@@ -12,7 +12,7 @@
 
 
   onMount(async () => {
-    fetch("http://127.0.0.1:8000/project/")
+    fetch("https://vic.uy/project/")
       .then((response) => response.json())
       .then((data) => {
         projects = data;
