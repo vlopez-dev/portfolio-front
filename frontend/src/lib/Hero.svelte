@@ -23,7 +23,7 @@ import { onMount, onDestroy } from 'svelte';
 
 </script>
 <Animate>
-<section class="hero is-fullheight custom-component">
+<section class="hero is-fullheight hero-section">
     <div class="hero-body">
     <div class="columns mx-2 my-6 ">
       <div class="column is-full">
@@ -42,63 +42,43 @@ import { onMount, onDestroy } from 'svelte';
   </section>
 </Animate>
   <style>
-   
-    .hero-body{
-        justify-content: center;
-    }
-    .title{
-      font-family: 'Karla', sans-serif;
-      font-size: 48px;
-    }
-    .subtitle{
-      font-family: 'Inconsolata', monospace;
-        }
-
-    .title{
-      text-align: center;
-      color: #fffffe;
-    }
-    
-
-
-
-
-
-/* Componentes colors darkmode */
-    .custom-component {
-        background-color: #fffffe;
-    }
-
-:global(body.dark-mode) .custom-component {
-        background-color: #0f0e17;
-        color: #FFFFFF;
-    }
-
-/* Principal text  darkmode */
-.custom-text {
-        color: #1f1235;
+   .hero-section {
+  background-color: #FFF0F5;
+  color: #2B2D42;
 }
 
-:global(body.dark-mode) .custom-text {
-        color: #FFFFFF;
+.hero-body {
+  justify-content: center;
+}
+
+.title {
+  font-family: 'Karla', sans-serif;
+  font-size: 48px;
+  text-align: center;
+  color: #2B2D42;
+}
+
+.subtitle {
+  font-family: 'Inconsolata', monospace;
+  text-align: center;
+  color: #FFB6B9;
+}
+
+/* Modo oscuro */
+:global(body.dark-mode) .hero-section {
+  background-color: #2B2D42;
+  color: #F7F7F7;
+}
+
+:global(body.dark-mode) .title {
+  color: #F7F7F7;
+}
+
+:global(body.dark-mode) .subtitle {
+  color: #FFB6B9;
+  text-shadow: 1px 1px 2px rgba(255, 182, 185, 0.6), 0 0 1em rgba(255, 182, 185, 0.6);
 }
 
 
-
-
-
-/* subtitle  darkmode */
-.custom-text-color{
-color: #ff6e6c;
-
-text-shadow: none;
-text-align: center;
-}
-:global(body.dark-mode) .custom-text-color {
-        color: #FFFFFF;
-        text-shadow: 1px 1px 2px rgba(255, 146, 26, 0.8), 0 0 1em rgba(255, 146, 26, 0.8), 0 0 0.2em rgba(255, 146, 26, 0.8);
-        text-align: center;
-
-}
     
   </style>

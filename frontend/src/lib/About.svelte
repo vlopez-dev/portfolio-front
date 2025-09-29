@@ -47,7 +47,7 @@ let certificates = [];
 
 
 <Animate>
-<section class="hero is-fullheight custom-component"  >
+<section class="hero is-fullheight about-section"  >
   {#each abouts as about}
     <div class="columns is-multiline mx-2 my-6" >
         <div class="column "></div>
@@ -231,27 +231,9 @@ let certificates = [];
   
 
  
-  .custom-component {
-        background-color: #fffffe;
-    }
-
 
     
 
-
-:global(body.dark-mode) .custom-component {
-        background-color: #0f0e17;
-        color: #fffffe;
-    }
-
-
-.custom-text {
-        color: #1f1235;
-}
-
-:global(body.dark-mode) .custom-text {
-        color: #f0f0f0;
-}
 
 
 
@@ -296,6 +278,67 @@ let certificates = [];
 :global(body.dark-mode) .custom-icon {
         color: #f0f0f0;
 }
+
+.about-section {
+  background-color: #EDE7F6;
+  color: #3E3A4D;
+}
+
+.title,
+.title__bio {
+  font-family: "Karla", sans-serif;
+  text-align: center;
+  color: #3E3A4D;
+}
+
+.subtitle {
+  text-align: center;
+  color: #6A5C93; /* tono intermedio lavanda */
+}
+
+.paragraph {
+  text-align: justify;
+  padding: 16px;
+  font-family: "Inconsolata", monospace;
+  line-height: 1.70rem;
+  color: #5C5470;
+  margin: 20px 0;
+}
+
+.custom-icon,
+.box-tools p {
+  color: #6A5C93;
+}
+
+.custom-bottom {
+  background-color: #B39DDB;
+  color: #3E3A4D;
+  width: 105px;
+}
+
+/* Modo oscuro */
+:global(body.dark-mode) .about-section {
+  background-color: #3E3A4D;
+  color: #EDE7F6;
+}
+
+:global(body.dark-mode) .title,
+:global(body.dark-mode) .title__bio,
+:global(body.dark-mode) .paragraph,
+:global(body.dark-mode) .subtitle {
+  color: #EDE7F6;
+}
+
+:global(body.dark-mode) .custom-icon {
+  color: #EDE7F6;
+}
+
+:global(body.dark-mode) .custom-bottom {
+  background-color: #9575CD;
+  color: #EDE7F6;
+  box-shadow: 0 0 10px rgba(179, 157, 219, 0.4);
+}
+
 
 
 </style>

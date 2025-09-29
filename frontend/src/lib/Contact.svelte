@@ -95,7 +95,7 @@ function onRecaptcha(response) {
 </script>
 
 <Animate >
-  <section class="hero is-fullheight custom-component  " >
+  <section class="hero is-fullheight contact-section  " >
     <div class="columns is-multiline mx-2 my-6">
       <div class="column"></div>
       <div class="column is-one-third">
@@ -186,15 +186,6 @@ function onRecaptcha(response) {
   
 
 
-  .custom-component {
-        background-color: #fffffe;
-    }
-
-  :global(body.dark-mode) .custom-component {
-        background-color: #0f0e17;
-        color: #fffffe;
-    }
-
 .custom-title{
   color:#0f0e17;
   text-align: center;
@@ -283,4 +274,83 @@ color: white;
   margin: 0 auto;
   width: 304px;
 }
+
+
+
+
+
+
+
+.contact-section {
+  background-color: #FFF9C4;
+  color: #5D4037;
+}
+
+.title,
+.custom-title {
+  font-family: "Karla", sans-serif;
+  text-align: center;
+  color: #5D4037;
+}
+
+.custom-text {
+  text-align: justify;
+  color: #6D4C41;
+  font-family: "Inconsolata", monospace;
+  line-height: 1.70rem;
+}
+
+.custom-label {
+  color: #5D4037;
+}
+
+.custom-input {
+  border-color: #5D4037;
+  background-color: #FFFDE7;
+  color: #5D4037;
+}
+
+.custom-button {
+  background-color: #FFCC80;
+  border: none;
+  color: #5D4037;
+  width: 105px;
+  margin-bottom: 15px;
+}
+
+.custom-message {
+  color: green;
+  text-align: center;
+}
+
+/* Modo oscuro */
+:global(body.dark-mode) .contact-section {
+  background-color: #5D4037;
+  color: #FFF9C4;
+}
+
+:global(body.dark-mode) .custom-title,
+:global(body.dark-mode) .title,
+:global(body.dark-mode) .custom-text,
+:global(body.dark-mode) .custom-label {
+  color: #FFF9C4;
+}
+
+:global(body.dark-mode) .custom-input {
+  background-color: #6D4C41;
+  color: #FFF9C4;
+  border-color: #FFF9C4;
+}
+
+:global(body.dark-mode) .custom-button {
+  background-color: #FFB74D;
+  color: #FFF9C4;
+  box-shadow: 0 0 10px rgba(255, 183, 77, 0.4);
+}
+
+:global(body.dark-mode) .custom-message {
+  color: #FFF9C4;
+  text-align: center;
+}
+
   </style>

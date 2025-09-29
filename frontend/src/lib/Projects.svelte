@@ -27,7 +27,7 @@
 
 </script>
 
-<section class="hero is-fullheight custom-component">
+<section class="hero is-fullheight projects-section">
     <div class="container is-fluid">
       <div class="columns is-multiline mx-2 my-6 ">
         {#each projects as project}
@@ -135,25 +135,8 @@
   }
 
 
-  .custom-component {
-        background-color: #fffffe;
-    }
-
-  :global(body.dark-mode) .custom-component {
-        background-color: #0f0e17;
-        color: #fffffe;
-    }
 
 
-    .custom-text {
-        color: #1f1235;
-        line-height: 1.25rem;
-
-}
-
-:global(body.dark-mode) .custom-text {
-        color: #f0f0f0;
-}
 
 
 .custom-title{
@@ -211,6 +194,81 @@
 
 }
 
+.projects-section {
+  background-color: #E0F7FA;
+  color: #004D40;
+}
+
+.container-project {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.container-img {
+  margin: 8px;
+  width: 600px;
+}
+
+.container-info {
+  margin: 8px;
+  text-align: center;
+  width: 682px;
+}
+
+.container-code {
+  margin: 12px;
+}
+
+.custom-container-tecno i {
+  font-size: 16px;
+  margin: 4px;
+  color: #00796B;
+}
+
+.paragraph {
+  text-align: center;
+  padding: 16px;
+  font-family: "Inconsolata", monospace;
+  line-height: 1.25rem;
+  color: #006064;
+}
+
+.custom-title {
+  font-size: 36px;
+  font-family: "Inconsolata", monospace;
+  color: #004D40;
+}
+
+.custom-buttom-color {
+  background-color: #80DEEA;
+  width: 105px;
+  color: #004D40;
+  border: none;
+}
+
+/* Modo oscuro */
+:global(body.dark-mode) .projects-section {
+  background-color: #004D40;
+  color: #E0F7FA;
+}
+
+:global(body.dark-mode) .custom-title,
+:global(body.dark-mode) .paragraph {
+  color: #E0F7FA;
+}
+
+:global(body.dark-mode) .custom-container-tecno i {
+  color: #E0F7FA;
+}
+
+:global(body.dark-mode) .custom-buttom-color {
+  background-color: #26C6DA;
+  color: #E0F7FA;
+  box-shadow: 0 0 10px rgba(38, 198, 218, 0.4);
+}
 
 
 

@@ -113,16 +113,6 @@
 
 
 
-.custom-component {
-        background-color: #FFFFFF;
-        color: #1f1235;
-    }
-
-
-:global(body.dark-mode) .custom-component {
-        background-color: #0f0e17;
-        color: #fffffe;
-    }
 
 
 
@@ -156,5 +146,77 @@
   background-color: #ff8906;
         
     }
+
+
+
+
+
+header {
+  width: 100%;
+}
+
+.navbar {
+  background-color: #FDF6F0;
+  color: #2B2D42;
+}
+
+.navbar-burger span {
+  background-color: #2B2D42;
+}
+
+.nav-link {
+  color: #2B2D42;
+  font-size: 16px;
+  padding: 20px 0px;
+  margin: 0px 20px;
+  position: relative;
+  opacity: 0.75;
+}
+
+.nav-link:hover {
+  opacity: 1;
+}
+
+.nav-link-ltr::before {
+  width: 0%;
+  bottom: 10px;
+  transition: 300ms;
+  height: 5px;
+  content: "";
+  position: absolute;
+  background-color: #FFB6B9;
+}
+
+.nav-link-ltr:hover::before {
+  width: 100%;
+}
+
+.custom-navitem {
+  background-color: transparent;
+  color: #2B2D42;
+}
+
+/* Modo oscuro */
+:global(body.dark-mode) .navbar {
+  background-color: #1F1235;
+  color: #F7F7F7;
+}
+
+:global(body.dark-mode) .navbar-burger span {
+  background-color: #F7F7F7;
+}
+
+:global(body.dark-mode) .nav-link {
+  color: #F7F7F7;
+}
+
+:global(body.dark-mode) .custom-navitem {
+  background-color: transparent;
+  color: #F7F7F7;
+}
+
+:global(body.dark-mode) .nav-link-ltr::before {
+  background-color: #FFB6B9;
+}
 
 </style>

@@ -71,18 +71,9 @@ import { GithubIcon,LinkedinIcon,TwitterIcon } from 'svelte-feather-icons'
 
 
 
-    .custom-component {
-        background-color: #fffffe;
-    }
-
 
     
 
-
-:global(body.dark-mode) .custom-component {
-        background-color: #0f0e17;
-        color: #fffffe;
-    }
 
 
     .custom-icons {
@@ -98,6 +89,65 @@ import { GithubIcon,LinkedinIcon,TwitterIcon } from 'svelte-feather-icons'
         background-color: #0f0e17;
         color: #fffffe;
     }
+
+
+
+
+
+    .footer {
+  height: 80px;
+  width: 100%;
+  background-color: #FFEBE5;
+}
+
+a,
+p {
+  color: #5D4037;
+  font-family: 'Karla', sans-serif;
+  padding: 10px;
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: auto;
+  width: auto;
+}
+
+.social a {
+  padding: 2px;
+}
+
+.box_social {
+  margin: 10px;
+}
+
+
+.custom-icons {
+  color: #5D4037;
+  transition: color 0.3s ease;
+}
+
+.custom-icons:hover {
+  color: #FFB6B9;
+}
+
+/* Modo oscuro */
+:global(body.dark-mode) .footer {
+  background-color: #3E3A4D;
+}
+
+
+:global(body.dark-mode) a,
+:global(body.dark-mode) p,
+:global(body.dark-mode) .custom-icons {
+  color: #FFF9C4;
+}
+
+:global(body.dark-mode) .custom-icons:hover {
+  color: #FFB6B9;
+}
 
 
   </style>
