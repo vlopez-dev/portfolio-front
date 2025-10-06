@@ -282,6 +282,7 @@ let certificates = [];
 .about-section {
   background-color: #EDE7F6;
   color: #3E3A4D;
+  transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .title,

@@ -45,6 +45,8 @@ import { onMount, onDestroy } from 'svelte';
    .hero-section {
   background-color: #FFF0F5;
   color: #2B2D42;
+  min-height: 100vh;
+  transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-body {
@@ -56,12 +58,14 @@ import { onMount, onDestroy } from 'svelte';
   font-size: 48px;
   text-align: center;
   color: #2B2D42;
+  margin-bottom: 1rem;
 }
 
 .subtitle {
   font-family: 'Inconsolata', monospace;
   text-align: center;
   color: #FFB6B9;
+  font-size: 20px;
 }
 
 /* Modo oscuro */
@@ -75,10 +79,7 @@ import { onMount, onDestroy } from 'svelte';
 }
 
 :global(body.dark-mode) .subtitle {
-  color: #FFB6B9;
-  text-shadow: 1px 1px 2px rgba(255, 182, 185, 0.6), 0 0 1em rgba(255, 182, 185, 0.6);
+  color: #D4C5F9;
+  text-shadow: 1px 1px 2px rgba(212, 197, 249, 0.2);
 }
-
-
-    
   </style>

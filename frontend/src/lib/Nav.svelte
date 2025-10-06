@@ -1,10 +1,12 @@
 <script>
   import { onMount } from 'svelte';
   import DarkModeToggle from './Button.svelte';
+  import { currentSection, sectionColors, sectionColorsDark, darkMode } from './stores.js';
 
-
-  export let item1, item2, item3, item4;
+  // Reactivity - actualizar colores cuando cambie la sección
+  $: currentColors = $darkMode ? sectionColorsDark[$currentSection] : sectionColors[$currentSection];
   
+  export let item1, item2, item3, item4;
   onMount(() => {
   const burgerIcon = document.querySelector("#burger");
   const navMenu = document.querySelector("#nav-links");
@@ -34,7 +36,9 @@
 
 
 <header>
-  <nav class="navbar custom-component  " role="navigation" aria-label="main navigation ">
+  <nav class="navbar custom-component" 
+       style="--current-bg: {currentColors?.bg || '#FFF0F5'}; --current-text: {currentColors?.text || '#2B2D42'}; --current-accent: {currentColors?.accent || '#FFB6B9'}" 
+       role="navigation" aria-label="main navigation">
     <div class="navbar-brand custom-component">
      
       <a id="burger" role="button" class="navbar-burger custom-component" aria-label="menu" aria-expanded="false">
@@ -46,11 +50,10 @@
     <div id="nav-links" class="navbar-menu custom-component">
       <div class="navbar-start custom-component " style="flex-grow: 1; justify-content: center;">
         
-        <a class="navbar-item nav-link nav-link-ltr custom-navitem custom-nav-link" href="/">{item1}</a>
-       <a class="navbar-item nav-link nav-link-ltr custom-navitem custom-nav-link " href="/about">{item2}</a>
-
-        <a class="navbar-item nav-link nav-link-ltr custom-navitem custom-nav-link" href="/projects">{item3}</a>
-        <a class="navbar-item nav-link nav-link-ltr custom-navitem custom-nav-link" href="/contact">{item4}</a>
+        <a class="navbar-item nav-link nav-link-ltr custom-navitem custom-nav-link" href="/" data-sveltekit-preload-data>{item1}</a>
+        <a class="navbar-item nav-link nav-link-ltr custom-navitem custom-nav-link" href="/about" data-sveltekit-preload-data>{item2}</a>
+        <a class="navbar-item nav-link nav-link-ltr custom-navitem custom-nav-link" href="/projects" data-sveltekit-preload-data>{item3}</a>
+        <a class="navbar-item nav-link nav-link-ltr custom-navitem custom-nav-link" href="/contact" data-sveltekit-preload-data>{item4}</a>
       
       </div>
     </div>
@@ -69,17 +72,18 @@
   
 
 .nav-link {
-  color: #fffffe;
+  color: var(--current-text);
   font-size: 16px;
   padding: 20px 0px;
   margin: 0px 20px;
-  /* display: inline-block; */
   position: relative;
-  opacity: 0.75;
+  opacity: 0.85;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link:hover {
   opacity: 1;
+  color: var(--current-accent);
 }
 /* 
 .nav-link::before {
@@ -117,35 +121,16 @@
 
 
 .custom-navitem {
-        background-color: white;
-        color: #1f1235;
-    }
+    background-color: transparent;
+    color: var(--current-text);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
+.custom-navitem:hover {
+    color: var(--current-accent);
+}
 
-:global(body.dark-mode) .custom-navitem {
-        background-color: #0f0e17;
-        color: white;
-        
-    }
-
-
-  .custom-nav-link::before{
-    transition: 300ms;
-    height: 5px;
-    content: "";
-     position: absolute;
-    background-color: #ff6e6c;
-
-  }
-  :global(body.dark-mode) .custom-nav-link::before {
-
-  transition: 300ms;
-  height: 5px;
-  content: "";
-  position: absolute;
-  background-color: #ff8906;
-        
-    }
+/* Removed duplicated styles - now using CSS variables */
 
 
 
@@ -156,67 +141,37 @@ header {
 }
 
 .navbar {
-  background-color: #FDF6F0;
-  color: #2B2D42;
+  background-color: var(--current-bg);
+  color: var(--current-text);
+  box-shadow: 0 1px 8px rgba(255, 182, 185, 0.1);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 182, 185, 0.3);
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navbar-burger span {
-  background-color: #2B2D42;
+  background-color: var(--nav-text);
+  transition: all 0.3s ease;
 }
 
-.nav-link {
-  color: #2B2D42;
-  font-size: 16px;
-  padding: 20px 0px;
-  margin: 0px 20px;
-  position: relative;
-  opacity: 0.75;
-}
-
-.nav-link:hover {
-  opacity: 1;
-}
+/* Cleaned up duplicate styles */
 
 .nav-link-ltr::before {
   width: 0%;
-  bottom: 10px;
-  transition: 300ms;
-  height: 5px;
+  bottom: 8px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 3px;
   content: "";
   position: absolute;
-  background-color: #FFB6B9;
+  background-color: var(--current-accent);
+  border-radius: 2px;
 }
 
 .nav-link-ltr:hover::before {
   width: 100%;
 }
 
-.custom-navitem {
-  background-color: transparent;
-  color: #2B2D42;
-}
-
-/* Modo oscuro */
-:global(body.dark-mode) .navbar {
-  background-color: #1F1235;
-  color: #F7F7F7;
-}
-
-:global(body.dark-mode) .navbar-burger span {
-  background-color: #F7F7F7;
-}
-
-:global(body.dark-mode) .nav-link {
-  color: #F7F7F7;
-}
-
-:global(body.dark-mode) .custom-navitem {
-  background-color: transparent;
-  color: #F7F7F7;
-}
-
-:global(body.dark-mode) .nav-link-ltr::before {
-  background-color: #FFB6B9;
-}
+/* Dark mode styles now handled by CSS variables and reactivity */
 
 </style>

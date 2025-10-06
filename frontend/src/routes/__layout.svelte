@@ -14,20 +14,4 @@
   
   <Footer />
   
-  <style>
-    :global(body) {
-      display: flex;
-      color: white;
-      flex-direction: column;
-      place-items: normal;
-      background-color: white;
-    }
-  
-    :global(body.dark-mode) {
-      display: flex;
-      color: white;
-      flex-direction: column;
-      place-items: normal;
-      background-color: #0f0e17;
-    }
-  </style>
+<!-- Este archivo puede no estar en uso - los estilos están en +layout.svelte -->

@@ -284,6 +284,7 @@ color: white;
 .contact-section {
   background-color: #FFF9C4;
   color: #5D4037;
+  transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .title,
