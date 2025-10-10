@@ -1,19 +1,8 @@
 <script>
 import { GithubIcon,LinkedinIcon,TwitterIcon } from 'svelte-feather-icons';
-import { currentSection, sectionColors, sectionColorsDark, darkMode } from './stores.js';
-
-let currentColors = sectionColors.contact; // default
-
-// Reactivity - actualizar colores cuando cambie la sección
-$: currentColors = $darkMode ? sectionColorsDark[$currentSection] : sectionColors[$currentSection];
-
-// Debug: observar cambios  
-$: console.log('🦶 Footer - Sección actual:', $currentSection, 'Colores:', currentColors);
-
 </script>
 
-<footer class="footer m-auto custom-component" 
-         style="--current-bg: {currentColors?.bg || '#FFF9C4'}; --current-text: {currentColors?.text || '#5D4037'}; --current-accent: {currentColors?.accent || '#FFB6B9'}">
+<footer class="footer m-auto custom-component">
     <div class="content has-text-centered">
       <p>
        
@@ -43,20 +32,21 @@ $: console.log('🦶 Footer - Sección actual:', $currentSection, 'Colores:', cu
   </footer>
 
   <style>
-    .footer {
+.footer {
       height: 80px;
       width: 100%;
-      background-color: var(--current-bg);
-      box-shadow: 0 -1px 8px rgba(255, 182, 185, 0.1);
-      border-top: 1px solid rgba(255, 182, 185, 0.2);
-      backdrop-filter: blur(8px);
+      background-color: var(--color-bg);
+      box-shadow: none;
+      border-top: none;
+      backdrop-filter: none;
       position: relative;
+      margin-top: 0;
       transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    a,
+a,
     p {
-      color: var(--current-text);
+      color: var(--color-text);
       font-family: 'Karla', sans-serif;
       padding: 10px;
       transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -80,8 +70,8 @@ $: console.log('🦶 Footer - Sección actual:', $currentSection, 'Colores:', cu
       justify-content: center;
     }
 
-    .social a:hover {
-      background-color: var(--current-accent);
+.social a:hover {
+      background-color: var(--color-accent);
       transform: translateY(-2px);
       box-shadow: 0 4px 12px rgba(255, 182, 185, 0.2);
     }
@@ -90,8 +80,8 @@ $: console.log('🦶 Footer - Sección actual:', $currentSection, 'Colores:', cu
       margin: 8px;
     }
 
-    .custom-icons {
-      color: var(--current-text);
+.custom-icons {
+      color: var(--color-text);
       transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
@@ -100,27 +90,4 @@ $: console.log('🦶 Footer - Sección actual:', $currentSection, 'Colores:', cu
       transform: scale(1.1);
     }
 
-    /* Modo oscuro */
-    :global(body.dark-mode) .footer {
-      background-color: #5D4037;
-      border-top: 1px solid rgba(212, 197, 249, 0.2);
-      box-shadow: 0 -1px 8px rgba(212, 197, 249, 0.1);
-    }
-
-    :global(body.dark-mode) a,
-    :global(body.dark-mode) p {
-      color: #FFF9C4;
-    }
-
-    :global(body.dark-mode) .custom-icons {
-      color: #FFF9C4;
-    }
-
-    :global(body.dark-mode) .custom-icons:hover {
-      color: white;
-    }
-
-    :global(body.dark-mode) .social a:hover {
-      background-color: #FFB6B9;
-    }
   </style>

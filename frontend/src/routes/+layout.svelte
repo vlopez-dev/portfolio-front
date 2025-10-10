@@ -4,6 +4,7 @@
  import Nav from '$lib/Nav.svelte';
  import Footer from '$lib/Footer.svelte';
  import '../styles.css';
+ import 'bulma/css/bulma.min.css';
     
  // Mapear rutas a nombres de secciones
  const routeToSection = {
@@ -19,6 +20,8 @@
    const newSection = routeToSection[currentRoute] || 'home';
    currentSection.set(newSection);
  }
+
+ 
 
 </script>
 <Nav
@@ -39,26 +42,15 @@ item4="Contact"
 
 
 <style>
- :global(body) {
+  :global(body) {
     display: flex;
-    color: #2B2D42;
+    color: var(--color-text);
     flex-direction: column;
     place-items: normal;
-    background: linear-gradient(180deg, #FFF0F5 0%, #EDE7F6 25%, #E0F7FA 50%, #FFF9C4 100%);
+    background: linear-gradient(180deg, var(--grad-1) 0%, var(--grad-2) 25%, var(--grad-3) 50%, var(--grad-4) 100%);
     min-height: 100vh;
     font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     transition: all 0.3s ease;
-    margin: 0;
-    padding: 0;
-  }
-
-  :global(body.dark-mode) {
-    display: flex;
-    color: #F7F7F7;
-    flex-direction: column;
-    place-items: normal;
-    background: linear-gradient(180deg, #2B2D42 0%, #3E3A4D 25%, #004D40 50%, #5D4037 100%);
-    min-height: 100vh;
     margin: 0;
     padding: 0;
   }
@@ -68,7 +60,7 @@ item4="Contact"
   }
 
   :global(::selection) {
-    background-color: #FFB6B9;
+    background-color: var(--color-accent);
     color: white;
   }
 </style>

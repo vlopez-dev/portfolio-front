@@ -1,11 +1,7 @@
 <script>
   import { onMount } from 'svelte';
   import DarkModeToggle from './Button.svelte';
-  import { currentSection, sectionColors, sectionColorsDark, darkMode } from './stores.js';
 
-  // Reactivity - actualizar colores cuando cambie la sección
-  $: currentColors = $darkMode ? sectionColorsDark[$currentSection] : sectionColors[$currentSection];
-  
   export let item1, item2, item3, item4;
   onMount(() => {
   const burgerIcon = document.querySelector("#burger");
@@ -24,20 +20,10 @@
     });
   });
 });
-
-
-
-
-
-
-
-
 </script>
 
-
 <header>
-  <nav class="navbar custom-component" 
-       style="--current-bg: {currentColors?.bg || '#FFF0F5'}; --current-text: {currentColors?.text || '#2B2D42'}; --current-accent: {currentColors?.accent || '#FFB6B9'}" 
+<nav class="navbar custom-component" 
        role="navigation" aria-label="main navigation">
     <div class="navbar-brand custom-component">
      
@@ -72,7 +58,7 @@
   
 
 .nav-link {
-  color: var(--current-text);
+  color: var(--color-text);
   font-size: 16px;
   padding: 20px 0px;
   margin: 0px 20px;
@@ -83,7 +69,7 @@
 
 .nav-link:hover {
   opacity: 1;
-  color: var(--current-accent);
+  color: var(--color-accent);
 }
 /* 
 .nav-link::before {
@@ -122,12 +108,12 @@
 
 .custom-navitem {
     background-color: transparent;
-    color: var(--current-text);
+    color: var(--color-text);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .custom-navitem:hover {
-    color: var(--current-accent);
+    color: var(--color-accent);
 }
 
 /* Removed duplicated styles - now using CSS variables */
@@ -141,17 +127,18 @@ header {
 }
 
 .navbar {
-  background-color: var(--current-bg);
-  color: var(--current-text);
-  box-shadow: 0 1px 8px rgba(255, 182, 185, 0.1);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(255, 182, 185, 0.3);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  box-shadow: none;
+  backdrop-filter: none;
+  border-bottom: none;
   position: relative;
+  margin-bottom: 0;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navbar-burger span {
-  background-color: var(--nav-text);
+  background-color: var(--color-text);
   transition: all 0.3s ease;
 }
 
@@ -164,7 +151,7 @@ header {
   height: 3px;
   content: "";
   position: absolute;
-  background-color: var(--current-accent);
+  background-color: var(--color-accent);
   border-radius: 2px;
 }
 

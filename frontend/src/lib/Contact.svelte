@@ -174,7 +174,7 @@ function onRecaptcha(response) {
 .title {
     font-family: "Karla", sans-serif;
     text-align: center;
-    color: #fffffe;
+    color: var(--color-text);
   }
 
  
@@ -187,24 +187,19 @@ function onRecaptcha(response) {
 
 
 .custom-title{
-  color:#0f0e17;
+  color: var(--color-text);
   text-align: center;
 }
 
-:global(body.dark-mode) .custom-title {
-        background-color: #0f0e17;
-        text-align: center;
-        color: #fffffe;
-    }
 
 
 
 
 
 .custom-button{
-  background-color: #ff6e6c;
+  background-color: var(--color-accent);
     border: none;
-    color: #fffffe;
+    color: var(--color-on-accent);
     width: 105px;
     margin-bottom: 15px;
 
@@ -212,19 +207,12 @@ function onRecaptcha(response) {
 
 
 
-:global(body.dark-mode) .custom-button {
-
-  background-color: #ff8906;
-    border: none;
-    color: #fffffe;
-    width: 105px;
-    margin-bottom: 15px;
-
-}
 
 
 .custom-input{
-border-color:#1f1235 ;
+  border-color: var(--color-border);
+  background-color: var(--color-surface);
+  color: var(--color-text);
 }
 
 :global(body.dark-mode) .custom-input {
@@ -233,38 +221,24 @@ border-color:#1f1235 ;
 }
 
 .custom-label{
-  color: #1f1235;
-  
-
+  color: var(--color-text);
 }
 
-:global(body.dark-mode) .custom-label {
 
-color: white;
-}
-
-:global(body.dark-mode) .custom-text {
-        color: #f0f0f0;
-        text-align: justify;
-}
 .custom-text{
   text-align: justify;
-  color: #1f1235;
+  color: var(--color-text);
   font-family: "Inconsolata", monospace;
   line-height: 1.70rem;
 }
 
 
 .custom-message{
-  color: green;
+  color: var(--color-success);
   text-align: center;
 }
 
 
-:global(body.dark-mode) .custom-message {
-        color: #f0f0f0;
-        text-align: center;
-}
 
 
 
@@ -282,8 +256,8 @@ color: white;
 
 
 .contact-section {
-  background-color: #FFF9C4;
-  color: #5D4037;
+  background-color: var(--color-bg);
+  color: var(--color-text);
   transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -291,30 +265,30 @@ color: white;
 .custom-title {
   font-family: "Karla", sans-serif;
   text-align: center;
-  color: #5D4037;
+  color: var(--color-text);
 }
 
 .custom-text {
   text-align: justify;
-  color: #6D4C41;
+  color: var(--color-text);
   font-family: "Inconsolata", monospace;
   line-height: 1.70rem;
 }
 
 .custom-label {
-  color: #5D4037;
+  color: var(--color-text);
 }
 
 .custom-input {
-  border-color: #5D4037;
-  background-color: #FFFDE7;
-  color: #5D4037;
+  border-color: var(--color-border);
+  background-color: var(--color-surface);
+  color: var(--color-text);
 }
 
 .custom-button {
-  background-color: #FFCC80;
+  background-color: var(--color-accent);
   border: none;
-  color: #5D4037;
+  color: var(--color-on-accent);
   width: 105px;
   margin-bottom: 15px;
 }
@@ -325,33 +299,5 @@ color: white;
 }
 
 /* Modo oscuro */
-:global(body.dark-mode) .contact-section {
-  background-color: #5D4037;
-  color: #FFF9C4;
-}
-
-:global(body.dark-mode) .custom-title,
-:global(body.dark-mode) .title,
-:global(body.dark-mode) .custom-text,
-:global(body.dark-mode) .custom-label {
-  color: #FFF9C4;
-}
-
-:global(body.dark-mode) .custom-input {
-  background-color: #6D4C41;
-  color: #FFF9C4;
-  border-color: #FFF9C4;
-}
-
-:global(body.dark-mode) .custom-button {
-  background-color: #FFB74D;
-  color: #FFF9C4;
-  box-shadow: 0 0 10px rgba(255, 183, 77, 0.4);
-}
-
-:global(body.dark-mode) .custom-message {
-  color: #FFF9C4;
-  text-align: center;
-}
 
   </style>

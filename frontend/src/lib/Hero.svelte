@@ -42,9 +42,9 @@ import { onMount, onDestroy } from 'svelte';
   </section>
 </Animate>
   <style>
-   .hero-section {
-  background-color: #FFF0F5;
-  color: #2B2D42;
+.hero-section {
+  background-color: var(--color-bg);
+  color: var(--color-text);
   min-height: 100vh;
   transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -57,29 +57,16 @@ import { onMount, onDestroy } from 'svelte';
   font-family: 'Karla', sans-serif;
   font-size: 48px;
   text-align: center;
-  color: #2B2D42;
+  color: var(--color-text);
   margin-bottom: 1rem;
 }
 
 .subtitle {
   font-family: 'Inconsolata', monospace;
   text-align: center;
-  color: #FFB6B9;
+  color: var(--color-accent);
   font-size: 20px;
 }
 
 /* Modo oscuro */
-:global(body.dark-mode) .hero-section {
-  background-color: #2B2D42;
-  color: #F7F7F7;
-}
-
-:global(body.dark-mode) .title {
-  color: #F7F7F7;
-}
-
-:global(body.dark-mode) .subtitle {
-  color: #D4C5F9;
-  text-shadow: 1px 1px 2px rgba(212, 197, 249, 0.2);
-}
   </style>

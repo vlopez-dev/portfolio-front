@@ -126,12 +126,12 @@
   }
 
 
-  .paragraph{
+.paragraph{
     text-align: center;
     padding: 16px;
     font-family: "Inconsolata", monospace;
     line-height: 1.25rem;
-    color: #a7a9be;
+    color: var(--color-text);
   }
 
 
@@ -142,33 +142,23 @@
 .custom-title{
   font-size: 36px;
     font-family: "Inconsolata", monospace;
-	color: #1f1235;
+	color: var(--color-text);
 }
 
 
 
-:global(body.dark-mode) .custom-title {
-        color: #f0f0f0;
-}
 
 
 
 .custom-buttom-color{
-  background-color: #ff6e6c;
+  background-color: var(--color-accent);
   width: 105px;
-  color: #fffffe;
+  color: var(--color-on-accent);
   border: none;
   }
 
 
 
-:global(body.dark-mode) .custom-buttom-color {
-        color: #f0f0f0;
-        width: 105px;
-
-        background-color: #ff8906;
-
-}
 
 
 
@@ -195,8 +185,8 @@
 }
 
 .projects-section {
-  background-color: #E0F7FA;
-  color: #004D40;
+  background-color: var(--color-bg);
+  color: var(--color-text);
   transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -226,7 +216,7 @@
 .custom-container-tecno i {
   font-size: 16px;
   margin: 4px;
-  color: #00796B;
+  color: var(--color-muted);
 }
 
 .paragraph {
@@ -234,42 +224,23 @@
   padding: 16px;
   font-family: "Inconsolata", monospace;
   line-height: 1.25rem;
-  color: #006064;
+  color: var(--color-text);
 }
 
 .custom-title {
   font-size: 36px;
   font-family: "Inconsolata", monospace;
-  color: #004D40;
+  color: var(--color-text);
 }
 
 .custom-buttom-color {
-  background-color: #80DEEA;
+  background-color: var(--color-accent);
   width: 105px;
-  color: #004D40;
+  color: var(--color-on-accent);
   border: none;
 }
 
 /* Modo oscuro */
-:global(body.dark-mode) .projects-section {
-  background-color: #004D40;
-  color: #E0F7FA;
-}
-
-:global(body.dark-mode) .custom-title,
-:global(body.dark-mode) .paragraph {
-  color: #E0F7FA;
-}
-
-:global(body.dark-mode) .custom-container-tecno i {
-  color: #E0F7FA;
-}
-
-:global(body.dark-mode) .custom-buttom-color {
-  background-color: #26C6DA;
-  color: #E0F7FA;
-  box-shadow: 0 0 10px rgba(38, 198, 218, 0.4);
-}
 
 
 

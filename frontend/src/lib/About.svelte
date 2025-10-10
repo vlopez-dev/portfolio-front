@@ -150,15 +150,15 @@ let certificates = [];
 <style>
 
 
-  .title {
+.title {
     font-family: "Karla", sans-serif;
     text-align: center;
-    color: #fffffe;
+    color: var(--color-text);
   }
 
-  .subtitle{
+.subtitle{
     text-align: center;
-    color: #a7a9be;
+    color: var(--color-muted);
   }
 
 
@@ -212,12 +212,12 @@ let certificates = [];
   }
 
 
-  .paragraph{
+.paragraph{
     text-align: justify;
     padding: 16px;
     font-family: "Inconsolata", monospace;
     line-height: 1.70rem;
-    color: #a7a9be;
+    color: var(--color-text);
     margin: 20px 0;
   }
 
@@ -238,30 +238,19 @@ let certificates = [];
 
 
 .custom-icon{
-  color: #a7a9be;
+  color: var(--color-muted);
 }
 
-:global(body.dark-mode) .custom-icon {
-        color: #f0f0f0;
-}
 
 
 
 .custom-bottom{
-  background-color: #ff6e6c;
+  background-color: var(--color-accent);
   width: 105px;
-  color: #fffffe;
+  color: var(--color-on-accent);
 }
 
 
-:global(body.dark-mode) .custom-bottom {
-  background-color: #ff8906;
-    border: none;
-    color: #fffffe;
-    width: 105px;
-    box-shadow: -8px 0px 20px rgba(255, 146, 26, 0.3), 0px 0px 20px rgba(255, 146, 26, 0.3), 8px 0px 20px rgb(255 146 26 / 30%);
-
-}
 
 
 
@@ -272,16 +261,13 @@ let certificates = [];
 
 
 .custom-box-tools{
-  color: #ff6e6c;
+  color: var(--color-accent);
 }
 
-:global(body.dark-mode) .custom-icon {
-        color: #f0f0f0;
-}
 
 .about-section {
-  background-color: #EDE7F6;
-  color: #3E3A4D;
+  background-color: var(--color-bg);
+  color: var(--color-text);
   transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -289,12 +275,12 @@ let certificates = [];
 .title__bio {
   font-family: "Karla", sans-serif;
   text-align: center;
-  color: #3E3A4D;
+  color: var(--color-text);
 }
 
 .subtitle {
   text-align: center;
-  color: #6A5C93; /* tono intermedio lavanda */
+  color: var(--color-muted);
 }
 
 .paragraph {
@@ -302,43 +288,22 @@ let certificates = [];
   padding: 16px;
   font-family: "Inconsolata", monospace;
   line-height: 1.70rem;
-  color: #5C5470;
+  color: var(--color-text);
   margin: 20px 0;
 }
 
 .custom-icon,
 .box-tools p {
-  color: #6A5C93;
+  color: var(--color-muted);
 }
 
 .custom-bottom {
-  background-color: #B39DDB;
-  color: #3E3A4D;
+  background-color: var(--color-accent);
+  color: var(--color-on-accent);
   width: 105px;
 }
 
 /* Modo oscuro */
-:global(body.dark-mode) .about-section {
-  background-color: #3E3A4D;
-  color: #EDE7F6;
-}
-
-:global(body.dark-mode) .title,
-:global(body.dark-mode) .title__bio,
-:global(body.dark-mode) .paragraph,
-:global(body.dark-mode) .subtitle {
-  color: #EDE7F6;
-}
-
-:global(body.dark-mode) .custom-icon {
-  color: #EDE7F6;
-}
-
-:global(body.dark-mode) .custom-bottom {
-  background-color: #9575CD;
-  color: #EDE7F6;
-  box-shadow: 0 0 10px rgba(179, 157, 219, 0.4);
-}
 
 
 

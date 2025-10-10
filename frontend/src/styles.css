@@ -1,139 +1,34 @@
-/* src/theme.css */
-
 :root {
-  /* Secciones principales */
-  --home-bg: #FFF0F5;
-  --home-text: #2B2D42;
-  
-  --about-bg: #EDE7F6;
-  --about-text: #3E3A4D;
-  
-  --projects-bg: #E0F7FA;
-  --projects-text: #004D40;
-  
-  --contact-bg: #FFF9C4;
-  --contact-text: #5D4037;
+  /* Paleta principal (modo claro) - edita estos valores para cambiar el tema */
+  --color-bg: #fffffe;     /* Fondo de navbar/footer y superficies */
+  --color-text: #272343;   /* Texto principal */
+  --color-accent: #ffd803; /* Color de acento (hover, detalles, botones) */
+  --color-on-accent: #272343; /* Texto sobre acento */
+  --color-muted: #2d334a;  /* Texto secundario */
+  --color-surface: #fffffe; /* Superficies (inputs, cards) */
+  --color-border: #bae8e8;  /* Bordes */
+  --color-success: #2e7d32; /* Mensajes de éxito */
 
-  /* Navbar y navegación */
-  --nav-bg: #FFF0F5; /* Mismo color que la sección home */
-  --nav-text: #2B2D42;
-  --nav-hover: #FFB6B9;
-  --nav-active: #FF8A95;
-  --nav-border: rgba(255, 182, 185, 0.3);
-
-  /* Footer */
-  --footer-bg: #FFF9C4; /* Mismo color que la sección contact */
-  --footer-text: #5D4037;
-  --footer-icons: #5D4037;
-  --footer-hover: #FFB6B9;
-
-  /* UI Elements */
-  --accent-primary: #FFB6B9;
-  --accent-secondary: #D4C5F9;
-  --accent-tertiary: #B2E5E7;
-  --accent-quaternary: #FFF2B3;
-  
-  /* Borders y sombras */
-  --border-light: #FFD6E8;
-  --border-medium: #E8C5E5;
-  --shadow-soft: rgba(255, 182, 185, 0.2);
+  /* Gradiente de fondo global (stops por sección) */
+  /* --grad-1: #FFF0F5; /* home.bg */
+  /* --grad-2: #EDE7F6; /* about.bg */
+  /* --grad-3: #E0F7FA; /* projects.bg */
+  /* --grad-4: #FFF9C4; /* contact.bg */
 }
 
-/* Modo oscuro */
+/* Overrides para modo oscuro: el toggle debe aplicar la clase .dark-mode al <body> */
 body.dark-mode {
-  /* Secciones principales */
-  --home-bg: #2B2D42;
-  --home-text: #F7F7F7;
-  
-  --about-bg: #3E3A4D;
-  --about-text: #EDE7F6;
-  
-  --projects-bg: #004D40;
-  --projects-text: #E0F7FA;
-  
-  --contact-bg: #5D4037;
-  --contact-text: #FFF9C4;
+  --color-bg: #5D4037;
+  --color-text: #FFF9C4;
+  --color-accent: #FFB6B9;
+  --color-on-accent: #ffffff;
+  --color-muted: #f0f0f0;
+  --color-surface: #6D4C41;
+  --color-border: #FFF9C4;
+  --color-success: #81c784;
 
-  /* Navbar y navegación */
-  --nav-bg: #2B2D42; /* Mismo color que la sección home */
-  --nav-text: #F7F7F7;
-  --nav-hover: #D4C5F9;
-  --nav-active: #C8A8F7;
-  --nav-border: rgba(212, 197, 249, 0.3);
-
-  /* Footer */
-  --footer-bg: #5D4037; /* Mismo color que la sección contact */
-  --footer-text: #FFF9C4;
-  --footer-icons: #FFF9C4;
-  --footer-hover: #FFB6B9;
-
-  /* UI Elements */
-  --accent-primary: #D4C5F9;
-  --accent-secondary: #FFB6B9;
-  --accent-tertiary: #B2E5E7;
-  --accent-quaternary: #FFF2B3;
-  
-  /* Borders y sombras */
-  --border-light: #5A5570;
-  --border-medium: #6B5A8D;
-  --shadow-soft: rgba(212, 197, 249, 0.2);
-}
-
-/* Utilidades globales para efectos pasteles */
-:global(.pastel-button) {
-  background: var(--accent-primary);
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 8px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 12px var(--shadow-soft);
-}
-
-:global(.pastel-button:hover) {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px var(--shadow-soft);
-  background: var(--nav-hover);
-}
-
-:global(.pastel-card) {
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--border-light);
-  border-radius: 12px;
-  padding: 24px;
-  box-shadow: 0 4px 20px var(--shadow-soft);
-  transition: all 0.3s ease;
-}
-
-:global(.pastel-card:hover) {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 40px var(--shadow-soft);
-  border-color: var(--accent-primary);
-}
-
-:global(body.dark-mode .pastel-card) {
-  background: rgba(62, 58, 77, 0.8);
-  border-color: var(--border-light);
-}
-
-/* Animaciones suaves */
-:global(@keyframes float) {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-}
-
-:global(.float-animation) {
-  animation: float 3s ease-in-out infinite;
-}
-
-/* Texto con gradiente pastel */
-:global(.gradient-text) {
-  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-weight: 600;
+  --grad-1: #2B2D42; /* home.bg (dark) */
+  --grad-2: #3E3A4D; /* about.bg (dark) */
+  --grad-3: #004D40; /* projects.bg (dark) */
+  --grad-4: #5D4037; /* contact.bg (dark) */
 }
