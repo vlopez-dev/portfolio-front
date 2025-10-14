@@ -95,7 +95,8 @@ function onRecaptcha(response) {
 </script>
 
 <Animate >
-  <section class="hero is-fullheight contact-section  " >
+<section class="hero is-fullheight contact-section  " >
+    <div class="section-pattern" aria-hidden="true"></div>
     <div class="columns is-multiline mx-2 my-6">
       <div class="column"></div>
       <div class="column is-one-third">
@@ -132,7 +133,7 @@ function onRecaptcha(response) {
 
         <div class="field is-grouped is-justify-content-center">
           <div class="control btn-cv  ">
-            <button class="button custom-button  is-normal is-rounded ">
+<button class="button cta-primary custom-button  is-normal is-rounded ">
               <span>
               <SendIcon size="24" />
             </span>
@@ -258,7 +259,20 @@ function onRecaptcha(response) {
 .contact-section {
   background-color: var(--color-bg);
   color: var(--color-text);
+  position: relative;
+  overflow: hidden;
   transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.section-pattern {
+  position: absolute;
+  inset: 0;
+  height: 140px;
+  pointer-events: none;
+  opacity: 0.03;
+  background-image: radial-gradient(circle at 1px 1px, var(--color-text) 1px, transparent 1.5px);
+  background-size: 18px 18px;
+  mix-blend-mode: multiply;
 }
 
 .title,

@@ -28,6 +28,7 @@
 </script>
 
 <section class="hero is-fullheight projects-section">
+    <div class="section-pattern" aria-hidden="true"></div>
     <div class="container is-fluid">
       <div class="columns is-multiline mx-2 my-6 ">
         {#each projects as project}
@@ -50,7 +51,7 @@
         </div>
 				<div class="container-code" >
           <a href="{project.link_repo}" target=”_blank”>
-          <button class="button  custom-buttom-color  is-normal is-rounded">
+<button class="button cta-primary custom-buttom-color  is-normal is-rounded">
             <span class="icon ">
               <GithubIcon size="24" />
             </span>
@@ -58,7 +59,7 @@
           </button>
         </a>
         <a href="{project.link_live}" target=”_blank”>
-          <button class="button  custom-buttom-color is-normal is-rounded">
+<button class="button cta-primary custom-buttom-color is-normal is-rounded">
 
             <span class="icon">
               <CloudIcon size="24" />
@@ -187,7 +188,20 @@
 .projects-section {
   background-color: var(--color-bg);
   color: var(--color-text);
+  position: relative;
+  overflow: hidden;
   transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.section-pattern {
+  position: absolute;
+  inset: 0;
+  height: 140px;
+  pointer-events: none;
+  opacity: 0.03;
+  background-image: radial-gradient(circle at 1px 1px, var(--color-text) 1px, transparent 1.5px);
+  background-size: 18px 18px;
+  mix-blend-mode: multiply;
 }
 
 .container-project {
@@ -242,8 +256,11 @@
 
 /* Modo oscuro */
 
-
-
+img {
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+}
 
 
 </style>

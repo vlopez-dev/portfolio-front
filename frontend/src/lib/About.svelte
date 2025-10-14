@@ -48,6 +48,7 @@ let certificates = [];
 
 <Animate>
 <section class="hero is-fullheight about-section"  >
+  <div class="section-pattern" aria-hidden="true"></div>
   {#each abouts as about}
     <div class="columns is-multiline mx-2 my-6" >
         <div class="column "></div>
@@ -62,7 +63,7 @@ let certificates = [];
           <h3 class="title custom-text">{about.title}</h3>
           <p class="paragraph custom-text">{about.description}</p>
           <div class="btn-cv">
-            <button class="button custom-bottom   is-normal is-rounded" on:click={downloadCV}>
+<button class="button cta-primary custom-bottom   is-normal is-rounded" on:click={downloadCV}>
               <span class="icon">
                 <DownloadIcon size="24" />
               </span>
@@ -167,13 +168,13 @@ let certificates = [];
     text-align: center;
   }
 
-  .about-img{
-    height: 80%;
-  }
+ 
   .about-img img{
     height: 100%;
     width: 100%;
     object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     
   }
 
@@ -268,7 +269,20 @@ let certificates = [];
 .about-section {
   background-color: var(--color-bg);
   color: var(--color-text);
+  position: relative;
+  overflow: hidden;
   transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.section-pattern {
+  position: absolute;
+  inset: 0;
+  height: 140px;
+  pointer-events: none;
+  opacity: 0.03;
+  background-image: radial-gradient(circle at 1px 1px, var(--color-text) 1px, transparent 1.5px);
+  background-size: 18px 18px;
+  mix-blend-mode: multiply;
 }
 
 .title,
@@ -304,7 +318,10 @@ let certificates = [];
 }
 
 /* Modo oscuro */
-
+.container-img {
+  margin: 8px;
+  width: 600px;
+}
 
 
 </style>

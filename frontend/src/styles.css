@@ -32,3 +32,63 @@ body.dark-mode {
   --grad-3: #004D40; /* projects.bg (dark) */
   --grad-4: #5D4037; /* contact.bg (dark) */
 }
+
+/* ===== Botones: microinteracciones accesibles ===== */
+.button {
+  will-change: transform, box-shadow, background-color, border-color, color;
+  transform: translateZ(0);
+  transition:
+    transform 180ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 160ms ease,
+    color 160ms ease,
+    border-color 160ms ease;
+}
+
+.button:hover:not(:disabled):not(.is-static) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px color-mix(in srgb, var(--color-accent) 22%, transparent);
+}
+
+.button:active:not(:disabled):not(.is-static) {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px color-mix(in srgb, var(--color-accent) 16%, transparent);
+}
+
+.button:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 3px color-mix(in srgb, var(--color-accent) 40%, transparent),
+    0 6px 16px color-mix(in srgb, var(--color-accent) 18%, transparent);
+}
+
+.button:disabled {
+  opacity: 0.6;
+  transform: none;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+/* Variantes controladas por tokens */
+.button.cta-primary {
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+  border: none;
+}
+.button.cta-primary:hover { filter: brightness(1.03); }
+.button.cta-primary:active { filter: brightness(0.98); }
+
+.button.cta-secondary {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+.button.cta-secondary:hover {
+  background: color-mix(in srgb, var(--color-accent) 10%, transparent);
+  border-color: var(--color-accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button { transition: none; transform: none; }
+  .button:hover { box-shadow: 0 4px 10px color-mix(in srgb, var(--color-accent) 16%, transparent); }
+}
