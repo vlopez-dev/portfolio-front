@@ -36,11 +36,6 @@
     }
     return cookieValue;
   }
-<<<<<<< HEAD
-  // console.log(cookieValue)
-  return cookieValue;
-=======
->>>>>>> test
 
   const sendEmail = async () => {
     const csrfCookie = getCookie('csrftoken');
@@ -48,21 +43,8 @@
     const recaptchaResponse =
       typeof window !== 'undefined' && window.grecaptcha ? window.grecaptcha.getResponse() : null;
 
-<<<<<<< HEAD
-
-
-  const sendEmail=async () => {
-
-    const csrfCookie = getCookie("csrftoken");
-
-    const recaptchaResponse = grecaptcha.getResponse();
-
-    const response = await fetch("https://vic.uy/send_email/", {
-      method: "POST",
-=======
-    const response = await fetch('http://127.0.0.1:8000/send_email/', {
+    const response = await fetch('https://vic.uy/send_email/', {
       method: 'POST',
->>>>>>> test
       headers: {
         'Content-Type': 'application/json',
         'X-CSRFToken': csrfCookie,
@@ -72,25 +54,10 @@
     });
 
     if (!response.ok) {
-<<<<<<< HEAD
-      console.log(response)
-      const data = await response.json();
-      // console.error("Error enviando correo",data);
-      document.getElementById("message").textContent = "Error al enviar e mensaje, intentelo nuevamente";
-
-    } else {
-      // console.log(response)
-
-      // const data = await response.json();
-      document.getElementById("message").textContent = "Mensaje enviado con exito";
-
-      console.log("Correo enviado correctamente");
-=======
       document.getElementById('status').textContent =
         'Error al enviar el mensaje, inténtalo nuevamente';
     } else {
       document.getElementById('status').textContent = 'Mensaje enviado con éxito';
->>>>>>> test
     }
   };
 </script>
