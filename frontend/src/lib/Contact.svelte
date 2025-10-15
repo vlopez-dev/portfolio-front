@@ -128,18 +128,6 @@
             <div class="g-recaptcha" data-sitekey="6Ld7NskkAAAAAJKzdpVtsTXKBUdX_TT3dizQHxA8"></div>
           </div>
         </div>
-<<<<<<< HEAD
-
-      </form>
-      <div class="column">
-      <div class="container">
-        <div class="g-recaptcha " data-sitekey="6Ld7NskkAAAAAJKzdpVtsTXKBUdX_TT3dizQHxA8"></div>
-
-      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    </div>
-  </div>
-=======
->>>>>>> test
       </div>
 
       <div class="column"></div>
@@ -160,44 +148,8 @@
     text-align: center;
   }
 
-<<<<<<< HEAD
-
-
-
-
-   
-
-
-  .custom-component {
-        background-color: #fffffe;
-    }
-
-  :global(body.dark-mode) .custom-component {
-        background-color: #0f0e17;
-        color: #fffffe;
-    }
-
-.custom-title{
-  color:#0f0e17;
-  text-align: center;
-}
-
-:global(body.dark-mode) .custom-title {
-        background-color: #0f0e17;
-        text-align: center;
-        color: #fffffe;
-    }
-
-
-
-
-
-.custom-button{
-  background-color: #ff6e6c;
-=======
   .custom-button {
     background-color: var(--color-accent);
->>>>>>> test
     border: none;
     color: var(--color-on-accent);
     width: 105px;
