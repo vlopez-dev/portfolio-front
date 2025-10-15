@@ -1,14 +1,10 @@
 import adapter from '@sveltejs/adapter-node';
 
-export default {
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
   kit: {
-    adapter: adapter({
-      out: 'build',
-      precompress: false,
-      env: {
-        host: '0.0.0.0',
-        port: process.env.PORT || 4173
-      }
-    })
-  }
+    adapter: adapter(),
+  },
 };
+
+export default config;

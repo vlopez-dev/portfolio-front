@@ -1,11 +1,10 @@
 <script>
-    import {slide} from 'svelte/transition'
+  import { slide } from 'svelte/transition';
 </script>
 
-<div transition:slide={{ delay: 200 }} >
-    <slot />
-</div> 
+<div transition:slide={{ delay: 200 }}>
+  <slot />
+</div>
 
 <style>
-   
 </style>

@@ -1,0 +1,103 @@
+:root {
+  /* Paleta principal (modo claro) - edita estos valores para cambiar el tema */
+  --color-bg: #fffffe; /* Fondo de navbar/footer y superficies */
+  --color-text: #272343; /* Texto principal */
+  --color-accent: #ffd803; /* Color de acento (hover, detalles, botones) */
+  --color-on-accent: #272343; /* Texto sobre acento */
+  --color-muted: #2d334a; /* Texto secundario */
+  --color-surface: #fffffe; /* Superficies (inputs, cards) */
+  --color-border: #bae8e8; /* Bordes */
+  --color-success: #2e7d32; /* Mensajes de éxito */
+
+  /* Gradiente de fondo global (stops por sección) */
+  /* --grad-1: #FFF0F5; /* home.bg */
+  /* --grad-2: #EDE7F6; /* about.bg */
+  /* --grad-3: #E0F7FA; /* projects.bg */
+  /* --grad-4: #FFF9C4; /* contact.bg */
+}
+
+/* Overrides para modo oscuro: el toggle debe aplicar la clase .dark-mode al <body> */
+body.dark-mode {
+  --color-bg: #272343;
+  --color-text: #fffffe;
+  --color-accent: #bae8e8;
+  --color-on-accent: #2d334a;
+  --color-muted: #f0f0f0;
+  --color-surface: #272343;
+  --color-border: #fff9c4;
+  --color-success: #81c784;
+
+  --grad-1: #2b2d42; /* home.bg (dark) */
+  --grad-2: #3e3a4d; /* about.bg (dark) */
+  --grad-3: #004d40; /* projects.bg (dark) */
+  --grad-4: #5d4037; /* contact.bg (dark) */
+}
+
+/* ===== Botones: microinteracciones accesibles ===== */
+.button {
+  will-change: transform, box-shadow, background-color, border-color, color;
+  transform: translateZ(0);
+  transition:
+    transform 180ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 160ms ease,
+    color 160ms ease,
+    border-color 160ms ease;
+}
+
+.button:hover:not(:disabled):not(.is-static) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px color-mix(in srgb, var(--color-accent) 22%, transparent);
+}
+
+.button:active:not(:disabled):not(.is-static) {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px color-mix(in srgb, var(--color-accent) 16%, transparent);
+}
+
+.button:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 3px color-mix(in srgb, var(--color-accent) 40%, transparent),
+    0 6px 16px color-mix(in srgb, var(--color-accent) 18%, transparent);
+}
+
+.button:disabled {
+  opacity: 0.6;
+  transform: none;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+/* Variantes controladas por tokens */
+.button.cta-primary {
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+  border: none;
+}
+.button.cta-primary:hover {
+  filter: brightness(1.03);
+}
+.button.cta-primary:active {
+  filter: brightness(0.98);
+}
+
+.button.cta-secondary {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+.button.cta-secondary:hover {
+  background: color-mix(in srgb, var(--color-accent) 10%, transparent);
+  border-color: var(--color-accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
+    transform: none;
+  }
+  .button:hover {
+    box-shadow: 0 4px 10px color-mix(in srgb, var(--color-accent) 16%, transparent);
+  }
+}

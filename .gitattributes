@@ -1,0 +1,6 @@
+inmobiliaria/settings.py merge=ours
+requirements.txt merge=ours
+.github/workflows/*.yml merge=ours
+.github/workflows/*.yaml merge=ours
+backend/portafolio/portafolio/settings.py merge=ours
+backend/portafolio/requeriments.txt merge=ours

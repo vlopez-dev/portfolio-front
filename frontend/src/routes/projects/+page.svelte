@@ -1,6 +1,5 @@
 <script>
-    import Projects from '$lib/Projects.svelte';
-  </script>
-  
-  <Projects />
-  
+  import Projects from '$lib/Projects.svelte';
+</script>
+
+<Projects />
