@@ -1,12 +1,12 @@
 :root {
   /* Paleta principal (modo claro) - edita estos valores para cambiar el tema */
-  --color-bg: #fffffe;     /* Fondo de navbar/footer y superficies */
-  --color-text: #272343;   /* Texto principal */
+  --color-bg: #fffffe; /* Fondo de navbar/footer y superficies */
+  --color-text: #272343; /* Texto principal */
   --color-accent: #ffd803; /* Color de acento (hover, detalles, botones) */
   --color-on-accent: #272343; /* Texto sobre acento */
-  --color-muted: #2d334a;  /* Texto secundario */
+  --color-muted: #2d334a; /* Texto secundario */
   --color-surface: #fffffe; /* Superficies (inputs, cards) */
-  --color-border: #bae8e8;  /* Bordes */
+  --color-border: #bae8e8; /* Bordes */
   --color-success: #2e7d32; /* Mensajes de éxito */
 
   /* Gradiente de fondo global (stops por sección) */
@@ -18,19 +18,19 @@
 
 /* Overrides para modo oscuro: el toggle debe aplicar la clase .dark-mode al <body> */
 body.dark-mode {
-  --color-bg: #5D4037;
-  --color-text: #FFF9C4;
-  --color-accent: #FFB6B9;
-  --color-on-accent: #ffffff;
+  --color-bg: #272343;
+  --color-text: #fffffe;
+  --color-accent: #bae8e8;
+  --color-on-accent: #2d334a;
   --color-muted: #f0f0f0;
-  --color-surface: #6D4C41;
-  --color-border: #FFF9C4;
+  --color-surface: #272343;
+  --color-border: #fff9c4;
   --color-success: #81c784;
 
-  --grad-1: #2B2D42; /* home.bg (dark) */
-  --grad-2: #3E3A4D; /* about.bg (dark) */
-  --grad-3: #004D40; /* projects.bg (dark) */
-  --grad-4: #5D4037; /* contact.bg (dark) */
+  --grad-1: #2b2d42; /* home.bg (dark) */
+  --grad-2: #3e3a4d; /* about.bg (dark) */
+  --grad-3: #004d40; /* projects.bg (dark) */
+  --grad-4: #5d4037; /* contact.bg (dark) */
 }
 
 /* ===== Botones: microinteracciones accesibles ===== */
@@ -75,8 +75,12 @@ body.dark-mode {
   color: var(--color-on-accent);
   border: none;
 }
-.button.cta-primary:hover { filter: brightness(1.03); }
-.button.cta-primary:active { filter: brightness(0.98); }
+.button.cta-primary:hover {
+  filter: brightness(1.03);
+}
+.button.cta-primary:active {
+  filter: brightness(0.98);
+}
 
 .button.cta-secondary {
   background: transparent;
@@ -89,6 +93,11 @@ body.dark-mode {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .button { transition: none; transform: none; }
-  .button:hover { box-shadow: 0 4px 10px color-mix(in srgb, var(--color-accent) 16%, transparent); }
+  .button {
+    transition: none;
+    transform: none;
+  }
+  .button:hover {
+    box-shadow: 0 4px 10px color-mix(in srgb, var(--color-accent) 16%, transparent);
+  }
 }
