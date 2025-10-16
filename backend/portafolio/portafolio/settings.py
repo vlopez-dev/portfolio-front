@@ -16,7 +16,7 @@ from dotenv import load_dotenv
 
 
 load_dotenv()
-DEBUG = os.getenv('DEBUG')
+DEBUG = False
 
 
 # Obtiene el valor de la variable de entorno DATABASE_URL
@@ -60,7 +60,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '7y+b=2!pm+cp_-hgr83ebzec@fa5g9d_n3tl4oxbh7=&o$58q+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = DEBUG
+DEBUG = False
 
 ALLOWED_HOSTS = ['vic.uy','www.vic.uy','127.0.0.1','localhost']
 load_dotenv()
