@@ -4,48 +4,36 @@ on:
   push:
     branches: [master]
 
-concurrency:
-  group: deploy-portfolio
-  cancel-in-progress: true
-
-permissions:
-  contents: read
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy over SSH
-        uses: appleboy/ssh-action@v0.1.10
+      - name: Deploy 
+        uses: actions/checkout@v3
+        with:
+          ref: 'master'
+
+      - name: Force update master branch
+        run: |
+            git fetch --all
+            git reset --hard origin/master
+            git pull --rebase origin master
+      - name: Conectar via ssh y desplegar
+        uses: appleboy/ssh-action@master
+        
         with:
           host: ${{ secrets.IP_ADRESS }}
           username: ${{ secrets.USER_NAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            set -Eeuo pipefail
-            BRANCH="master"
-            APP_DIR="/home/vlopez/portafolio/portfolio-front"
-            # Opcional: limitar servicios, ej: SERVICES="frontend"
-            # SERVICES=""
-
-            cd "$APP_DIR"
+            cd /home/vlopez/portafolio/portfolio-front
             git fetch --all
-            git reset --hard "origin/$BRANCH"
-
-            if docker compose version >/dev/null 2>&1; then
-              DC="docker compose"
-            else
-              DC="docker-compose"
-            fi
-
-            if [ -n "${SERVICES:-}" ]; then
-              $DC pull $SERVICES || true
-              $DC build --no-cache --pull $SERVICES
-              $DC up -d --remove-orphans $SERVICES
-            else
-              $DC pull || true
-              $DC build --no-cache --pull
-              $DC up -d --remove-orphans
-            fi
-
-            echo "Deploy de portafolio completado."
+            git reset --hard origin/master
+            git pull --rebase origin master
+            echo "Deteniendo servicios...."
+            docker-compose down
+            echo " Recontruyendo imagenes y levantando servicios....
+            docker-compose build --no-cache
+            docker-compose up -d - frontend
+            echo "Servicios levantados correctamente"
