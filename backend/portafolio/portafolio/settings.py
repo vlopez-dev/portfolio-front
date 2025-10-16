@@ -62,7 +62,7 @@ SECRET_KEY = '7y+b=2!pm+cp_-hgr83ebzec@fa5g9d_n3tl4oxbh7=&o$58q+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['vic.uy','www.vic.uy','127.0.0.1','localhost']
+ALLOWED_HOSTS = ['vic.uy','www.vic.uy','localhost','127.0.0.1']
 load_dotenv()
 
 # Application definition
