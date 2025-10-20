@@ -27,7 +27,6 @@
  */
 declare module '$env/static/private' {
 	export const HISTFILESIZE: string;
-	export const npm_package_dev: string;
 	export const LANGUAGE: string;
 	export const WARP_HONOR_PS1: string;
 	export const USER: string;
@@ -36,18 +35,15 @@ declare module '$env/static/private' {
 	export const XDG_SEAT: string;
 	export const XDG_SESSION_TYPE: string;
 	export const npm_node_execpath: string;
-	export const npm_package_resolved: string;
 	export const XDG_CACHE_HOME: string;
 	export const SHLVL: string;
 	export const npm_config_noproxy: string;
 	export const HOME: string;
 	export const OLDPWD: string;
-	export const npm_package_optional: string;
 	export const TERM_PROGRAM_VERSION: string;
 	export const DESKTOP_SESSION: string;
 	export const npm_package_json: string;
 	export const WARP_USE_SSH_WRAPPER: string;
-	export const npm_package_engines_node: string;
 	export const XDG_SEAT_PATH: string;
 	export const SDL_IM_MODULE: string;
 	export const QT_DBL_CLICK_DIST: string;
@@ -55,7 +51,6 @@ declare module '$env/static/private' {
 	export const MANAGERPID: string;
 	export const npm_config_userconfig: string;
 	export const npm_config_local_prefix: string;
-	export const npm_package_integrity: string;
 	export const SYSTEMD_EXEC_PID: string;
 	export const GSM_SKIP_SSH_AGENT_WORKAROUND: string;
 	export const DBUS_SESSION_BUS_ADDRESS: string;
@@ -87,7 +82,6 @@ declare module '$env/static/private' {
 	export const LC_ADDRESS: string;
 	export const XDG_RUNTIME_DIR: string;
 	export const DISPLAY: string;
-	export const npm_config_legacy_peer_deps: string;
 	export const LANG: string;
 	export const XDG_CURRENT_DESKTOP: string;
 	export const LC_TELEPHONE: string;
@@ -107,13 +101,11 @@ declare module '$env/static/private' {
 	export const npm_lifecycle_event: string;
 	export const GDMSESSION: string;
 	export const LC_MEASUREMENT: string;
-	export const npm_package_dev_optional: string;
 	export const GPG_AGENT_INFO: string;
 	export const QT_IM_MODULE: string;
 	export const XDG_VTNR: string;
 	export const npm_config_globalconfig: string;
 	export const npm_config_init_module: string;
-	export const npm_package_peer: string;
 	export const PWD: string;
 	export const QT_QPA_PLATFORM: string;
 	export const DSG_APP_ID: string;
@@ -130,6 +122,7 @@ declare module '$env/static/private' {
 	export const MEMORY_PRESSURE_WRITE: string;
 	export const INIT_CWD: string;
 	export const EDITOR: string;
+	export const NODE_ENV: string;
 }
 
 /**
@@ -160,7 +153,6 @@ declare module '$env/static/public' {
 declare module '$env/dynamic/private' {
 	export const env: {
 		HISTFILESIZE: string;
-		npm_package_dev: string;
 		LANGUAGE: string;
 		WARP_HONOR_PS1: string;
 		USER: string;
@@ -169,18 +161,15 @@ declare module '$env/dynamic/private' {
 		XDG_SEAT: string;
 		XDG_SESSION_TYPE: string;
 		npm_node_execpath: string;
-		npm_package_resolved: string;
 		XDG_CACHE_HOME: string;
 		SHLVL: string;
 		npm_config_noproxy: string;
 		HOME: string;
 		OLDPWD: string;
-		npm_package_optional: string;
 		TERM_PROGRAM_VERSION: string;
 		DESKTOP_SESSION: string;
 		npm_package_json: string;
 		WARP_USE_SSH_WRAPPER: string;
-		npm_package_engines_node: string;
 		XDG_SEAT_PATH: string;
 		SDL_IM_MODULE: string;
 		QT_DBL_CLICK_DIST: string;
@@ -188,7 +177,6 @@ declare module '$env/dynamic/private' {
 		MANAGERPID: string;
 		npm_config_userconfig: string;
 		npm_config_local_prefix: string;
-		npm_package_integrity: string;
 		SYSTEMD_EXEC_PID: string;
 		GSM_SKIP_SSH_AGENT_WORKAROUND: string;
 		DBUS_SESSION_BUS_ADDRESS: string;
@@ -220,7 +208,6 @@ declare module '$env/dynamic/private' {
 		LC_ADDRESS: string;
 		XDG_RUNTIME_DIR: string;
 		DISPLAY: string;
-		npm_config_legacy_peer_deps: string;
 		LANG: string;
 		XDG_CURRENT_DESKTOP: string;
 		LC_TELEPHONE: string;
@@ -240,13 +227,11 @@ declare module '$env/dynamic/private' {
 		npm_lifecycle_event: string;
 		GDMSESSION: string;
 		LC_MEASUREMENT: string;
-		npm_package_dev_optional: string;
 		GPG_AGENT_INFO: string;
 		QT_IM_MODULE: string;
 		XDG_VTNR: string;
 		npm_config_globalconfig: string;
 		npm_config_init_module: string;
-		npm_package_peer: string;
 		PWD: string;
 		QT_QPA_PLATFORM: string;
 		DSG_APP_ID: string;
@@ -263,6 +248,7 @@ declare module '$env/dynamic/private' {
 		MEMORY_PRESSURE_WRITE: string;
 		INIT_CWD: string;
 		EDITOR: string;
+		NODE_ENV: string;
 		[key: `PUBLIC_${string}`]: undefined;
 		[key: `${string}`]: string | undefined;
 	}
