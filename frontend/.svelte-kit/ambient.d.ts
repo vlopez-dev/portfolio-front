@@ -26,7 +26,9 @@
  * ```
  */
 declare module '$env/static/private' {
+	export const HISTFILESIZE: string;
 	export const LANGUAGE: string;
+	export const WARP_HONOR_PS1: string;
 	export const USER: string;
 	export const LC_TIME: string;
 	export const npm_config_user_agent: string;
@@ -37,21 +39,19 @@ declare module '$env/static/private' {
 	export const SHLVL: string;
 	export const npm_config_noproxy: string;
 	export const HOME: string;
-	export const CHROME_DESKTOP: string;
 	export const OLDPWD: string;
 	export const TERM_PROGRAM_VERSION: string;
 	export const DESKTOP_SESSION: string;
 	export const npm_package_json: string;
+	export const WARP_USE_SSH_WRAPPER: string;
 	export const XDG_SEAT_PATH: string;
 	export const SDL_IM_MODULE: string;
 	export const QT_DBL_CLICK_DIST: string;
-	export const PS1: string;
 	export const LC_MONETARY: string;
 	export const MANAGERPID: string;
 	export const npm_config_userconfig: string;
 	export const npm_config_local_prefix: string;
 	export const SYSTEMD_EXEC_PID: string;
-	export const VSCODE_PYTHON_AUTOACTIVATE_GUARD: string;
 	export const GSM_SKIP_SSH_AGENT_WORKAROUND: string;
 	export const DBUS_SESSION_BUS_ADDRESS: string;
 	export const npm_config_engine_strict: string;
@@ -67,10 +67,12 @@ declare module '$env/static/private' {
 	export const GNOME_KEYRING_CUSTOM_LOCAL_PATH: string;
 	export const MEMORY_PRESSURE_WATCH: string;
 	export const XDG_SESSION_CLASS: string;
+	export const SSH_SOCKET_DIR: string;
 	export const TERM: string;
 	export const XDG_SESSION_ID: string;
 	export const npm_config_cache: string;
 	export const GNOME_DESKTOP_SESSION_ID: string;
+	export const WARP_IS_LOCAL_SHELL_SESSION: string;
 	export const npm_config_node_gyp: string;
 	export const PATH: string;
 	export const INVOCATION_ID: string;
@@ -79,12 +81,10 @@ declare module '$env/static/private' {
 	export const XDG_SESSION_PATH: string;
 	export const LC_ADDRESS: string;
 	export const XDG_RUNTIME_DIR: string;
-	export const GDK_BACKEND: string;
 	export const DISPLAY: string;
 	export const LANG: string;
 	export const XDG_CURRENT_DESKTOP: string;
 	export const LC_TELEPHONE: string;
-	export const VIRTUAL_ENV_PROMPT: string;
 	export const XDG_DATA_HOME: string;
 	export const XDG_CONFIG_HOME: string;
 	export const XMODIFIERS: string;
@@ -95,16 +95,13 @@ declare module '$env/static/private' {
 	export const npm_lifecycle_script: string;
 	export const SSH_AUTH_SOCK: string;
 	export const XDG_GREETER_DATA_DIR: string;
-	export const ORIGINAL_XDG_CURRENT_DESKTOP: string;
 	export const SHELL: string;
 	export const LC_NAME: string;
 	export const npm_package_version: string;
 	export const npm_lifecycle_event: string;
-	export const NO_AT_BRIDGE: string;
 	export const GDMSESSION: string;
 	export const LC_MEASUREMENT: string;
 	export const GPG_AGENT_INFO: string;
-	export const VIRTUAL_ENV: string;
 	export const QT_IM_MODULE: string;
 	export const XDG_VTNR: string;
 	export const npm_config_globalconfig: string;
@@ -155,7 +152,9 @@ declare module '$env/static/public' {
  */
 declare module '$env/dynamic/private' {
 	export const env: {
+		HISTFILESIZE: string;
 		LANGUAGE: string;
+		WARP_HONOR_PS1: string;
 		USER: string;
 		LC_TIME: string;
 		npm_config_user_agent: string;
@@ -166,21 +165,19 @@ declare module '$env/dynamic/private' {
 		SHLVL: string;
 		npm_config_noproxy: string;
 		HOME: string;
-		CHROME_DESKTOP: string;
 		OLDPWD: string;
 		TERM_PROGRAM_VERSION: string;
 		DESKTOP_SESSION: string;
 		npm_package_json: string;
+		WARP_USE_SSH_WRAPPER: string;
 		XDG_SEAT_PATH: string;
 		SDL_IM_MODULE: string;
 		QT_DBL_CLICK_DIST: string;
-		PS1: string;
 		LC_MONETARY: string;
 		MANAGERPID: string;
 		npm_config_userconfig: string;
 		npm_config_local_prefix: string;
 		SYSTEMD_EXEC_PID: string;
-		VSCODE_PYTHON_AUTOACTIVATE_GUARD: string;
 		GSM_SKIP_SSH_AGENT_WORKAROUND: string;
 		DBUS_SESSION_BUS_ADDRESS: string;
 		npm_config_engine_strict: string;
@@ -196,10 +193,12 @@ declare module '$env/dynamic/private' {
 		GNOME_KEYRING_CUSTOM_LOCAL_PATH: string;
 		MEMORY_PRESSURE_WATCH: string;
 		XDG_SESSION_CLASS: string;
+		SSH_SOCKET_DIR: string;
 		TERM: string;
 		XDG_SESSION_ID: string;
 		npm_config_cache: string;
 		GNOME_DESKTOP_SESSION_ID: string;
+		WARP_IS_LOCAL_SHELL_SESSION: string;
 		npm_config_node_gyp: string;
 		PATH: string;
 		INVOCATION_ID: string;
@@ -208,12 +207,10 @@ declare module '$env/dynamic/private' {
 		XDG_SESSION_PATH: string;
 		LC_ADDRESS: string;
 		XDG_RUNTIME_DIR: string;
-		GDK_BACKEND: string;
 		DISPLAY: string;
 		LANG: string;
 		XDG_CURRENT_DESKTOP: string;
 		LC_TELEPHONE: string;
-		VIRTUAL_ENV_PROMPT: string;
 		XDG_DATA_HOME: string;
 		XDG_CONFIG_HOME: string;
 		XMODIFIERS: string;
@@ -224,16 +221,13 @@ declare module '$env/dynamic/private' {
 		npm_lifecycle_script: string;
 		SSH_AUTH_SOCK: string;
 		XDG_GREETER_DATA_DIR: string;
-		ORIGINAL_XDG_CURRENT_DESKTOP: string;
 		SHELL: string;
 		LC_NAME: string;
 		npm_package_version: string;
 		npm_lifecycle_event: string;
-		NO_AT_BRIDGE: string;
 		GDMSESSION: string;
 		LC_MEASUREMENT: string;
 		GPG_AGENT_INFO: string;
-		VIRTUAL_ENV: string;
 		QT_IM_MODULE: string;
 		XDG_VTNR: string;
 		npm_config_globalconfig: string;
