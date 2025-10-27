@@ -130,6 +130,21 @@
     transition: all 0.3s ease;
   }
 
+  /* Ensure mobile menu uses theme colors (override Bulma defaults) */
+  .navbar-menu {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    box-shadow: none;
+    border-top: 1px solid var(--color-border);
+  }
+  .navbar-item {
+    background-color: transparent;
+    color: var(--color-text);
+  }
+  .navbar-item:hover {
+    background-color: color-mix(in srgb, var(--color-accent) 10%, transparent);
+    color: var(--color-accent);
+  }
   /* Cleaned up duplicate styles */
 
   .nav-link-ltr::before {
