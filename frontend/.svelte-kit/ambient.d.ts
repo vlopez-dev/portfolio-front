@@ -48,7 +48,6 @@ declare module '$env/static/private' {
 	export const SDL_IM_MODULE: string;
 	export const QT_DBL_CLICK_DIST: string;
 	export const VSCODE_GIT_ASKPASS_MAIN: string;
-	export const PS1: string;
 	export const LC_MONETARY: string;
 	export const VSCODE_GIT_ASKPASS_NODE: string;
 	export const MANAGERPID: string;
@@ -92,7 +91,6 @@ declare module '$env/static/private' {
 	export const XDG_CURRENT_DESKTOP: string;
 	export const PYTHONSTARTUP: string;
 	export const LC_TELEPHONE: string;
-	export const VIRTUAL_ENV_PROMPT: string;
 	export const XDG_DATA_HOME: string;
 	export const XDG_CONFIG_HOME: string;
 	export const XMODIFIERS: string;
@@ -113,7 +111,6 @@ declare module '$env/static/private' {
 	export const GDMSESSION: string;
 	export const LC_MEASUREMENT: string;
 	export const GPG_AGENT_INFO: string;
-	export const VIRTUAL_ENV: string;
 	export const VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
 	export const QT_IM_MODULE: string;
 	export const XDG_VTNR: string;
@@ -187,7 +184,6 @@ declare module '$env/dynamic/private' {
 		SDL_IM_MODULE: string;
 		QT_DBL_CLICK_DIST: string;
 		VSCODE_GIT_ASKPASS_MAIN: string;
-		PS1: string;
 		LC_MONETARY: string;
 		VSCODE_GIT_ASKPASS_NODE: string;
 		MANAGERPID: string;
@@ -231,7 +227,6 @@ declare module '$env/dynamic/private' {
 		XDG_CURRENT_DESKTOP: string;
 		PYTHONSTARTUP: string;
 		LC_TELEPHONE: string;
-		VIRTUAL_ENV_PROMPT: string;
 		XDG_DATA_HOME: string;
 		XDG_CONFIG_HOME: string;
 		XMODIFIERS: string;
@@ -252,7 +247,6 @@ declare module '$env/dynamic/private' {
 		GDMSESSION: string;
 		LC_MEASUREMENT: string;
 		GPG_AGENT_INFO: string;
-		VIRTUAL_ENV: string;
 		VSCODE_GIT_ASKPASS_EXTRA_ARGS: string;
 		QT_IM_MODULE: string;
 		XDG_VTNR: string;

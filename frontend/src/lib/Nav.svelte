@@ -141,9 +141,10 @@
     background-color: transparent;
     color: var(--color-text);
   }
+  /* Evitar hover de fondo en todo el item; el efecto se maneja en .nav-link */
   .navbar-item:hover {
-    background-color: color-mix(in srgb, var(--color-accent) 10%, transparent);
-    color: var(--color-accent);
+    background-color: transparent;
+    color: inherit;
   }
   /* Cleaned up duplicate styles */
 
