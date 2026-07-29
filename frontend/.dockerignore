@@ -1,5 +1,5 @@
 # Exclude local Let's Encrypt data from Docker build context (prevents permission errors and leaking secrets)
-nginx/letsencrypt/**
+nginx/letsencrypt
 
 # Optional common ignores (uncomment if useful)
 # node_modules

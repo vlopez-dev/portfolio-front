@@ -1,0 +1,75 @@
+version: '3.7'
+services:
+  frontend:
+    container_name: frontend
+    build:
+      context: ./portfolio-front/frontend
+    ports:
+      - "3000:3000"
+    environment:
+    - PORT=3000
+    networks:
+      - internal_network
+      - shared_network
+
+  django_gunicorn:
+    container_name: portafolioback
+    volumes:
+      - static:/app/static/
+      - media:/app/media/
+      - logs:/app/logs/
+    build:
+      context: ./portfolio-front/backend
+    ports:
+      - "8001:8001"
+    networks:
+      - internal_network
+      - shared_network
+    expose:
+      - 8001
+    env_file:
+      - portfolio-front/backend/.env
+      - .env
+  
+  dj_gunicorn_agenda:
+    container_name: agendaback
+    volumes:
+      - static:/app/static/
+    build:
+      context: ./apps
+    ports:
+      - "8002:8002"
+    networks:
+      - internal_network
+      - shared_network
+    expose:
+      - 8002
+    env_file:
+      - apps/.env
+      - .env
+
+  nginx:
+    container_name: vic-nginx
+    image: nginx:alpine
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+      #- ./cert/letsencrypt:/etc/letsencrypt
+      - static:/app/static/
+      - media:/app/media/
+    networks:
+      - internal_network
+      - shared_network
+      - proxy_network
+
+volumes:
+  static:
+  media:
+  logs:
+
+networks:
+  internal_network:
+    driver: bridge
+  shared_network:
+    external: true
+  proxy_network:
+    external: true
